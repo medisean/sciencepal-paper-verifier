@@ -36,8 +36,8 @@
 - `results/metrics_summary.{json,csv}`、`results/per_item_results.csv`：指标与逐条结果
 - `scripts/`：评测集生成、跑批、评分、审计、Layer-2 案例等全部可复现脚本
 - `data/eval/`：Layer-1 金标准评测集
-- 本仓库已本地 git 初始化（密钥 .env 已通过 .gitignore 排除）；推送到公开远程仓库后在此填写地址：
-  **仓库地址：______________**
+- 本仓库已公开（GitHub，.env 与密钥已通过 .gitignore 排除，远程确认无泄露）：
+  **仓库地址：https://github.com/medisean/sciencepal-paper-verifier**
 
 ## 五、提交物清单对照
 
