@@ -350,8 +350,8 @@ text(s, Inches(0.88), Inches(4.7), Inches(5.4), Inches(0.4),
      [[("随附可复现材料", 15, True, NAVY)]])
 text(s, Inches(0.88), Inches(5.15), Inches(5.5), Inches(1.6),
      [[("· 代码仓库：评测集生成 / 跑批 / 评分 / 审计全脚本", 12.5, False, DARK)],
-      [("· 一键复现：run_batch → export → audit", 12.5, False, DARK)],
-      [("· 技术报告、逐条结果、SSE 审计报告、Layer-2 案例", 12.5, False, DARK)],
+      [("· 一键复现：run_batch + run_naive → export → audit", 12.5, False, DARK)],
+      [("· 三方对照技术报告、逐条结果、12 run SSE 审计、Layer-2 案例", 12.5, False, DARK)],
       [("· 原创性与资源使用声明", 12.5, False, DARK)]],
      line_spacing=1.18, space_after=4)
 box(s, Inches(6.78), Inches(4.5), Inches(5.95), Inches(2.3), fill=LIGHT, rounded=True)
