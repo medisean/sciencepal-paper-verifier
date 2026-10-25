@@ -98,7 +98,7 @@ d.text((110, 300), "科研论文核查员", font=F(108, True), fill=WHITE)
 d.text((112, 450), "Paper Reference Verifier", font=F(48), fill=(159,182,214))
 d.text((112, 660), "在 SciencePal 沙箱里逐条联网核验参考文献，用可追溯证据替代“凭记忆猜测”", font=F(34), fill=WHITE)
 d.text((112, 900), "DOI 真伪核验 · 题录逐字段比对 · 撤稿识别 · 方法学沙箱复算", font=F(30, True), fill=(191,208,232))
-d.text((112, 980), "个人参赛 | 香港城市大学 HKAI-Sci | 2026-10-31", font=F(26), fill=(174,194,222))
+d.text((112, 980), "邹亮明 · 邹晶晶 | 香港城市大学 HKAI-Sci | 2026-10-31", font=F(26), fill=(174,194,222))
 save(img, "s01.png")
 
 # ---------- s02 问题（PPT 第2页全屏）----------
@@ -138,15 +138,15 @@ for i, t in enumerate(["无需登录，只读的“智能体运行记录”",
                        "40 步完整执行轨迹，可逐步回放",
                        "每一条沙箱命令、HTTP 状态都可见",
                        "点“跳到结尾”直接看最终报告",
-                       "评委可完全复核，不是 PPT 口述"]):
+                       "每一步都可独立复核"]):
     d.ellipse([1170, 380+i*72, 1192, 402+i*72], fill=GREEN)
     para(d, 1210, 376+i*72, t, 25, DARK, 600, lh=1.1, gap=0)
 save(img, "s04.png")
 
 # s05 HTTP 实测
-img = demo_page("s05", "二、逐条联网 Crossref：404 篡改立即现形", "/tmp/demo_done.png",
+img = demo_page("s05", "二、逐条联网 Crossref：404 即判 DOI 不存在", "/tmp/demo_done.png",
     [("Agent 在隔离沙箱中对每条 DOI 发起真实 HTTP 请求", RED, "实测"),
-     ("[1] 200 真实；[2] 404 伪造 DOI 现形", RED, "HTTP 200 / 404"),
+     ("[1] 200 真实；[2] 404 判定伪造 DOI 不存在", RED, "HTTP 200 / 404"),
      ("[3][4] 200 后再逐字段比对题录与撤稿", BLUE, "取证"),
      ("不靠记忆，每一条结论都有可复核的来源", GREEN, "可追溯")],
     "02")
@@ -162,16 +162,16 @@ img = demo_page("s06", "三、四条引用、四种状态：零误判", "/tmp/sh
 save(img, "s06.png")
 
 # s07 撤稿
-img = demo_page("s07", "四、撤稿识别：揪出被当正常引用的 STAP 论文", "/tmp/share_retraction.png",
+img = demo_page("s07", "四、撤稿识别：题录合法但已撤稿的 STAP 论文", "/tmp/share_retraction.png",
     [("DOI 有效（HTTP 200），但标题带 RETRACTED ARTICLE", RED, "Retracted: TRUE"),
      ("Agent 主动查询 relation 字段定位撤稿通知", BLUE, "撤稿通知"),
-     ("对照正常文献（LeCun）正确放行，不冤枉", GREEN, "精准"),
-     ("规避撤稿污染，守住证据链可信度", NAVY, "学术诚信")],
+     ("对照正常文献（LeCun）正确放行", GREEN, "对照"),
+     ("避免引用已撤稿论文", NAVY, "学术诚信")],
     "04")
 save(img, "s07.png")
 
 # s08 方法学
-img = demo_page("s08", "五、沙箱真实复算：p 值造假无处遁形", "/tmp/share_method_end.png",
+img = demo_page("s08", "五、沙箱复算：报告 p 值与数据矛盾", "/tmp/share_method_end.png",
     [("沙箱安装 scipy 1.15.3，按原始数据真实复算", BLUE, "真实执行"),
      ("报告 p=0.03/0.04，复算 p=0.206/0.138（不显著）", RED, "p 值矛盾"),
      ("两两 t 检验替代 ANOVA；样本量不足（功效0.24）", RED, "方法错误"),
@@ -183,8 +183,8 @@ save(img, "s08.png")
 img, d = base()
 topbar(d, "六、为什么结果可信：方法学严谨性", "06")
 cards = [
-    ("金标准可复现", "用 Crossref 实时构造 valid / not_found / mismatch 三类标签；伪造 DOI 用过去年份、同格式仅篡改后缀并实时验证 404，杜绝靠“未来年份”蒙对。", BLUE),
-    ("对照公平可审计", "离线基线禁用 execute_command 与 web_search，SSE 逐条重放审计确认 8 个 run 全程零联网（工具请求被 blocked），没有偷看答案。", GREEN),
+    ("金标准可复现", "用 Crossref 实时构造 valid / not_found / mismatch 三类标签；伪造 DOI 用过去年份、同格式仅篡改后缀并实时验证 404，避免靠未来年份推断。", BLUE),
+    ("对照公平可审计", "离线基线禁用 execute_command 与 web_search，SSE 逐条重放审计确认 8 个 run 全程零联网（工具请求被 blocked），确认未获取外部答案。", GREEN),
     ("测试集未调参", "dev 与 test 分离，48 条测试样本（4 个随机种子）从未参与提示词调优；结论由独立测试集给出。", GOLD),
 ]
 x = 70

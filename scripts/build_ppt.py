@@ -179,11 +179,11 @@ for i, tag in enumerate(tags):
     text(s, l, Inches(5.45), tw, Inches(0.62), [[(tag, 14.5, True, WHITE)]],
          align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
 text(s, Inches(0.92), Inches(6.55), Inches(11.5), Inches(0.5),
-     [[("主办：香港城市大学 HKAI-Sci    |    参赛形式：个人参赛    |    提交截止：2026-10-31", 12.5, False, RGBColor(0xAE,0xC2,0xDE))]])
+     [[("主办：香港城市大学 HKAI-Sci    |    参赛：邹亮明 · 邹晶晶    |    提交截止：2026-10-31", 12.5, False, RGBColor(0xAE,0xC2,0xDE))]])
 
 # ---------- 第 2 页：痛点 ----------
 s = prs.slides.add_slide(BLANK)
-header(s, 2, "问题：引用幻觉是沉默的科研系统性风险",
+header(s, 2, "问题：模型凭记忆无法可靠识别引用幻觉",
        "纯模型离线基线在 48 条金标准上的实测表现")
 # 左：问题
 box(s, Inches(0.6), Inches(1.95), Inches(6.0), Inches(4.9), fill=LIGHT, rounded=True)
@@ -313,7 +313,7 @@ box(s, Inches(0.55), Inches(6.02), Inches(12.2), Inches(1.18), fill=LIGHT, round
 text(s, Inches(0.8), Inches(6.12), Inches(12.0), Inches(0.35),
      [[("评测严谨性", 13.5, True, NAVY)]])
 text(s, Inches(0.8), Inches(6.46), Inches(11.9), Inches(0.7),
-     [[("· 金标准由 Crossref 实时构造（valid / not_found / mismatch）；伪造 DOI 用过去年份、同格式仅篡改后缀并实时验证 404，杜绝靠“未来年份”蒙对。", 11.5, False, DARK)],
+     [[("· 金标准由 Crossref 实时构造（valid / not_found / mismatch）；伪造 DOI 用过去年份、同格式仅篡改后缀并实时验证 404，避免靠未来年份推断。", 11.5, False, DARK)],
       [("· dev / test 分离，48 条 test 未参与调参；SSE 逐条重放审计证明离线基线全程零联网（工具请求被 blocked），对照公平。", 11.5, False, DARK)]],
      line_spacing=1.12, space_after=2)
 
@@ -326,7 +326,7 @@ cards = [
      "sciencepal.ai/share/ee4068d7…"),
     ("案例 A · 撤稿识别", "识别被当正常引用的 STAP 论文，定位官方撤稿通知 DOI",
      "sciencepal.ai/share/f6f8746c…"),
-    ("案例 B · 统计复算", "沙箱 scipy 复算揪出 p 值造假：报告 0.03/0.04，实算 0.206/0.138",
+    ("案例 B · 统计复算", "沙箱 scipy 复算发现 p 值与数据矛盾：报告 0.03/0.04，实算 0.206/0.138",
      "sciencepal.ai/share/8de1f3cc…"),
 ]
 cw = Inches(3.95); ch = Inches(2.2); gap = Inches(0.18)

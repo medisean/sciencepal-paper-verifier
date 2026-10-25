@@ -107,6 +107,7 @@ python3 scripts/score_eval.py --bundle data/eval/layer1_seed7_n12.json \
 
 ## 7. 局限与后续
 
-- Layer-1 当前为题录层；Layer-2 正在补充**真实 PMC 开放获取论文端到端方法学审查**与**撤稿论文（Retraction Watch）识别**的小样本案例。
+- Layer-1 覆盖题录层（48 条量化）；Layer-2 用两个端到端案例验证了撤稿识别与方法学复算（`results/layer2/`），但样本量小，尚未形成大规模基准。
+- 撤稿识别目前依赖 Crossref 标题撤稿标记与 `update-to` 关系，覆盖度受出版商回传质量影响。
 - 元数据比对对"在线优先/正式见刊多年份"等 Crossref 多日期场景仍有边界情况，报告中以证据原文呈现。
-- 可扩展更多数据源（PubMed、Semantic Scholar、OpenAlex）与中文文献库。
+- 数据源目前以 Crossref 为主，之后可接入 PubMed、Semantic Scholar、OpenAlex 与中文文献库做多源交叉验证。
