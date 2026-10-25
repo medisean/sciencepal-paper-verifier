@@ -185,46 +185,65 @@ for i, tag in enumerate(tags):
 text(s, Inches(0.92), Inches(6.55), Inches(11.5), Inches(0.5),
      [[("主办：香港城市大学 HKAI-Sci    |    参赛：邹亮明 · 邹晶晶    |    提交截止：2026-10-31", 12.5, False, RGBColor(0xAE,0xC2,0xDE))]])
 
-# ---------- 第 2 页：痛点 ----------
+# ---------- 第 2 页：痛点 + 背景量级 ----------
 s = prs.slides.add_slide(BLANK)
 header(s, 2, "问题：模型凭记忆无法可靠识别引用幻觉",
-       "纯模型离线基线在 48 条金标准上的实测表现")
+       "这不是小概率问题，而是科研可信度的系统性风险；右侧为我们 48 条金标准的实测")
 # 左：问题
-box(s, Inches(0.6), Inches(1.95), Inches(6.0), Inches(4.9), fill=LIGHT, rounded=True)
-text(s, Inches(0.9), Inches(2.15), Inches(5.5), Inches(0.45),
-     [[("为什么需要外部证据", 17, True, NAVY)]])
+box(s, Inches(0.6), Inches(1.55), Inches(6.0), Inches(3.55), fill=LIGHT, rounded=True)
+text(s, Inches(0.9), Inches(1.68), Inches(5.5), Inches(0.4),
+     [[("为什么需要外部证据", 16, True, NAVY)]])
 probs = [
-    ("编造 DOI", "大模型撰写/审查文献时会“编造”参考文献，且 DOI 格式高度逼真，肉眼难辨。"),
-    ("题录错配", "真实 DOI 配错作者、年份、期刊或卷期页，张冠李戴却看似规范。"),
+    ("编造 DOI", "大模型“编造”参考文献，DOI 格式逼真，肉眼难辨。"),
+    ("题录错配", "真实 DOI 配错作者、年份、期刊或卷期页，张冠李戴。"),
     ("撤稿未披露", "被撤稿论文仍被当作正常文献引用，污染证据链。"),
-    ("人工成本高", "逐条查库、核对、查撤稿极耗时，审稿与自查难以规模化。"),
+    ("人工成本高", "逐条查库、核对、查撤稿极耗时，审稿难规模化。"),
 ]
-yy = 2.72
+yy = 2.12
 for t, d in probs:
     box(s, Inches(0.92), Inches(yy+0.06), Inches(0.14), Inches(0.14), fill=RED)
-    text(s, Inches(1.2), Inches(yy-0.05), Inches(5.15), Inches(0.95),
-         [[(t+"　", 14, True, DARK), (d, 12.5, False, GRAY)]], line_spacing=1.08)
-    yy += 1.02
+    text(s, Inches(1.2), Inches(yy-0.04), Inches(5.2), Inches(0.72),
+         [[(t+"　", 13.5, True, DARK), (d, 12, False, GRAY)]], line_spacing=1.05)
+    yy += 0.74
 # 右：实证
-box(s, Inches(6.9), Inches(1.95), Inches(5.85), Inches(4.9), fill=WHITE, line=LINE, rounded=True)
-text(s, Inches(7.2), Inches(2.15), Inches(5.3), Inches(0.45),
-     [[("实测：纯模型只能猜“格式规律”", 17, True, NAVY)]])
+box(s, Inches(6.9), Inches(1.55), Inches(5.85), Inches(3.55), fill=WHITE, line=LINE, rounded=True)
+text(s, Inches(7.2), Inches(1.68), Inches(5.3), Inches(0.4),
+     [[("实测：纯模型只能猜“格式规律”（48 条）", 16, True, NAVY)]])
 stats = [
-    ("0.62", "幻觉 DOI 检测 F1 仅为 0.62，误报 8 次、漏报 3 次", RED),
+    ("0.62", "幻觉 DOI 检测 F1 仅 0.62，误报 8 次、漏报 3 次", RED),
     ("8 次误报", "用臆想的“期刊 DOI 格式规则”冤枉真实文献", RED),
     ("3 次漏报", "漏掉的恰是格式最规范、最危险的伪造 DOI", RED),
 ]
-yy = 2.78
+yy = 2.15
 for big, desc, col in stats:
-    text(s, Inches(7.2), Inches(yy), Inches(2.0), Inches(0.7),
-         [[(big, 30, True, col)]], anchor=MSO_ANCHOR.MIDDLE)
-    text(s, Inches(9.25), Inches(yy+0.05), Inches(3.3), Inches(0.85),
-         [[(desc, 12.5, False, DARK)]], anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.1)
-    yy += 1.15
-box(s, Inches(7.2), Inches(6.05), Inches(5.25), Inches(0.62), fill=RGBColor(0xF7,0xEC,0xEA), rounded=True)
-text(s, Inches(7.35), Inches(6.05), Inches(5.0), Inches(0.62),
-     [[("结论：没有外部证据，模型无法可靠区分“真”与“逼真”", 12.5, True, RED)]],
+    text(s, Inches(7.2), Inches(yy), Inches(1.95), Inches(0.66),
+         [[(big, 26, True, col)]], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, Inches(9.18), Inches(yy+0.03), Inches(3.45), Inches(0.72),
+         [[(desc, 11.5, False, DARK)]], anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.05)
+    yy += 0.86
+box(s, Inches(7.2), Inches(4.7), Inches(5.25), Inches(0.34), fill=RGBColor(0xF7,0xEC,0xEA), rounded=True)
+text(s, Inches(7.35), Inches(4.7), Inches(5.0), Inches(0.34),
+     [[("结论：没有外部证据，模型无法可靠区分“真”与“逼真”", 12, True, RED)]],
      anchor=MSO_ANCHOR.MIDDLE)
+# 底部：背景量级（真实文献）
+box(s, Inches(0.6), Inches(5.28), Inches(12.15), Inches(1.9), fill=RGBColor(0xEE,0xF2,0xF8), rounded=True)
+text(s, Inches(0.9), Inches(5.38), Inches(11.6), Inches(0.34),
+     [[("问题的量级（公开文献，非自测）", 13.5, True, NAVY)]])
+bg = [
+    ("> 70%", "受访研究者曾尝试却无法复现他人的实验", "Nature 2016  reproducibility survey, n=1576"),
+    ("1 万+", "2023 年撤稿论文数创历史纪录，撤稿库累计约 5.5 万条", "Nature 2023；Retraction Watch / Crossref"),
+    ("18%", "GPT-4 生成的引用为编造，另有 24% 真实引用有实质错误", "Sci Rep 2023;13:14045"),
+]
+bx = 0.6
+for i, (num, desc, src) in enumerate(bg):
+    left = Inches(0.78 + i*4.02)
+    box(s, left, Inches(5.78), Inches(3.86), Inches(1.3), fill=WHITE, line=LINE, rounded=True)
+    text(s, left+Inches(0.2), Inches(5.88), Inches(3.5), Inches(0.5),
+         [[(num, 24, True, RED)]], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, left+Inches(0.2), Inches(6.38), Inches(3.5), Inches(0.5),
+         [[(desc, 11, True, DARK)]], line_spacing=1.05)
+    text(s, left+Inches(0.2), Inches(6.82), Inches(3.55), Inches(0.24),
+         [[(src, 8.5, False, GRAY)]])
 
 # ---------- 第 3 页：方案 ----------
 s = prs.slides.add_slide(BLANK)
@@ -274,51 +293,60 @@ text(s, Inches(7.06), Inches(5.2), Inches(5.45), Inches(1.3),
       [("定位为审稿 / 作者自检助手，不替代同行评议。", 13, False, DARK)]],
      line_spacing=1.2)
 
-# ---------- 第 4 页：结果 ----------
+# ---------- 第 4 页：两个主结果 ----------
 s = prs.slides.add_slide(BLANK)
-header(s, 4, "结果：联网是决定性闸门（F1 0.62→1.0），专家流程固化确定性",
+header(s, 4, "两个主结果：联网是能力闸门，流程固化确定性护栏",
        "48 条独立测试集；三方对照（离线 / 普通联网 / 专家工作流），SSE 审计确认公平")
-s.shapes.add_picture(str(fig1), Inches(0.55), Inches(2.0), width=Inches(5.5))
-# 表格（三方 F1）
-rows = [["检测任务", "离线基线", "普通联网", "专家工作流"],
-        ["幻觉 DOI", "0.62", "1.00", "1.00"],
-        ["题录错配", "0.82", "1.00", "1.00"],
-        ["任意问题", "0.82", "1.00", "1.00"]]
-tl, tt, tw_, th = Inches(7.35), Inches(2.1), Inches(5.4), Inches(2.5)
-COLW = [Inches(1.62), Inches(1.26), Inches(1.26), Inches(1.26)]
-COLR = [None, RED, BLUE, GREEN]
-tbl = s.shapes.add_table(4, 4, tl, tt, tw_, th).table
-for c in range(4):
-    tbl.columns[c].width = COLW[c]
-for r in range(4):
-    for c in range(4):
-        cell = tbl.cell(r, c)
-        cell.text = rows[r][c]
-        para = cell.text_frame.paragraphs[0]
-        para.alignment = PP_ALIGN.CENTER if c else PP_ALIGN.LEFT
-        run = para.runs[0]
-        run.font.size = Pt(12.5 if r == 0 else 14)
-        run.font.name = FONT; _set_ea(run)
-        run.font.bold = (r == 0 or c > 0)
-        run.font.color.rgb = WHITE if r == 0 else (COLR[c] if c > 0 else DARK)
-        cell.fill.solid()
-        cell.fill.fore_color.rgb = NAVY if r == 0 else (LIGHT if r % 2 else WHITE)
-        cell.vertical_anchor = MSO_ANCHOR.MIDDLE
-# 右侧结论框
-box(s, Inches(7.35), Inches(4.95), Inches(5.4), Inches(1.18), fill=RGBColor(0xEC,0xF4,0xEF), rounded=True)
-text(s, Inches(7.6), Inches(4.98), Inches(5.0), Inches(1.14),
-     [[("两个联网方法均 0 误报 / 0 漏报", 13.5, True, GREEN)],
-      [("离线基线：合计 23 次误报、7 次漏报", 12, True, RED)],
-      [("强模型上专家流程无额外 F1 增益，价值在确定性", 11, True, NAVY)]],
-     anchor=MSO_ANCHOR.MIDDLE, space_after=2, line_spacing=1.12)
-# 方法学严谨性
-box(s, Inches(0.55), Inches(6.35), Inches(12.2), Inches(1.0), fill=LIGHT, rounded=True)
-text(s, Inches(0.8), Inches(6.42), Inches(12.0), Inches(0.3),
-     [[("对照严谨性与诚实结论", 13, True, NAVY)]])
-text(s, Inches(0.8), Inches(6.72), Inches(11.9), Inches(0.6),
-     [[("· 增设工具全开、能联网但不给专家流程的普通 Agent 作对照，防止稻草人基线；撤稿、统计复算、2026 冷门撤稿限定任务同输入对照，两个联网 Agent 都能做对。", 11, False, DARK)],
-      [("· 专家流程差异在过程：平均工具调用更少、无长期记忆污染、JSON 稳定可解析；全流程留证据、可审计。局限：仅单模型、n=48，弱模型增益待验。", 11, False, DARK)]],
-     line_spacing=1.1, space_after=2)
+# 左：主结果① 标签 + F1 图
+box(s, Inches(0.55), Inches(1.6), Inches(5.55), Inches(0.36), fill=NAVY, rounded=True)
+text(s, Inches(0.55), Inches(1.6), Inches(5.55), Inches(0.36),
+     [[("主结果① 能力闸门：一联网，F1 0.62→1.0、误报 23→0", 12.5, True, WHITE)]],
+     align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+s.shapes.add_picture(str(fig1), Inches(0.6), Inches(2.05), width=Inches(5.45))
+
+# 右：主结果② 标签 + 过程指标卡
+GREEN_L = RGBColor(0xEC, 0xF4, 0xEF)
+box(s, Inches(6.35), Inches(1.6), Inches(6.45), Inches(0.36), fill=GREEN, rounded=True)
+text(s, Inches(6.35), Inches(1.6), Inches(6.45), Inches(0.36),
+     [[("主结果② 确定性护栏：专家流程相对普通 Agent 的真实增益", 12.5, True, WHITE)]],
+     align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
+proc = [
+    ("平均工具调用 / 轮", "路径更短、token 更省（7 轮均值）", "8.3", "12.4"),
+    ("违禁写入长期记忆", "普通 Agent 被禁仍调用 save_memory", "0 次", "1 次"),
+    ("最终 JSON 输出", "固定 schema，无人值守可稳定解析", "末轮固定", "1 次错位"),
+    ("检查覆盖与留痕", "每步留 HTTP 状态、来源与复算脚本", "强制全检", "临场发挥"),
+]
+yt = 2.08
+for name, note, expv, ordv in proc:
+    box(s, Inches(6.35), Inches(yt), Inches(6.45), Inches(0.93), fill=LIGHT, rounded=True)
+    bar = s.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(6.35), Inches(yt),
+                             Inches(0.08), Inches(0.93))
+    bar.fill.solid(); bar.fill.fore_color.rgb = GREEN; bar.line.fill.background()
+    bar.shadow.inherit = False
+    # 左栏：指标名 + 说明
+    text(s, Inches(6.58), Inches(yt+0.1), Inches(3.05), Inches(0.36),
+         [[(name, 12.5, True, NAVY)]], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, Inches(6.58), Inches(yt+0.5), Inches(3.1), Inches(0.38),
+         [[(note, 9.5, False, GRAY)]], anchor=MSO_ANCHOR.MIDDLE, line_spacing=1.0)
+    # 右栏：专家（绿）/ 普通（蓝）两行，标签与值独立文本框对齐
+    text(s, Inches(9.7), Inches(yt+0.13), Inches(0.55), Inches(0.32),
+         [[("专家", 11, False, GRAY)]], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, Inches(10.3), Inches(yt+0.08), Inches(2.45), Inches(0.38),
+         [[(expv, 13.5, True, GREEN)]], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, Inches(9.7), Inches(yt+0.53), Inches(0.55), Inches(0.32),
+         [[("普通", 11, False, GRAY)]], anchor=MSO_ANCHOR.MIDDLE)
+    text(s, Inches(10.3), Inches(yt+0.48), Inches(2.45), Inches(0.38),
+         [[(ordv, 13.5, True, BLUE)]], anchor=MSO_ANCHOR.MIDDLE)
+    yt += 1.02
+
+# 底部：诚实解读
+box(s, Inches(0.55), Inches(6.3), Inches(12.25), Inches(1.02), fill=RGBColor(0xEE,0xF2,0xF8), rounded=True)
+text(s, Inches(0.8), Inches(6.36), Inches(11.9), Inches(0.3),
+     [[("如何读这两个结果：诚实、不设弱对手", 12.5, True, NAVY)]])
+text(s, Inches(0.8), Inches(6.66), Inches(11.9), Inches(0.62),
+     [[("· H1 成立：联网是硬闸门，F1 0.62→1.0、误报 23→0；H2 阴性：强模型上专家流程不额外提高 F1，不宣称更准。", 10.5, False, DARK)],
+      [("· 专家流程价值在无人值守规模化时的确定性、效率与可审计；撤稿、统计复算、2026 冷门撤稿限定任务同输入对照均判对。局限：仅单模型、n=48（Wilson 下界 0.926）、弱模型增益待验。", 10.5, False, DARK)]],
+     line_spacing=1.08, space_after=1)
 
 # ---------- 第 5 页：交付与演示 ----------
 s = prs.slides.add_slide(BLANK)

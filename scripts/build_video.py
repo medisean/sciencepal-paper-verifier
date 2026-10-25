@@ -194,8 +194,8 @@ for t, c, col in cards:
     d.text((x+36, 280), t, font=F(36, True), fill=NAVY)
     para(d, x+36, 370, c, 26, DARK, 510, lh=1.4, gap=0)
     x += 610
-d.text((70, 870), "结论：决定性闸门是联网（F1 0.62→1.0、误报 23→0）；普通联网 Agent 同样满分。", font=F(29, True), fill=RED)
-d.text((70, 925), "强模型上专家流程无额外 F1 增益，价值在确定性、效率与可审计（工具更少、无状态污染、输出稳定）。", font=F(27, True), fill=NAVY)
+d.text((70, 870), "主结果一（能力）：联网是能力闸门，F1 0.62→1.0、误报 23→0，普通联网 Agent 同样满分。", font=F(28, True), fill=RED)
+d.text((70, 925), "主结果二（过程）：专家流程不额外提高 F1，但给确定性、效率与可审计护栏（工具更少、无状态污染、输出稳定）。", font=F(26, True), fill=NAVY)
 save(img, "s10.png")
 
 # s12 结尾
