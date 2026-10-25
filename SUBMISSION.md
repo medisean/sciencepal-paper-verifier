@@ -1,0 +1,49 @@
+# 提交清单 · SciencePal AI4Science Hackathon 2026
+
+> 提交截止：**2026-10-31（香港时间）**，以腾讯问卷提交时间戳为准。
+> 参赛形式：个人参赛。账号：276144337@qq.com。
+
+## 一、项目基本信息
+
+- **项目名称**：科研论文核查员（Paper Reference Verifier）
+- **一句话介绍**：一个运行在 SciencePal 上的科研审稿 Agent，逐条联网核验参考文献的 DOI 真伪、题录一致性与撤稿状态，并在沙箱中实际复算方法学/统计，用可追溯证据（HTTP 状态、来源 URL、复算脚本）输出结构化核查报告。
+- **关键词**：AI4Science、引用幻觉检测、DOI 核验、撤稿识别、统计复算、可复现评测
+
+## 二、可运行 SciencePal 公开分享链接（免登录，只读回放）
+
+评委打开即可看到 Agent 的完整执行轨迹（沙箱 curl、监控任务、HTTP 状态、最终报告），无需登录。
+
+| 演示 | 内容 | 链接 |
+|---|---|---|
+| **主演示（推荐）** | 4 条引用覆盖 4 种状态：真实放行 / 幻觉 DOI（404 篡改）/ 年份错配 / 已撤稿（STAP） | https://sciencepal.ai/share/ee4068d7-07e5-4a27-9af7-1f3c50fedcaa |
+| 案例 A · 撤稿识别 | 识别被当正常引用的 STAP 撤稿论文，定位官方撤稿通知 | https://sciencepal.ai/share/f6f8746c-3350-48f1-ac58-d0150e135ac1 |
+| 案例 B · 方法学复算 | 沙箱 scipy 复算，揪出 p 值造假（报告 0.03/0.04，实算 0.206/0.138） | https://sciencepal.ai/share/8de1f3cc-cde0-41ad-a2b5-b3b9af5a004b |
+
+> 打开后点“跳到结尾”可直接看最终结论，点“开始播放”可按真实时间回放全过程。
+
+## 三、量化结果（48 条金标准测试集，未参与调参）
+
+- 核查 Agent：幻觉 DOI / 元数据 / 任意问题三项 **F1 = 1.000，零误报、零漏报**；
+- 纯模型离线基线（经 SSE 审计确认零外部数据）：幻觉 DOI F1 = 0.621、元数据 F1 = 0.824，且 23 次误报。
+- 图表：`results/figures/evaluation_comparison.html`；逐条：`results/per_item_results.csv`。
+
+## 四、随附材料（代码仓库）
+
+- `README.md`：项目说明与一键复现
+- `results/TECHNICAL_REPORT.md`：技术报告（方法、对照、审计、结果、局限）
+- `results/layer2/LAYER2_CASES.md`：撤稿 + 方法学两个端到端案例
+- `results/audit_report.md`：8 个 run 的离线/联网 SSE 审计证据
+- `results/metrics_summary.{json,csv}`、`results/per_item_results.csv`：指标与逐条结果
+- `scripts/`：评测集生成、跑批、评分、审计、Layer-2 案例等全部可复现脚本
+- `data/eval/`：Layer-1 金标准评测集
+- 本仓库已本地 git 初始化（密钥 .env 已通过 .gitignore 排除）；推送到公开远程仓库后在此填写地址：
+  **仓库地址：______________**
+
+## 五、提交物清单对照
+
+- [ ] 项目基本信息（见上）
+- [ ] 可运行 SciencePal 公开分享链接（3 个，见上）
+- [ ] 演示视频（3–5 分钟）：`assets/video/`（待录制，分镜见 `assets/视频分镜脚本.md`）
+- [ ] 演示 PPT（≤5 页）：`assets/科研论文核查员.pptx`
+- [ ] 原创性与资源使用声明：`assets/原创性与资源使用声明.md`
+- [ ] 代码仓库 / 技术报告 / Agent 配置 / 可复现实验材料（鼓励项，已具备）
