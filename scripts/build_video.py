@@ -184,7 +184,7 @@ img, d = base()
 topbar(d, "六、为什么结果可信：方法学严谨性", "06")
 cards = [
     ("金标准可复现", "用 Crossref 实时构造 valid / not_found / mismatch 三类标签；伪造 DOI 用过去年份、同格式仅篡改后缀并实时验证 404，避免靠未来年份推断。", BLUE),
-    ("对照公平可审计", "离线基线禁用 execute_command 与 web_search，SSE 逐条重放审计确认 8 个 run 全程零联网（工具请求被 blocked），确认未获取外部答案。", GREEN),
+    ("三方对照防稻草人", "离线基线关闭工具并审计确认零联网；另设工具全开、能联网但不教专家流程的普通 Agent，与专家工作流同输入对比；12 个 run 审计均符合预期。", GREEN),
     ("测试集未调参", "dev 与 test 分离，48 条测试样本（4 个随机种子）从未参与提示词调优；结论由独立测试集给出。", GOLD),
 ]
 x = 70
@@ -194,7 +194,8 @@ for t, c, col in cards:
     d.text((x+36, 280), t, font=F(36, True), fill=NAVY)
     para(d, x+36, 370, c, 26, DARK, 510, lh=1.4, gap=0)
     x += 610
-d.text((70, 880), "结论：核查员三项 F1=1.000、零误报；离线基线幻觉 DOI F1 仅 0.62，共 23 次误报。", font=F(30, True), fill=RED)
+d.text((70, 870), "结论：决定性闸门是联网（F1 0.62→1.0、误报 23→0）；普通联网 Agent 同样满分。", font=F(29, True), fill=RED)
+d.text((70, 925), "强模型上专家流程无额外 F1 增益，价值在确定性、效率与可审计（工具更少、无状态污染、输出稳定）。", font=F(27, True), fill=NAVY)
 save(img, "s10.png")
 
 # s12 结尾

@@ -1,0 +1,45 @@
+{
+  "case": "obscure_retraction_limited_task",
+  "agent": "naive",
+  "run_id": "a92aa71d-b1fd-4573-be28-90a20b9c0df0",
+  "status": "completed",
+  "n_tool_calls": 15,
+  "tool_names": [
+    "execute_command",
+    "execute_command",
+    "watch_task",
+    "watch_task",
+    "execute_command",
+    "execute_command",
+    "watch_task",
+    "watch_task",
+    "check_command_output",
+    "check_command_output",
+    "check_command_output",
+    "execute_command",
+    "check_command_output",
+    "execute_command",
+    "check_command_output"
+  ],
+  "final_text": "The research state shows no active branch or card, and no checkpoint evidence. This is a simple reference verification task that doesn't require long-running research state management. I've already completed the verification of both references in the previous turn.\n\nLet me provide the final consolidated result. Both references have been fully verified via live Crossref queries and DOI resolution.\n\n## 核查结果汇总\n\n### [1] Idrees et al. 2026 — **存在严重问题(已撤稿)**\n\n| 项目 | 引用信息 | Crossref 官方记录 | 是否一致 |\n|---|---|---|---|\n| DOI | 10.1017/s0007485326101060 | 有效,可解析(HTTP 200) | ✓ |\n| 标题 | Potential global distribution of *Pochazia shantungensis*... | 相同,但官方标题末尾已加 **\"- RETRACTED\"** | ⚠️ |\n| 作者 | Idrees MA, Dong X, Zhang X, Qin D | Muhammad Aqib Idrees, Xiaoyi Dong, Xinhong Zhang, Daozheng Qin | ✓ |\n| 期刊 | Bulletin of Entomological Research | 相同 | ✓ |\n| 卷/期/页 | 116(5):647-655 | 116(5):647-655 | ✓ |\n| 年份 | 2026 | 2026 | ✓ |\n\n**关键问题**:该文章已被**撤稿(RETRACTED)**。Crossref 记录显示标题含 \"- RETRACTED\",并关联撤稿通知 DOI `10.1017/s0007485326101424`(2026-10-06 发布)。引用中未披露撤稿状态,属于严重的文献完整性问题。\n\n### [2] Cárdenas et al. 2016 — **完全正常**\n\n| 项目 | 引用信息 | Crossref 官方记录 | 是否一致 |\n|---|---|---|---|\n| DOI | 10.1017/s0007485316000481 | 有效,可解析(HTTP 200) | ✓ |\n| 标题 | Autecology, feeding preferences and reproductive biology of *Chorthippus (Glyptobothrus) vagans*... | 完全一致 | ✓ |\n| 作者 | Cárdenas AM, Gallardo P, Moyano L, Presa JJ | A.M. Cárdenas, P. Gallardo, L. Moyano, J.J. Presa | ✓ |\n| 期刊 | Bulletin of Entomological Research | 相同 | ✓ |\n| 卷/期/页 | 107(1):21-31 | 107(1):21-31 | ✓ |\n| 年份 | 2016 | 2016 | ✓ |\n\n无任何问题,题录信息与官方记录完全一致。\n\n```json\n{\"references\":[{\"item_id\":1,\"doi\":\"10.1017/s0007485326101060\",\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"confirm\",\"issue\":\"DOI resolves and bibliographic details (authors, journal, volume 116, issue 5, pages 647-655, year 2026) match Crossref. However, the article has been RETRACTED: Crossref title includes '- RETRACTED' and a retraction notice exists (DOI 10.1017/s0007485326101424, issued 2026-10-06). The citation omits the retraction status, which is a serious integrity problem.\"},{\"item_id\":2,\"doi\":\"10.1017/s0007485316000481\",\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"issue\":\"DOI resolves and all bibliographic details (authors Cárdenas/Gallardo/Moyano/Presa, journal Bulletin of Entomological Research, volume 107, issue 1, pages 21-31, year 2016) match Crossref exactly. No retraction or other issues found.\"}]}\n```",
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi": "10.1017/s0007485326101060",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "confirm",
+        "issue": "DOI resolves and bibliographic details (authors, journal, volume 116, issue 5, pages 647-655, year 2026) match Crossref. However, the article has been RETRACTED: Crossref title includes '- RETRACTED' and a retraction notice exists (DOI 10.1017/s0007485326101424, issued 2026-10-06). The citation omits the retraction status, which is a serious integrity problem."
+      },
+      {
+        "item_id": 2,
+        "doi": "10.1017/s0007485316000481",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "issue": "DOI resolves and all bibliographic details (authors Cárdenas/Gallardo/Moyano/Presa, journal Bulletin of Entomological Research, volume 107, issue 1, pages 21-31, year 2016) match Crossref exactly. No retraction or other issues found."
+      }
+    ]
+  }
+}

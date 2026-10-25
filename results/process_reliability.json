@@ -1,0 +1,29 @@
+{
+  "verifier": {
+    "n_runs": 7,
+    "tool_calls_mean": 8.29,
+    "tool_calls_min": 3,
+    "tool_calls_max": 22,
+    "unexpected_tool_calls_total": 3,
+    "runs_with_json_not_in_last_message": 0,
+    "runs_with_parsable_json": 7
+  },
+  "naive": {
+    "n_runs": 7,
+    "tool_calls_mean": 12.43,
+    "tool_calls_min": 3,
+    "tool_calls_max": 36,
+    "unexpected_tool_calls_total": 3,
+    "runs_with_json_not_in_last_message": 1,
+    "runs_with_parsable_json": 7
+  },
+  "baseline": {
+    "n_runs": 4,
+    "tool_calls_mean": 0.75,
+    "tool_calls_min": 0,
+    "tool_calls_max": 3,
+    "unexpected_tool_calls_total": 3,
+    "runs_with_json_not_in_last_message": 0,
+    "runs_with_parsable_json": 4
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "case": "layer2a_retraction_naiveprompt",
+  "agent": "naive",
+  "run_id": "43950cd8-a870-4f01-8c5c-a38dff8fa2dd",
+  "status": "completed",
+  "n_tool_calls": 4,
+  "tool_names": [
+    "execute_command",
+    "execute_command",
+    "watch_task",
+    "watch_task"
+  ],
+  "final_text": "Both DOIs resolve (HTTP 302 redirects to the publisher). Let me analyze the Crossref metadata.\n\n**Reference [1] - Obokata et al. 2014:**\n- DOI 10.1038/nature12968 resolves (302)\n- Crossref title: **\"RETRACTED ARTICLE: Stimulus-triggered fate conversion of somatic cells into pluripotency\"**\n- Volume 505, Issue 7485, pages 641-647, published 2014 — all match\n- **BUT**: This is the STAP cell paper, which was **RETRACTED**. The citation omits the retraction status. The title in Crossref includes \"RETRACTED ARTICLE:\" prefix.\n\n**Reference [2] - LeCun et al. 2015:**\n- DOI 10.1038/nature14539 resolves (302)\n- Crossref title: \"Deep learning\"\n- Volume 521, Issue 7553, pages 436-444, published 2015\n- Authors: Yann LeCun, Yoshua Bengio, Geoffrey Hinton — all match\n- Not retracted. All metadata matches.\n\nBoth DOIs are valid. Reference [1] has the retraction issue — the citation omits that the paper was retracted. Reference [2] is fully correct.\n\n```json\n{\"references\":[{\"item_id\":1,\"doi\":\"10.1038/nature12968\",\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"confirm\",\"evidence_url\":\"https://api.crossref.org/works/10.1038/nature12968\",\"issue\":\"DOI 有效且卷期页(505(7485):641-647)与题录一致,但该文为 STAP 细胞论文,已被撤稿。Crossref 标题为 'RETRACTED ARTICLE: Stimulus-triggered fate conversion of somatic cells into pluripotency',引用中未披露撤稿状态。\"},{\"item_id\":2,\"doi\":\"10.1038/nature14539\",\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"evidence_url\":\"https://api.crossref.org/works/10.1038/nature14539\",\"issue\":\"DOI 有效,作者(LeCun/Bengio/Hinton)、年份(2015)、标题(Deep learning)、卷期页(521(7553):436-444)均与 Crossref 一致,未被撤稿。\"}]}\n```\n\n**核查结果汇总:**\n\n**[1] Obokata et al. 2014, Nature 505(7485):641-647, doi:10.1038/nature12968 — CONFIRM(有问题)**\n- DOI 真实存在(解析返回 302 跳转至 Springer Nature)。\n- 卷期页、作者、年份均与 Crossref 一致。\n- **关键问题**:这是著名的 STAP 细胞论文,已被撤稿。Crossref 中标题为 \"RETRACTED ARTICLE: Stimulus-triggered fate conversion of somatic cells into pluripotency\",而引用中未披露撤稿状态。引用被撤稿论文而不加说明属于严重问题。\n\n**[2] LeCun et al. 2015, Nature 521(7553):436-444, doi:10.1038/nature14539 — PASS(无误)**\n- DOI 真实存在(解析返回 302 跳转至 Springer Nature)。\n- 作者、年份、标题、卷期页均与 Crossref 完全一致。\n- 未被撤稿,无任何问题。",
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi": "10.1038/nature12968",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "confirm",
+        "evidence_url": "https://api.crossref.org/works/10.1038/nature12968",
+        "issue": "DOI 有效且卷期页(505(7485):641-647)与题录一致,但该文为 STAP 细胞论文,已被撤稿。Crossref 标题为 'RETRACTED ARTICLE: Stimulus-triggered fate conversion of somatic cells into pluripotency',引用中未披露撤稿状态。"
+      },
+      {
+        "item_id": 2,
+        "doi": "10.1038/nature14539",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "evidence_url": "https://api.crossref.org/works/10.1038/nature14539",
+        "issue": "DOI 有效,作者(LeCun/Bengio/Hinton)、年份(2015)、标题(Deep learning)、卷期页(521(7553):436-444)均与 Crossref 一致,未被撤稿。"
+      }
+    ]
+  }
+}

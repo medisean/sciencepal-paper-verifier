@@ -8,7 +8,12 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from runner import parse_events
+from run_batch import audit_run, _tool_body
 
 ROOT = Path(__file__).resolve().parent.parent
 RUNS = ROOT / "output" / "runs"
@@ -36,56 +41,31 @@ def audit_sse(run_id: str) -> dict:
     if not files:
         return {"run_id": run_id, "missing_jsonl": True}
     fp = files[0]
+    events = [json.loads(line) for line in fp.read_text(encoding="utf-8").splitlines()
+              if line.strip()]
+    parsed = parse_events(events)
+    # 统一复用 run_batch.audit_run 的联网识别（含 302、异步批量、Crossref 字段）
+    verdict = audit_run(parsed)
     tools = []
-    for line in fp.read_text(encoding="utf-8").splitlines():
-        try:
-            e = json.loads(line)
-        except json.JSONDecodeError:
-            continue
-        d = e.get("data", {})
-        if d.get("type") != "tool":
-            continue
-        c = d.get("content")
-        if isinstance(c, str):
-            try:
-                c = json.loads(c)
-            except json.JSONDecodeError:
-                c = {"raw": c}
-        name = c.get("name", "?") if isinstance(c, dict) else "?"
-        inner = c.get("content", "") if isinstance(c, dict) else str(c)
-        # 工具结果常再包一层 JSON：{"output": "..."}
-        if isinstance(inner, str):
-            try:
-                nested = json.loads(inner)
-                if isinstance(nested, dict) and "output" in nested:
-                    inner = nested["output"]
-            except json.JSONDecodeError:
-                pass
-        body = str(inner)
+    for t in parsed.get("tool_calls", []):
+        body = _tool_body(t)
         blocked = bool(BLOCKED_RE.search(body))
-        has_endpoint = bool(NETDATA_RE.search(body))
-        has_http = bool(HTTP_OK_RE.search(body))
-        has_meta = bool(META_RE.search(body))
-        # 联网成功的充分证据：execute_command 实际返回了 HTTP 200/404（被拒时绝不会有）；
-        # 或出现学术 API 域名 + 元数据；或核查脚本落盘结果被读出。
-        net_data = has_http or (has_endpoint and has_meta)
-        if "verify_results" in body and ("title" in body or "container" in body):
-            net_data = True
-        tools.append({"name": name, "blocked": blocked, "mentions_api": has_endpoint,
-                      "external_data_returned": net_data, "excerpt": body[:180].replace("\n", " ")})
+        tools.append({"name": t.get("name", "?"), "blocked": blocked,
+                      "external_data_returned": False,
+                      "excerpt": body[:180].replace("\n", " ")})
     return {
         "run_id": run_id,
         "jsonl": fp.name,
-        "tool_calls": len(tools),
-        "external_data_returned": any(t["external_data_returned"] for t in tools),
-        "blocked_attempts": sum(1 for t in tools if t["blocked"]),
+        "tool_calls": verdict["tool_attempts"],
+        "external_data_returned": verdict["network_access"],
+        "blocked_attempts": verdict["blocked_attempts"],
         "tools": tools,
     }
 
 
 def main() -> None:
     records = []
-    for tag in ("verifier", "baseline"):
+    for tag in ("baseline", "naive", "verifier"):
         for s in TEST_SEEDS:
             f = EVAL / f"layer1_seed{s}_n12__{tag}.json"
             if not f.exists():
@@ -95,7 +75,7 @@ def main() -> None:
             records.append({
                 "seed": r["bundle"], "tag": tag, "run_id": r["run_id"],
                 "thread_id": r.get("thread_id"), "status": r.get("status"),
-                "expected": "online" if tag == "verifier" else "offline",
+                "expected": "offline" if tag == "baseline" else "online",
                 "tool_calls": a["tool_calls"],
                 "external_data_returned": a["external_data_returned"],
                 "blocked_attempts": a["blocked_attempts"],
@@ -108,6 +88,7 @@ def main() -> None:
 
     lines = ["# 离线/联网审计报告（SSE 原始事件重放）", "",
              "对每个评测 run 重放 `output/runs/{run_id}.jsonl` 原始工具事件，判定其是否实际获得外部数据。",
+             "三方对照：`baseline`（关闭 execute_command/web_search，应全程离线）、`naive`（普通联网 Agent，工具全开，应联网）、`verifier`（专家核查工作流，应联网）。",
              ""]
     lines.append("| seed | agent | 期望 | 工具调用 | 工具被拒次数 | 实际获得外部数据 | run_id |")
     lines.append("|---|---|---|---|---|---|---|")

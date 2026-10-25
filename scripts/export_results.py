@@ -15,20 +15,23 @@ TASKS = ["hallucinated_doi_detection", "metadata_error_detection", "any_issue_de
 TASK_CN = {"hallucinated_doi_detection": "幻觉DOI检测",
            "metadata_error_detection": "元数据错误检测",
            "any_issue_detection": "任意问题检测"}
+# 对照顺序：离线基线 → 普通联网 Agent（无专家 SOP）→ 专家核查工作流
+METHODS = ("baseline", "naive", "verifier")
+METHOD_CN = {"baseline": "离线基线", "naive": "普通联网Agent", "verifier": "专家核查工作流"}
 
 
 def main() -> None:
     out = ROOT / "results"
     out.mkdir(exist_ok=True)
     agg = {m: {k: {x: 0 for x in ("tp", "fp", "fn", "tn")} for k in TASKS}
-           for m in ("verifier", "baseline")}
+           for m in METHODS}
     per_item = []
 
     for s in SEEDS:
         bundle = json.loads((ROOT / f"data/eval/layer1_seed{s}_n12.json").read_text(encoding="utf-8"))
         gold = {it["item_id"]: it for it in bundle["items"]}
         preds = {}
-        for m in ("verifier", "baseline"):
+        for m in METHODS:
             res = json.loads((ROOT / f"output/eval/layer1_seed{s}_n12__{m}.json").read_text(encoding="utf-8"))
             rep = score(bundle, res)
             for k in TASKS:
@@ -44,7 +47,7 @@ def main() -> None:
                 "doi": g["doi"], "gold_doi_status": g["doi_status"],
                 "gold_metadata_match": g["metadata_match"],
             }
-            for m in ("verifier", "baseline"):
+            for m in METHODS:
                 p = preds[m].get(iid, {})
                 row[f"{m}_doi_status"] = p.get("doi_status", "missing")
                 row[f"{m}_metadata_match"] = p.get("metadata_match")
@@ -60,27 +63,27 @@ def main() -> None:
         w = csv.writer(fh)
         w.writerow(["方法", "任务", "精确率P", "召回率R", "F1", "特异度Specificity",
                     "准确率Accuracy", "TP", "FP", "FN", "TN"])
-        for m in ("baseline", "verifier"):
+        for m in METHODS:
             for k in TASKS:
                 d = metrics[m][k]
-                w.writerow([m, TASK_CN[k], d["precision"], d["recall"], d["f1"],
+                w.writerow([METHOD_CN[m], TASK_CN[k], d["precision"], d["recall"], d["f1"],
                             d["specificity"], d["accuracy"], d["tp"], d["fp"], d["fn"], d["tn"]])
 
     with (out / "per_item_results.csv").open("w", encoding="utf-8-sig", newline="") as fh:
-        cols = ["seed", "item_id", "gold_label", "doi", "gold_doi_status", "gold_metadata_match",
-                "verifier_doi_status", "verifier_metadata_match", "verifier_verdict",
-                "baseline_doi_status", "baseline_metadata_match", "baseline_verdict"]
+        cols = ["seed", "item_id", "gold_label", "doi", "gold_doi_status", "gold_metadata_match"]
+        for m in METHODS:
+            cols += [f"{m}_doi_status", f"{m}_metadata_match", f"{m}_verdict"]
         w = csv.DictWriter(fh, fieldnames=cols)
         w.writeheader()
         w.writerows(per_item)
 
     print(f"n={len(per_item)} 已导出 results/metrics_summary.json / .csv / per_item_results.csv")
     print("\n=== 指标汇总 ===")
-    print(f"{'任务':<16}{'方法':<10}{'P':>7}{'R':>7}{'F1':>7}{'Spec':>7}")
+    print(f"{'任务':<16}{'方法':<14}{'P':>7}{'R':>7}{'F1':>7}{'Spec':>7}")
     for k in TASKS:
-        for m in ("baseline", "verifier"):
+        for m in METHODS:
             d = metrics[m][k]
-            print(f"{TASK_CN[k]:<16}{m:<10}{d['precision']:>7.3f}{d['recall']:>7.3f}"
+            print(f"{TASK_CN[k]:<16}{METHOD_CN[m]:<14}{d['precision']:>7.3f}{d['recall']:>7.3f}"
                   f"{d['f1']:>7.3f}{d['specificity']:>7.3f}")
 
 

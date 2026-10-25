@@ -1,0 +1,37 @@
+{
+  "case": "obscure_retraction_limited_task",
+  "agent": "verifier",
+  "run_id": "673334de-5ebf-4ee5-b8a1-49783cb609a4",
+  "status": "completed",
+  "n_tool_calls": 3,
+  "tool_names": [
+    "execute_command",
+    "execute_command",
+    "execute_command"
+  ],
+  "final_text": "The Crossref title for reference 1 explicitly ends with \"- RETRACTED\", which is a clear retraction marker per my C4 criteria. The citation omits this retraction status. This is a confirm-level issue.\n\nLet me compile the final report.\n\n## 参考文献核查报告\n\n### 核查过程\n- 通过 `curl` 实际请求 Crossref API:\n  - Ref 1: `https://api.crossref.org/works/10.1017/s0007485326101060` → **HTTP 200**\n  - Ref 2: `https://api.crossref.org/works/10.1017/s0007485316000481` → **HTTP 200**\n- 逐字段比对 Crossref 返回的真实记录与引用题录。\n\n---\n\n### 1) 参考文献核查表\n\n| 序号 | 原始引用 | DOI状态 | 元数据匹配 | 判定 | 置信度 | 证据URL |\n|---|---|---|---|---|---|---|\n| 1 | Idrees MA, Dong X, Zhang X, Qin D. ... Bulletin of Entomological Research. 2026;116(5):647-655. doi:10.1017/s0007485326101060 | valid (HTTP 200) | 年份/作者/期刊/卷/期/页码均匹配；**但标题带 \"- RETRACTED\" 撤稿标记，引用未披露撤稿状态** | **confirm** | 1.0 | https://api.crossref.org/works/10.1017/s0007485326101060 |\n| 2 | Cárdenas AM, Gallardo P, Moyano L, Presa JJ. ... Bulletin of Entomological Research. 2016;107(1):21-31. doi:10.1017/s0007485316000481 | valid (HTTP 200) | 全部字段匹配，无撤稿标记 | **pass** | 1.0 | https://api.crossref.org/works/10.1017/s0007485316000481 |\n\n---\n\n### 逐条详细说明\n\n**[1] Idrees et al. 2026 — CONFIRM（撤稿未披露）**\n- DOI 有效可解析（HTTP 200），非幻觉引用。\n- 题录字段（年份 2026、作者 Idrees/Dong/Zhang/Qin、期刊 Bulletin of Entomological Research、卷 116、期 5、页码 647-655）与 Crossref 记录**完全一致**。\n- **关键问题（C4 撤稿状态）**：Crossref 返回的官方标题为 *\"Potential global distribution of Pochazia shantungensis ... based on an optimised MaxEnt model **- RETRACTED**\"*，标题明确带有 `- RETRACTED` 后缀，即该文已被撤稿。引用中未披露任何撤稿状态。虽然 Crossref 的 `update-to`/`relation` 字段未返回指向撤稿通知的链接，但标题中的 RETRACTED 标记本身已构成明确的撤稿证据。**引用已撤稿论文且未披露，属必须报告的错误。**\n\n**[2] Cárdenas et al. 2016 — PASS**\n- DOI 有效可解析（HTTP 200）。\n- 标题、年份（2016）、作者（Cárdenas/Gallardo/Moyano/Presa）、期刊、卷 107、期 1、页码 21-31 与 Crossref 记录**全部一致**。\n- 标题无任何撤稿标记，`relation`/`update-to` 字段为空，未发现撤稿证据。通过。\n\n---\n\n### 总体风险评级：**中**\n\n最关键的 1 个问题：\n1. **Ref [1]（Idrees et al. 2026）为已撤稿论文**，Crossref 官方标题带 \"- RETRACTED\" 后缀，引用未披露撤稿状态。引用已撤稿文献且未加说明，可能误导读者。\n\n---\n\n```json\n{\"references\":[{\"item_id\":1,\"doi\":\"10.1017/s0007485326101060\",\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"confirm\",\"issue\":\"Crossref 官方标题为 '...optimised MaxEnt model - RETRACTED'，该文已被撤稿，引用未披露撤稿状态（C4）。其余题录字段（年份2026、作者、期刊、卷116期5、页码647-655）均匹配。\",\"confidence\":1.0,\"evidence_url\":\"https://api.crossref.org/works/10.1017/s0007485326101060\"},{\"item_id\":2,\"doi\":\"10.1017/s0007485316000481\",\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"issue\":\"全部题录字段（标题、年份2016、作者、期刊、卷107期1、页码21-31）与 Crossref 记录一致，无撤稿标记。\",\"confidence\":1.0,\"evidence_url\":\"https://api.crossref.org/works/10.1017/s0007485316000481\"}]}\n```",
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi": "10.1017/s0007485326101060",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "confirm",
+        "issue": "Crossref 官方标题为 '...optimised MaxEnt model - RETRACTED'，该文已被撤稿，引用未披露撤稿状态（C4）。其余题录字段（年份2026、作者、期刊、卷116期5、页码647-655）均匹配。",
+        "confidence": 1.0,
+        "evidence_url": "https://api.crossref.org/works/10.1017/s0007485326101060"
+      },
+      {
+        "item_id": 2,
+        "doi": "10.1017/s0007485316000481",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "issue": "全部题录字段（标题、年份2016、作者、期刊、卷107期1、页码21-31）与 Crossref 记录一致，无撤稿标记。",
+        "confidence": 1.0,
+        "evidence_url": "https://api.crossref.org/works/10.1017/s0007485316000481"
+      }
+    ]
+  }
+}

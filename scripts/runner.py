@@ -28,6 +28,7 @@ def parse_events(events: list[dict[str, Any]]) -> dict[str, Any]:
     assistant_parts: list[str] = []
     tool_calls: list[dict[str, Any]] = []
     final_text: str | None = None
+    full_response_texts: list[str] = []
     usage: dict[str, Any] = {}
     status_seen: list[str] = []
 
@@ -54,13 +55,17 @@ def parse_events(events: list[dict[str, Any]]) -> dict[str, Any]:
             msg = choice.get("message", {}) or {}
             if isinstance(msg.get("content"), str) and msg["content"].strip():
                 final_text = msg["content"]  # 以最后一个完整消息为准
+                full_response_texts.append(msg["content"])
             if c.get("usage"):
                 usage = c["usage"]
 
     if final_text is None:
         final_text = "".join(assistant_parts)
 
-    json_result = extract_json(final_text)
+    # 普通联网 Agent 可能在工具调用前的某一轮输出最终 JSON、最后一轮只留总结；
+    # 因此在所有完整响应拼接文本中提取最后一个 JSON 代码块，而不是只看最后一条。
+    search_text = "\n\n".join(full_response_texts) if full_response_texts else final_text
+    json_result = extract_json(search_text)
     return {
         "final_text": final_text,
         "json_result": json_result,

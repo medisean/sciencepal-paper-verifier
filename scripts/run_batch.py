@@ -35,13 +35,37 @@ def _tool_body(t: dict) -> str:
 def audit_run(result: dict) -> dict:
     """根据工具事件判定该 run 是否实际访问了外部数据。
 
-    关键：execute_command 实际返回 HTTP 200/404 即视为联网成功；
-    工具被平台拒绝（blocked/tool_unavailable/permission）绝不会出现 HTTP 状态。"""
+    联网证据（任一即可）：
+    - execute_command / watch_task 中出现对学术 API 的 curl 命令（crossref/doi.org/pubmed）；
+    - 工具输出中出现 "http 200/http 404" 或 Crossref 状态体。
+    工具被平台拒绝（blocked/tool_unavailable/permission）记为 blocked。
+    离线 baseline 没有 execute_command 输出，以下规则不会误判。"""
+    import re
+    curl_re = re.compile(r"curl[^\n]{0,240}https?://", re.IGNORECASE)
+    api_re = re.compile(
+        r"https?://(?:api\.crossref\.org|(?:dx\.)?doi\.org|crossref\.org|"
+        r"eutils\.ncbi\.nlm\.nih\.gov|(?:pubmed|www)\.ncbi\.nlm\.nih\.gov)",
+        re.IGNORECASE)
+    doi_re = re.compile(r"10\.\d{3,9}/")
+    status_re = re.compile(r"HTTP\s*(200|302|404)\b", re.IGNORECASE)
+    bare_status_re = re.compile(r"===\s*10\.\d{3,9}/[^\n]*\n\s*(200|302|404)\b", re.IGNORECASE)
+    crossref_field_re = re.compile(
+        r"(resource not found|title:\s*\[|container:\s*\[|author[s]?:\s*\[|\"status\"\s*:\s*\"ok\")",
+        re.IGNORECASE)
     net_hits, blocked = 0, 0
     for t in result.get("tool_calls", []):
         body = _tool_body(t)
         low = body.lower()
+        has_doi = bool(doi_re.search(body))
+        got_external = (
+            curl_re.search(body) or api_re.search(body)
+            or (status_re.search(body) and has_doi)
+            or (bare_status_re.search(body))
+            or (crossref_field_re.search(body) and has_doi)
+        )
         if "http 200" in low or "http 404" in low or '"status":"ok"' in low.replace(" ", ""):
+            net_hits += 1
+        elif got_external:
             net_hits += 1
         if "tool_unavailable" in low or '"runtime": "blocked"' in low or '"runtime":"blocked"' in low \
                 or '"reason_code": "permission"' in low or '"reason_code":"permission"' in low:

@@ -21,20 +21,23 @@
 
 > 打开后点“跳到结尾”可直接看最终结论，点“开始播放”可按真实时间回放全过程。
 
-## 三、量化结果（48 条金标准测试集，未参与调参）
+## 三、量化结果（48 条金标准测试集，三方对照，未参与调参）
 
-- 核查 Agent：幻觉 DOI / 元数据 / 任意问题三项 **F1 = 1.000，零误报、零漏报**；
-- 纯模型离线基线（经 SSE 审计确认零外部数据）：幻觉 DOI F1 = 0.621、元数据 F1 = 0.824，且 23 次误报。
-- 图表：`results/figures/evaluation_comparison.html`；逐条：`results/per_item_results.csv`。
+- 离线基线（经 SSE 审计确认零外部数据）：幻觉 DOI F1 = 0.621、元数据 F1 = 0.824，合计 23 次误报；
+- 普通联网 Agent（工具全开、能联网，但不教专家流程）：三项 F1 = 1.000，零误报、零漏报；
+- 专家核查工作流（本作品）：三项 F1 = 1.000，零误报、零漏报。
+- 结论：**决定性闸门是强制联网（F1 0.62→1.0）；强模型上专家流程无额外 F1 增益，价值在确定性、效率与可审计**（工具调用更少、无长期记忆污染、输出 schema 稳定），已如实写进技术报告。
+- 图表：`results/metrics_summary.csv`、`results/process_reliability.json`；逐条：`results/per_item_results.csv`；Layer-2 同输入对照：`results/layer2/compare/`。
 
 ## 四、随附材料（代码仓库）
 
 - `README.md`：项目说明与一键复现
 - `results/TECHNICAL_REPORT.md`：技术报告（方法、对照、审计、结果、局限）
-- `results/layer2/LAYER2_CASES.md`：撤稿 + 方法学两个端到端案例
-- `results/audit_report.md`：8 个 run 的离线/联网 SSE 审计证据
-- `results/metrics_summary.{json,csv}`、`results/per_item_results.csv`：指标与逐条结果
-- `scripts/`：评测集生成、跑批、评分、审计、Layer-2 案例等全部可复现脚本
+- `results/layer2/LAYER2_CASES.md`：撤稿（含 2026 冷门撤稿）+ 方法学案例与同输入对照
+- `results/layer2/compare/`：普通联网 Agent 与专家工作流的同输入 Layer-2 结果
+- `results/audit_report.md`：离线/联网 SSE 审计证据
+- `results/metrics_summary.{json,csv}`、`results/per_item_results.csv`、`results/process_reliability.json`：三组指标、逐条结果与过程可靠性
+- `scripts/`：评测集生成、三方跑批（run_batch / run_naive）、评分、审计、Layer-2 同输入对照等全部可复现脚本
 - `data/eval/`：Layer-1 金标准评测集
 - 本仓库已公开（GitHub，.env 与密钥已通过 .gitignore 排除，远程确认无泄露）：
   **仓库地址：https://github.com/medisean/sciencepal-paper-verifier**

@@ -49,43 +49,47 @@ m = json.loads((ROOT / "results" / "metrics_summary.json").read_text(encoding="u
 tasks = ["幻觉 DOI", "题录错配", "任意问题"]
 keys = ["hallucinated_doi_detection", "metadata_error_detection", "any_issue_detection"]
 vf1 = [m["verifier"][k]["f1"] for k in keys]
+nf1 = [m["naive"][k]["f1"] for k in keys]
 bf1 = [m["baseline"][k]["f1"] for k in keys]
 vfp = [m["verifier"][k]["fp"] for k in keys]
+nfp = [m["naive"][k]["fp"] for k in keys]
 bfp = [m["baseline"][k]["fp"] for k in keys]
 bfn = [m["baseline"][k]["fn"] for k in keys]
 
-# ---------- 图 1：F1 对比 ----------
+# ---------- 图 1：F1 对比（三方） ----------
 fig, ax = plt.subplots(figsize=(6.2, 4.1), dpi=200)
 import numpy as np
-x = np.arange(len(tasks)); w = 0.36
-b1 = ax.bar(x - w/2, vf1, w, label="科研论文核查员（联网核查）", color="#2E8B57")
-b2 = ax.bar(x + w/2, bf1, w, label="纯模型离线基线（SSE 审计零联网）", color="#C0392B")
-ax.set_ylim(0, 1.12); ax.set_ylabel("F1 分数", fontsize=12)
+x = np.arange(len(tasks)); w = 0.26
+b0 = ax.bar(x - w, bf1, w, label="离线基线（审计零联网）", color="#C0392B")
+b2 = ax.bar(x, nf1, w, label="普通联网 Agent（无专家流程）", color="#5B8DB8")
+b1 = ax.bar(x + w, vf1, w, label="专家核查工作流（本作品）", color="#2E8B57")
+ax.set_ylim(0, 1.18); ax.set_ylabel("F1 分数", fontsize=12)
 ax.set_xticks(x); ax.set_xticklabels(tasks, fontsize=12)
-ax.set_title("48 条金标准测试集 · 三类检测任务 F1 对比", fontsize=13, fontweight="bold", color="#1B3A6B")
-ax.legend(fontsize=10, loc="lower left", framealpha=0.9)
+ax.set_title("48 条金标准 · 三类检测 F1：联网是闸门（0.62→1.0）", fontsize=12.5, fontweight="bold", color="#1B3A6B")
+ax.legend(fontsize=9, loc="lower left", framealpha=0.9)
 ax.spines[["top", "right"]].set_visible(False)
 ax.yaxis.grid(True, ls="--", alpha=0.35); ax.set_axisbelow(True)
-for bars in (b1, b2):
+for bars, dy in ((b0, 0.015), (b2, 0.015), (b1, 0.06)):
     for r in bars:
-        ax.annotate(f"{r.get_height():.2f}", (r.get_x()+r.get_width()/2, r.get_height()+0.015),
-                    ha="center", va="bottom", fontsize=11, fontweight="bold")
+        ax.annotate(f"{r.get_height():.2f}", (r.get_x()+r.get_width()/2, r.get_height()+dy),
+                    ha="center", va="bottom", fontsize=10, fontweight="bold")
 plt.tight_layout()
 fig1 = FIG / "ppt_f1_compare.png"; fig.savefig(fig1, bbox_inches="tight"); plt.close(fig)
 
-# ---------- 图 2：误报/漏报对比 ----------
+# ---------- 图 2：误报/漏报对比（三方） ----------
 fig, ax = plt.subplots(figsize=(6.2, 3.4), dpi=200)
-ax.bar(x - w/2, vfp, w, label="核查员 误报", color="#2E8B57")
-ax.bar(x + w/2, bfp, w, label="基线 误报(FP)", color="#C0392B")
-ax.bar(x + w/2, bfn, w, bottom=bfp, label="基线 漏报(FN)", color="#E0A030")
+ax.bar(x - w, bfp, w, label="离线 误报(FP)", color="#C0392B")
+ax.bar(x - w, bfn, w, bottom=bfp, label="离线 漏报(FN)", color="#E0A030")
+ax.bar(x, nfp, w, label="普通联网 误报", color="#5B8DB8")
+ax.bar(x + w, vfp, w, label="专家工作流 误报", color="#2E8B57")
 ax.set_xticks(x); ax.set_xticklabels(tasks, fontsize=12)
 ax.set_ylabel("错误条数", fontsize=12); ax.set_ylim(0, 12)
-ax.set_title("错误分解：核查员零误报零漏报；基线共 23 次误报", fontsize=13, fontweight="bold", color="#1B3A6B")
-ax.legend(fontsize=10, loc="upper right", framealpha=0.9)
+ax.set_title("错误分解：两个联网方法均零误报；离线基线共 23 次误报", fontsize=12, fontweight="bold", color="#1B3A6B")
+ax.legend(fontsize=8.5, loc="upper right", framealpha=0.9)
 ax.spines[["top", "right"]].set_visible(False)
 ax.yaxis.grid(True, ls="--", alpha=0.35); ax.set_axisbelow(True)
 for i, (fp, fn) in enumerate(zip(bfp, bfn)):
-    ax.annotate(f"FP{fp}/FN{fn}", (i+w/2, fp+fn+0.2), ha="center", fontsize=10, color="#7a2a20")
+    ax.annotate(f"FP{fp}/FN{fn}", (i-w, fp+fn+0.2), ha="center", fontsize=9, color="#7a2a20")
 plt.tight_layout()
 fig2 = FIG / "ppt_errors.png"; fig.savefig(fig2, bbox_inches="tight"); plt.close(fig)
 
@@ -272,18 +276,20 @@ text(s, Inches(7.06), Inches(5.2), Inches(5.45), Inches(1.3),
 
 # ---------- 第 4 页：结果 ----------
 s = prs.slides.add_slide(BLANK)
-header(s, 4, "结果：48 条金标准测试，零误报、零漏报",
-       "独立测试集（未参与调参），离线对照经 SSE 审计确认公平")
-s.shapes.add_picture(str(fig1), Inches(0.55), Inches(2.05), width=Inches(5.55))
-# 表格
-rows = [["检测任务", "核查员 F1", "基线 F1", "核查员误报"],
-        ["幻觉 DOI", "1.00", "0.62", "0"],
-        ["题录错配", "1.00", "0.82", "0"],
-        ["任意问题", "1.00", "0.82", "0"]]
-tl, tt, tw_, th = Inches(7.35), Inches(2.15), Inches(5.4), Inches(2.5)
+header(s, 4, "结果：联网是决定性闸门（F1 0.62→1.0），专家流程固化确定性",
+       "48 条独立测试集；三方对照（离线 / 普通联网 / 专家工作流），SSE 审计确认公平")
+s.shapes.add_picture(str(fig1), Inches(0.55), Inches(2.0), width=Inches(5.5))
+# 表格（三方 F1）
+rows = [["检测任务", "离线基线", "普通联网", "专家工作流"],
+        ["幻觉 DOI", "0.62", "1.00", "1.00"],
+        ["题录错配", "0.82", "1.00", "1.00"],
+        ["任意问题", "0.82", "1.00", "1.00"]]
+tl, tt, tw_, th = Inches(7.35), Inches(2.1), Inches(5.4), Inches(2.5)
+COLW = [Inches(1.62), Inches(1.26), Inches(1.26), Inches(1.26)]
+COLR = [None, RED, BLUE, GREEN]
 tbl = s.shapes.add_table(4, 4, tl, tt, tw_, th).table
-tbl.columns[0].width = Inches(1.9)
-for c in range(1,4): tbl.columns[c].width = Inches(1.166)
+for c in range(4):
+    tbl.columns[c].width = COLW[c]
 for r in range(4):
     for c in range(4):
         cell = tbl.cell(r, c)
@@ -291,31 +297,28 @@ for r in range(4):
         para = cell.text_frame.paragraphs[0]
         para.alignment = PP_ALIGN.CENTER if c else PP_ALIGN.LEFT
         run = para.runs[0]
-        run.font.size = Pt(13 if r==0 else 14)
+        run.font.size = Pt(12.5 if r == 0 else 14)
         run.font.name = FONT; _set_ea(run)
-        run.font.bold = (r == 0)
-        run.font.color.rgb = WHITE if r == 0 else DARK
-        if c == 1 and r > 0:
-            run.font.color.rgb = GREEN; run.font.bold = True
-        if c == 3 and r > 0:
-            run.font.color.rgb = GREEN; run.font.bold = True
+        run.font.bold = (r == 0 or c > 0)
+        run.font.color.rgb = WHITE if r == 0 else (COLR[c] if c > 0 else DARK)
         cell.fill.solid()
         cell.fill.fore_color.rgb = NAVY if r == 0 else (LIGHT if r % 2 else WHITE)
         cell.vertical_anchor = MSO_ANCHOR.MIDDLE
 # 右侧结论框
-box(s, Inches(7.35), Inches(5.0), Inches(5.4), Inches(0.82), fill=RGBColor(0xEC,0xF4,0xEF), rounded=True)
-text(s, Inches(7.6), Inches(5.0), Inches(5.0), Inches(0.82),
-     [[("核查员：0 误报 / 0 漏报", 14, True, GREEN)],
-      [("离线基线：合计 23 次误报、7 次漏报", 12.5, True, RED)]],
-     anchor=MSO_ANCHOR.MIDDLE, space_after=2, line_spacing=1.1)
+box(s, Inches(7.35), Inches(4.95), Inches(5.4), Inches(1.18), fill=RGBColor(0xEC,0xF4,0xEF), rounded=True)
+text(s, Inches(7.6), Inches(4.98), Inches(5.0), Inches(1.14),
+     [[("两个联网方法均 0 误报 / 0 漏报", 13.5, True, GREEN)],
+      [("离线基线：合计 23 次误报、7 次漏报", 12, True, RED)],
+      [("强模型上专家流程无额外 F1 增益，价值在确定性", 11, True, NAVY)]],
+     anchor=MSO_ANCHOR.MIDDLE, space_after=2, line_spacing=1.12)
 # 方法学严谨性
-box(s, Inches(0.55), Inches(6.02), Inches(12.2), Inches(1.18), fill=LIGHT, rounded=True)
-text(s, Inches(0.8), Inches(6.12), Inches(12.0), Inches(0.35),
-     [[("评测严谨性", 13.5, True, NAVY)]])
-text(s, Inches(0.8), Inches(6.46), Inches(11.9), Inches(0.7),
-     [[("· 金标准由 Crossref 实时构造（valid / not_found / mismatch）；伪造 DOI 用过去年份、同格式仅篡改后缀并实时验证 404，避免靠未来年份推断。", 11.5, False, DARK)],
-      [("· dev / test 分离，48 条 test 未参与调参；SSE 逐条重放审计证明离线基线全程零联网（工具请求被 blocked），对照公平。", 11.5, False, DARK)]],
-     line_spacing=1.12, space_after=2)
+box(s, Inches(0.55), Inches(6.35), Inches(12.2), Inches(1.0), fill=LIGHT, rounded=True)
+text(s, Inches(0.8), Inches(6.42), Inches(12.0), Inches(0.3),
+     [[("对照严谨性与诚实结论", 13, True, NAVY)]])
+text(s, Inches(0.8), Inches(6.72), Inches(11.9), Inches(0.6),
+     [[("· 增设工具全开、能联网但不给专家流程的普通 Agent 作对照，防止稻草人基线；撤稿、统计复算、2026 冷门撤稿限定任务同输入对照，两个联网 Agent 都能做对。", 11, False, DARK)],
+      [("· 专家流程差异在过程：平均工具调用更少、无长期记忆污染、JSON 稳定可解析；全流程留证据、可审计。局限：仅单模型、n=48，弱模型增益待验。", 11, False, DARK)]],
+     line_spacing=1.1, space_after=2)
 
 # ---------- 第 5 页：交付与演示 ----------
 s = prs.slides.add_slide(BLANK)
