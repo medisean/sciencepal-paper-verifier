@@ -17,3 +17,6 @@ output/*
 # macOS 元数据
 ._*
 .DS_Store
+
+# 视频中间产物（由 build_video.py 生成，最终 mp4 保留）
+assets/video_frames/
