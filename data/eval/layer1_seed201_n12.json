@@ -1,0 +1,131 @@
+{
+  "version": "v2",
+  "layer": "layer1_doi_metadata",
+  "seed": 201,
+  "n": 12,
+  "source": "Crossref REST API",
+  "created_for": "SciencePal AI4Science Hackathon 2026",
+  "items": [
+    {
+      "item_id": 1,
+      "label": "valid",
+      "doi": "10.1016/j.compmedimag.2020.101820",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "He Y., Zhao H., Wong STC. (2021). Deep learning powers cancer diagnosis in digital pathology. Computerized Medical Imaging and Graphics, 88, 101820. doi: 10.1016/j.compmedimag.2020.101820",
+      "year": 2021
+    },
+    {
+      "item_id": 2,
+      "label": "mismatch",
+      "doi": "10.1007/s10994-018-5747-8",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "detail": "年份 2018→2016",
+      "citation": "Berrar D., Lopes P., Dubitzky W. (2016). Incorporating domain knowledge in machine learning for soccer outcome prediction. Machine Learning, 108, 1, 97-126. doi: 10.1007/s10994-018-5747-8",
+      "real_year": 2018
+    },
+    {
+      "item_id": 3,
+      "label": "mismatch",
+      "doi": "10.14311/nnw.2018.28.015",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "author_title",
+      "detail": "标题/作者被改",
+      "citation": "Zaorálek L., Platoš J., Snášel V. (2018). PATIENT-ADAPTED AND INTER-PATIENT ECG CLASSIFICATION USING NEURAL NETWORK AND?. Neural Network World, 28, 3, 241-254. doi: 10.14311/nnw.2018.28.015",
+      "real_year": 2018
+    },
+    {
+      "item_id": 4,
+      "label": "valid",
+      "doi": "10.21275/sr23048115831",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Sai Swaroop Reddy V. (2023). Cybersecurity Threat Prediction Using Machine Learning. International Journal of Science and Research (IJSR), 12, 4, 1972-1976. doi: 10.21275/sr23048115831",
+      "year": 2023
+    },
+    {
+      "item_id": 5,
+      "label": "valid",
+      "doi": "10.1093/eurheartj/ehad847",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Serruys PW., Kageyama S., Onuma Y. (2024). Cardiology’s new crystal ball: machine learning for outcome prediction. European Heart Journal, 45, 8, 610-612. doi: 10.1093/eurheartj/ehad847",
+      "year": 2024
+    },
+    {
+      "item_id": 6,
+      "label": "valid",
+      "doi": "10.3390/s20123539",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Lo C., Lee C., Huang W. (2020). Prognosis of Bearing and Gear Wears Using Convolutional Neural Network with Hybrid Loss Function. Sensors, 20, 12, 3539. doi: 10.3390/s20123539",
+      "year": 2020
+    },
+    {
+      "item_id": 7,
+      "label": "mismatch",
+      "doi": "10.11648/j.mlr.20230801.11",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "journal",
+      "detail": "期刊名被改",
+      "citation": "Wu Z., He H. (2023). Traditional Machine Learning Models for Building Energy Performance Prediction: A Comparative Research. The Journal of Clinical Research Reports. doi: 10.11648/j.mlr.20230801.11",
+      "real_year": 2023
+    },
+    {
+      "item_id": 8,
+      "label": "not_found",
+      "doi": "10.30871/jaic.v9i6.54722",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Simanjuntak MS., Robet R., Hoki L. (2025). A Comparative Study of Machine Learning and Deep Learning Models for Heart Disease Classification. Journal of Applied Informatics and Computing, 9, 6, 3405-3409. doi: 10.30871/jaic.v9i6.54722",
+      "real_doi": "10.30871/jaic.v9i6.11546",
+      "year": 2025
+    },
+    {
+      "item_id": 9,
+      "label": "not_found",
+      "doi": "10.3390/audiolres15116996",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Ollermann R., Strodthoff N., Radeloff A., Böscke R. (2025). Machine Learning Versus Simple Clinical Models for Cochlear Implant Outcome Prediction. Audiology Research, 15, 6, 161. doi: 10.3390/audiolres15116996",
+      "real_doi": "10.3390/audiolres15060161",
+      "year": 2025
+    },
+    {
+      "item_id": 10,
+      "label": "valid",
+      "doi": "10.1016/j.cplett.2024.141663",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Sankar Borah G., Nagamani S. (2024). Development of a robust Machine learning model for Ames test outcome prediction. Chemical Physics Letters, 856, 141663. doi: 10.1016/j.cplett.2024.141663",
+      "year": 2024
+    },
+    {
+      "item_id": 11,
+      "label": "valid",
+      "doi": "10.3390/jcm13195917",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Rout M., Vaughan A., Sidorov EV., Sanghera DK. (2024). Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion. Journal of Clinical Medicine, 13, 19, 5917. doi: 10.3390/jcm13195917",
+      "year": 2024
+    },
+    {
+      "item_id": 12,
+      "label": "not_found",
+      "doi": "10.1016/j.media.2020.108909",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Wu X., Chen C., Zhong M., Wang J., et al. (2021). COVID-AL: The diagnosis of COVID-19 with deep active learning. Medical Image Analysis, 68, 101913. doi: 10.1016/j.media.2020.108909",
+      "real_doi": "10.1016/j.media.2020.101913",
+      "year": 2021
+    }
+  ],
+  "prompt": "下面是某生物医学论文稿件的参考文献列表。请逐条核查：① 每条的 DOI 是否真实存在（必须在沙箱中实际联网调用 Crossref，记录 HTTP 状态）；② 题录信息（作者、年份、标题、期刊、卷期页码）是否与该 DOI 的真实元数据逐字段一致（任一字段不一致即 metadata_match=false）。\n\n[1] He Y., Zhao H., Wong STC. (2021). Deep learning powers cancer diagnosis in digital pathology. Computerized Medical Imaging and Graphics, 88, 101820. doi: 10.1016/j.compmedimag.2020.101820\n[2] Berrar D., Lopes P., Dubitzky W. (2016). Incorporating domain knowledge in machine learning for soccer outcome prediction. Machine Learning, 108, 1, 97-126. doi: 10.1007/s10994-018-5747-8\n[3] Zaorálek L., Platoš J., Snášel V. (2018). PATIENT-ADAPTED AND INTER-PATIENT ECG CLASSIFICATION USING NEURAL NETWORK AND?. Neural Network World, 28, 3, 241-254. doi: 10.14311/nnw.2018.28.015\n[4] Sai Swaroop Reddy V. (2023). Cybersecurity Threat Prediction Using Machine Learning. International Journal of Science and Research (IJSR), 12, 4, 1972-1976. doi: 10.21275/sr23048115831\n[5] Serruys PW., Kageyama S., Onuma Y. (2024). Cardiology’s new crystal ball: machine learning for outcome prediction. European Heart Journal, 45, 8, 610-612. doi: 10.1093/eurheartj/ehad847\n[6] Lo C., Lee C., Huang W. (2020). Prognosis of Bearing and Gear Wears Using Convolutional Neural Network with Hybrid Loss Function. Sensors, 20, 12, 3539. doi: 10.3390/s20123539\n[7] Wu Z., He H. (2023). Traditional Machine Learning Models for Building Energy Performance Prediction: A Comparative Research. The Journal of Clinical Research Reports. doi: 10.11648/j.mlr.20230801.11\n[8] Simanjuntak MS., Robet R., Hoki L. (2025). A Comparative Study of Machine Learning and Deep Learning Models for Heart Disease Classification. Journal of Applied Informatics and Computing, 9, 6, 3405-3409. doi: 10.30871/jaic.v9i6.54722\n[9] Ollermann R., Strodthoff N., Radeloff A., Böscke R. (2025). Machine Learning Versus Simple Clinical Models for Cochlear Implant Outcome Prediction. Audiology Research, 15, 6, 161. doi: 10.3390/audiolres15116996\n[10] Sankar Borah G., Nagamani S. (2024). Development of a robust Machine learning model for Ames test outcome prediction. Chemical Physics Letters, 856, 141663. doi: 10.1016/j.cplett.2024.141663\n[11] Rout M., Vaughan A., Sidorov EV., Sanghera DK. (2024). Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion. Journal of Clinical Medicine, 13, 19, 5917. doi: 10.3390/jcm13195917\n[12] Wu X., Chen C., Zhong M., Wang J., et al. (2021). COVID-AL: The diagnosis of COVID-19 with deep active learning. Medical Image Analysis, 68, 101913. doi: 10.1016/j.media.2020.108909\n\n只输出一个 ```json 代码块：{\"references\":[{\"item_id\":1,\"doi_status\":\"valid|not_found|no_doi\",\"metadata_match\":true,\"verdict\":\"confirm|suspect|pass\",\"confidence\":0.0,\"evidence_url\":\"\",\"issue\":\"\"}]}。正常用 pass，DOI 不存在或题录有误用 confirm，不确定用 suspect。"
+}

@@ -1,0 +1,31 @@
+{
+  "case": "retraction_detection",
+  "run_id": "259b2c5c-30ae-4c1f-ab8a-c48ab7433bf2",
+  "status": "completed",
+  "n_tool_calls": 4,
+  "final_text": "The Crossref record for reference 1 confirms the retraction via the title prefix \"RETRACTED ARTICLE:\". The retraction notice DOI for this paper is 10.1038/nature13533 (the official Nature retraction). The Crossref title prefix is sufficient and authoritative evidence of retraction.\n\nI have all the data needed. Let me compile the verification report.\n\n## 参考文献核查报告\n\n### 核查方法\n- 通过 Crossref API (`https://api.crossref.org/works/{DOI}`) 实际联网查询两条 DOI,均返回 **HTTP 200**。\n- 逐字段比对题录(标题、作者、年份、期刊、卷/期/页码)。\n- 撤稿判定依据 Crossref 返回的标题前缀及 relation/update 字段。\n\n---\n\n### [1] Obokata H, et al. Nature 2014;505(7485):641-647. doi:10.1038/nature12968\n\n| 核查项 | 结果 |\n|---|---|\n| DOI 状态 | **valid**(HTTP 200) |\n| 标题 | Crossref 返回 **\"RETRACTED ARTICLE: Stimulus-triggered fate conversion of somatic cells into pluripotency\"** |\n| 作者 | Obokata Haruko, Wakayama Teruhiko, Sasai Yoshiki, ... — 与引用一致 |\n| 年份 | 2014(issued 2014-01-29)— 与引用一致 |\n| 期刊 | Nature — 一致 |\n| 卷/期/页 | 505(7485):641-647 — 一致 |\n| **撤稿状态** | **已撤稿(RETRACTED)**。Crossref 标题以 \"RETRACTED ARTICLE:\" 开头,符合撤稿判定标准。此为著名的 STAP 万能细胞论文,2014 年被 Nature 撤稿。 |\n\n**判定:confirm(撤稿)**。题录元数据本身与引用一致,但该文献已被正式撤稿,引用其作为证据存在严重问题。\n\n---\n\n### [2] LeCun Y, Bengio Y, Hinton G. Nature 2015;521(7553):436-444. doi:10.1038/nature14539\n\n| 核查项 | 结果 |\n|---|---|\n| DOI 状态 | **valid**(HTTP 200) |\n| 标题 | \"Deep learning\" — 无撤稿标记 |\n| 作者 | LeCun Yann, Bengio Yoshua, Hinton Geoffrey — 与引用一致 |\n| 年份 | 2015(issued 2015-05-27)— 与引用一致 |\n| 期刊 | Nature — 一致 |\n| 卷/期/页 | 521(7553):436-444 — 一致 |\n| **撤稿状态** | **未撤稿**。relation 字段仅含 has-review,无撤稿通知;标题无 RETRACTED 前缀。 |\n\n**判定:ok(通过)**。DOI 有效、题录完全匹配、未撤稿。\n\n---\n\n### 证据 URL\n- [1] Crossref 记录:https://api.crossref.org/works/10.1038/nature12968(标题含 \"RETRACTED ARTICLE:\")\n- [2] Crossref 记录:https://api.crossref.org/works/10.1038/nature14539\n\n---\n\n### 关键发现\n**文献 [1](Obokata STAP 论文)已被撤稿**,这是本次核查最重要的发现。任何引用该文献作为\"体细胞重编程为多能性\"证据的论文,其论断基础已失效,必须替换或标注撤稿状态。\n\n```json\n{\"references\":[{\"item_id\":1,\"doi\":\"10.1038/nature12968\",\"doi_status\":\"valid\",\"metadata_match\":true,\"retracted\":true,\"verdict\":\"confirm\",\"evidence_url\":\"https://api.crossref.org/works/10.1038/nature12968\",\"issue\":\"Crossref 标题以 'RETRACTED ARTICLE:' 开头,该 STAP 论文已被 Nature 正式撤稿(2014)。题录元数据与引用一致,但文献已撤稿,不得作为有效证据引用。\"},{\"item_id\":2,\"doi\":\"10.1038/nature14539\",\"doi_status\":\"valid\",\"metadata_match\":true,\"retracted\":false,\"verdict\":\"ok\",\"evidence_url\":\"https://api.crossref.org/works/10.1038/nature14539\",\"issue\":\"DOI 有效,题录(标题/作者/年份/期刊/卷期页)与引用完全一致,未撤稿。\"}]}\n```",
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi": "10.1038/nature12968",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "retracted": true,
+        "verdict": "confirm",
+        "evidence_url": "https://api.crossref.org/works/10.1038/nature12968",
+        "issue": "Crossref 标题以 'RETRACTED ARTICLE:' 开头,该 STAP 论文已被 Nature 正式撤稿(2014)。题录元数据与引用一致,但文献已撤稿,不得作为有效证据引用。"
+      },
+      {
+        "item_id": 2,
+        "doi": "10.1038/nature14539",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "retracted": false,
+        "verdict": "ok",
+        "evidence_url": "https://api.crossref.org/works/10.1038/nature14539",
+        "issue": "DOI 有效,题录(标题/作者/年份/期刊/卷期页)与引用完全一致,未撤稿。"
+      }
+    ]
+  }
+}

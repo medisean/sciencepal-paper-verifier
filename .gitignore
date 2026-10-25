@@ -1,0 +1,19 @@
+# 密钥与本地环境
+.env
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 数据与产出（体量大，不入库）
+data/papers/*
+data/pdf/*
+output/*
+!**/.gitkeep
+
+# macOS 元数据
+._*
+.DS_Store

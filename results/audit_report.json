@@ -1,0 +1,467 @@
+[
+  {
+    "seed": 7,
+    "tag": "verifier",
+    "run_id": "cb659537-5dd3-4bd4-bdbe-2f4ff71d66aa",
+    "thread_id": "74ec7ddf-0281-433e-be10-b013283e9ec5",
+    "status": "completed",
+    "expected": "online",
+    "tool_calls": 22,
+    "external_data_returned": true,
+    "blocked_attempts": 0,
+    "tools": [
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \"10.3390/s20123539 \" \"10.1148/ryai.24"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \"10.1007/s10994-02 4-06611-1\" \"10.339"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"verify1\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"verify2\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \"10.3390/s20123539 \" \"10.1148/ryai.24"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \"10.1007/s10994-02 4-06611-1\" \"10.339"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"v3\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"v4\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "create_file",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "File 'verify_refs.py' created successfully."
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && python3 verify_refs.py'; comm and printf '%s\\n' "
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"v5\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "create_file",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "File 'verify_refs2.py' created successfully."
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && python3 verify_refs2.py && ca t verify_results.j"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"v6\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && cat verify_results.json'; com mand printf '%s\\n'"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@cd7db76f-61be-4ab8-b419-0bb118e3fd30:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && echo \"=== clinimag 116202 === \"; curl -s -o /dev"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"v8\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "DOI: 10.1016/j.clinimag.2025.110621 title: ['Comment on “Breast lymphoma: Imaging features, clinical presentation, and ultrasound AI decision support”'] container: ['Clinical Imagi"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "=== MLWA 100537 search === DOI: 10.1016/j.mlwa.2024.100537 title: ['Efficient machine learning-assisted failure analysis method for circuit-level defect prediction'] container: ['M"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "issued: {'date-parts': [[2024, 9, 6]]} published-print: {'date-parts': [[2024, 10]]} published-online: {'date-parts': [[2024, 9, 6]]} journal-issue: {'issue': '10', 'published-prin"
+      },
+      {
+        "name": "save_memory",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "Memory saved (id=2cfcf166-212b-449a-9bd8-3176ef92b558, type=discovery, category=reference-verification)"
+      },
+      {
+        "name": "save_memory",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "Memory saved (id=f638130c-5ea7-473b-9fe7-01bf347ff4db, type=preference, category=reference-verification)"
+      }
+    ]
+  },
+  {
+    "seed": 123,
+    "tag": "verifier",
+    "run_id": "422da290-1da5-4a1f-81b0-6a459b43c97b",
+    "thread_id": "5710a203-5bee-46ed-b106-e2bd6b2b8c29",
+    "status": "completed",
+    "expected": "online",
+    "tool_calls": 2,
+    "external_data_returned": true,
+    "blocked_attempts": 0,
+    "tools": [
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": true,
+        "excerpt": "=== 10.1259/bjro.20220021 === HTTP 200 TITLE: Artificial intelligence in cardiovascular imaging: enhancing image analysis and risk stratification AUTHORS: ['Lin Andrew', 'Pieszko K"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "=== Search for item 5 (Gunduz Parkinson IEEE Access) === 10.1109/access.2019.2936564 | Deep Learning-Based Parkinson’s Disease Classification Using | 2019 | IEEE Access | 115540-11"
+      }
+    ]
+  },
+  {
+    "seed": 2024,
+    "tag": "verifier",
+    "run_id": "36247539-64e1-4fe6-8620-e7d574dd1526",
+    "thread_id": "85f8b79f-1624-49c1-9dba-5d8c1c25a683",
+    "status": "completed",
+    "expected": "online",
+    "tool_calls": 22,
+    "external_data_returned": true,
+    "blocked_attempts": 0,
+    "tools": [
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \"10.21275/ms231218 1849\" \"10.3390/jcm"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": false,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \"10.1016/j.jocn.20 22.07.022\" \"10.101"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"session_64d08b32\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"watching\": \"session_f2516846\",   \"timeout_seconds\": 300,   \"status\": \"Registered. Wait for task notification; do not poll or resubmit the command.\" }"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.2127"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.3389"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.3390"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.2127"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.2127"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.3389"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.3390"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.2127"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1016"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1016"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.2127"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1177"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1016"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1016"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1016"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.2127"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1177"
+      },
+      {
+        "name": "watch_task",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": true,
+        "excerpt": "(venv) root@0f48e5b8-883e-4d5f-99b5-dcd2389d167a:/workspace# eval 'export GIT_TE RMINAL_PROMPT=0; set -o pipefail; cd /workspace && curl -s \"https://api.crossref .org/works/10.1016"
+      }
+    ]
+  },
+  {
+    "seed": 2025,
+    "tag": "verifier",
+    "run_id": "083aa2a1-3bed-4249-8590-223685c85615",
+    "thread_id": "6ff12df3-26ca-4c7b-bf82-35a9022b0c67",
+    "status": "completed",
+    "expected": "online",
+    "tool_calls": 3,
+    "external_data_returned": true,
+    "blocked_attempts": 0,
+    "tools": [
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": true,
+        "excerpt": "=== 10.1093/eurheartj/ehaf784.4139 === HTTP 200 {\"status\":\"ok\",\"message-type\":\"work\",\"message-version\":\"1.0.0\",\"message\":{\"indexed\":{\"date-parts\":[[2026,2,6]],\"date-time\":\"2026-02-"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": true,
+        "excerpt": "=== 10.1016/j.asoc.2020.106351 === HTTP 200 {\"status\":\"ok\",\"message-type\":\"work\",\"message-version\":\"1.0.0\",\"message\":{\"indexed\":{\"date-parts\":[[2026,8,17]],\"date-time\":\"2026-08-17T"
+      },
+      {
+        "name": "execute_command",
+        "blocked": false,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "=== 10.1093/eurheartj/ehaf784.4139 === title: ['Novel biomarker-based machine learning model in personalized cardiotoxicity prediction'] container: ['European Heart Journal'] volum"
+      }
+    ]
+  },
+  {
+    "seed": 7,
+    "tag": "baseline",
+    "run_id": "86c582d0-dc02-46ec-be9a-21f39cdcb655",
+    "thread_id": "088520ec-1a8e-4b29-b2ff-ab0448680baf",
+    "status": "completed",
+    "expected": "offline",
+    "tool_calls": 3,
+    "external_data_returned": false,
+    "blocked_attempts": 2,
+    "tools": [
+      {
+        "name": "search_skills",
+        "blocked": false,
+        "mentions_api": true,
+        "external_data_returned": false,
+        "excerpt": "{   \"skills\": [     {       \"name\": \"verify-bib\",       \"description\": \"\\\"Validate every BibTeX entry's authors and title against 5 academic sources (Semantic Scholar / OpenAlex / "
+      },
+      {
+        "name": "load_skill",
+        "blocked": true,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{\"skill_status\": {\"skill_name\": \"verify-bib\", \"bound\": false, \"discovered\": true, \"loaded\": false, \"runtime\": \"blocked\", \"execution\": \"not_observed\", \"verification\": \"not_verified\""
+      },
+      {
+        "name": "record_skill_outcome",
+        "blocked": true,
+        "mentions_api": false,
+        "external_data_returned": false,
+        "excerpt": "{   \"skill_status\": {     \"skill_name\": \"verify-bib\",     \"bound\": false,     \"discovered\": true,     \"loaded\": false,     \"runtime\": \"blocked\",     \"execution\": \"not_observed\",   "
+      }
+    ]
+  },
+  {
+    "seed": 123,
+    "tag": "baseline",
+    "run_id": "1b755771-f1ef-4c05-8459-9008e2ad1cb5",
+    "thread_id": "7759a74c-65c8-44ee-baaa-bf758fecf517",
+    "status": "completed",
+    "expected": "offline",
+    "tool_calls": 0,
+    "external_data_returned": false,
+    "blocked_attempts": 0,
+    "tools": []
+  },
+  {
+    "seed": 2024,
+    "tag": "baseline",
+    "run_id": "0f1f975e-a9a2-4e9a-80a5-cfa07a95709f",
+    "thread_id": "6b1aa682-ffcc-49c7-b0e4-8ccfd01722f6",
+    "status": "completed",
+    "expected": "offline",
+    "tool_calls": 0,
+    "external_data_returned": false,
+    "blocked_attempts": 0,
+    "tools": []
+  },
+  {
+    "seed": 2025,
+    "tag": "baseline",
+    "run_id": "3cad58eb-9d84-436e-9a06-ec91f6e960dc",
+    "thread_id": "84a3cb71-d63a-4b74-89d3-e249e53643ba",
+    "status": "completed",
+    "expected": "offline",
+    "tool_calls": 0,
+    "external_data_returned": false,
+    "blocked_attempts": 0,
+    "tools": []
+  }
+]

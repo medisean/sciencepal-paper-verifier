@@ -1,0 +1,131 @@
+{
+  "version": "v2",
+  "layer": "layer1_doi_metadata",
+  "seed": 2025,
+  "n": 12,
+  "source": "Crossref REST API",
+  "created_for": "SciencePal AI4Science Hackathon 2026",
+  "items": [
+    {
+      "item_id": 1,
+      "label": "valid",
+      "doi": "10.1093/eurheartj/ehaf784.4139",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Liu I., Park C. (2025). Novel biomarker-based machine learning model in personalized cardiotoxicity prediction. European Heart Journal, 46, Supplement_1. doi: 10.1093/eurheartj/ehaf784.4139",
+      "year": 2025
+    },
+    {
+      "item_id": 2,
+      "label": "not_found",
+      "doi": "10.21275/sr231015260210",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015260210",
+      "real_doi": "10.21275/sr231015173828",
+      "year": 2023
+    },
+    {
+      "item_id": 3,
+      "label": "valid",
+      "doi": "10.2174/15734056mte2nnjcoy",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Mondal, MRH . (2021). Diagnosis of COVID-19 Using Machine Learning and Deep Learning: A Review. Current Medical Imaging Reviews, 17, 12. doi: 10.2174/15734056mte2nnjcoy",
+      "year": 2021
+    },
+    {
+      "item_id": 4,
+      "label": "not_found",
+      "doi": "10.1016/j.dss.2025.126417",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Strunk J., Nissen A., Smolnik S. (2025). All risks ain't the same – A risk facets perspective on AI-based decision support systems. Decision Support Systems, 199, 114557. doi: 10.1016/j.dss.2025.126417",
+      "real_doi": "10.1016/j.dss.2025.114557",
+      "year": 2025
+    },
+    {
+      "item_id": 5,
+      "label": "not_found",
+      "doi": "10.1016/j.ejmp.2024.175697",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Hossain A., Hossain S., Sultana J. (2024). PS01.02 STRATIFICATION ON HIGH RISK AND LOW RISK ISCHEMIC STROKES USING MRI IMAGES BASED ON ARTIFICIAL INTELLIGENCE. Physica Medica, 125, 104004. doi: 10.1016/j.ejmp.2024.175697",
+      "real_doi": "10.1016/j.ejmp.2024.104004",
+      "year": 2024
+    },
+    {
+      "item_id": 6,
+      "label": "valid",
+      "doi": "10.1016/j.mlwa.2023.100516",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Orji U., Ukwandu E. (2024). Machine learning for an explainable cost prediction of medical insurance. Machine Learning with Applications, 15, 100516. doi: 10.1016/j.mlwa.2023.100516",
+      "year": 2024
+    },
+    {
+      "item_id": 7,
+      "label": "valid",
+      "doi": "10.1016/j.asoc.2020.106351",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.106351",
+      "year": 2020
+    },
+    {
+      "item_id": 8,
+      "label": "valid",
+      "doi": "10.1177/21677026251340348",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "McClure Z., Fuller-Tyszkiewicz M., Messer M., Linardon J. (2025). Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review. Clinical Psychological Science, 13, 6, 1051-1068. doi: 10.1177/21677026251340348",
+      "year": 2025
+    },
+    {
+      "item_id": 9,
+      "label": "mismatch",
+      "doi": "10.1109/rbme.2020.3007816",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "detail": "年份 2021→2025",
+      "citation": "Shamout F., Zhu T., Clifton DA. (2025). Machine Learning for Clinical Outcome Prediction. IEEE Reviews in Biomedical Engineering, 14, 116-126. doi: 10.1109/rbme.2020.3007816",
+      "real_year": 2021
+    },
+    {
+      "item_id": 10,
+      "label": "mismatch",
+      "doi": "10.1093/nargab/lqad055",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "journal",
+      "detail": "期刊名被改",
+      "citation": "Yao S., Cao B., Li T., Kalos D., et al. (2022). Prediction-oriented prognostic biomarker discovery with survival machine learning methods. The Journal of Clinical Research Reports, 5, 2. doi: 10.1093/nargab/lqad055",
+      "real_year": 2022
+    },
+    {
+      "item_id": 11,
+      "label": "mismatch",
+      "doi": "10.1016/j.media.2020.101913",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "author_title",
+      "detail": "标题/作者被改",
+      "citation": "Wu X., Chen C., Zhong M., Wang J., et al. (2021). COVID-AL: The diagnosis of COVID-19 with deep Wearable learning. Medical Image Analysis, 68, 101913. doi: 10.1016/j.media.2020.101913",
+      "real_year": 2021
+    },
+    {
+      "item_id": 12,
+      "label": "valid",
+      "doi": "10.1016/j.clinthera.2023.09.019",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Jaltotage B., Sukudom S., Ihdayhid AR., Dwivedi G. (2023). Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence. Clinical Therapeutics, 45, 11, 1023-1028. doi: 10.1016/j.clinthera.2023.09.019",
+      "year": 2023
+    }
+  ],
+  "prompt": "下面是某生物医学论文稿件的参考文献列表。请逐条核查：① 每条的 DOI 是否真实存在（必须在沙箱中实际联网调用 Crossref，记录 HTTP 状态）；② 题录信息（作者、年份、标题、期刊、卷期页码）是否与该 DOI 的真实元数据逐字段一致（任一字段不一致即 metadata_match=false）。\n\n[1] Liu I., Park C. (2025). Novel biomarker-based machine learning model in personalized cardiotoxicity prediction. European Heart Journal, 46, Supplement_1. doi: 10.1093/eurheartj/ehaf784.4139\n[2] Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015260210\n[3] Mondal, MRH . (2021). Diagnosis of COVID-19 Using Machine Learning and Deep Learning: A Review. Current Medical Imaging Reviews, 17, 12. doi: 10.2174/15734056mte2nnjcoy\n[4] Strunk J., Nissen A., Smolnik S. (2025). All risks ain't the same – A risk facets perspective on AI-based decision support systems. Decision Support Systems, 199, 114557. doi: 10.1016/j.dss.2025.126417\n[5] Hossain A., Hossain S., Sultana J. (2024). PS01.02 STRATIFICATION ON HIGH RISK AND LOW RISK ISCHEMIC STROKES USING MRI IMAGES BASED ON ARTIFICIAL INTELLIGENCE. Physica Medica, 125, 104004. doi: 10.1016/j.ejmp.2024.175697\n[6] Orji U., Ukwandu E. (2024). Machine learning for an explainable cost prediction of medical insurance. Machine Learning with Applications, 15, 100516. doi: 10.1016/j.mlwa.2023.100516\n[7] Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.106351\n[8] McClure Z., Fuller-Tyszkiewicz M., Messer M., Linardon J. (2025). Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review. Clinical Psychological Science, 13, 6, 1051-1068. doi: 10.1177/21677026251340348\n[9] Shamout F., Zhu T., Clifton DA. (2025). Machine Learning for Clinical Outcome Prediction. IEEE Reviews in Biomedical Engineering, 14, 116-126. doi: 10.1109/rbme.2020.3007816\n[10] Yao S., Cao B., Li T., Kalos D., et al. (2022). Prediction-oriented prognostic biomarker discovery with survival machine learning methods. The Journal of Clinical Research Reports, 5, 2. doi: 10.1093/nargab/lqad055\n[11] Wu X., Chen C., Zhong M., Wang J., et al. (2021). COVID-AL: The diagnosis of COVID-19 with deep Wearable learning. Medical Image Analysis, 68, 101913. doi: 10.1016/j.media.2020.101913\n[12] Jaltotage B., Sukudom S., Ihdayhid AR., Dwivedi G. (2023). Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence. Clinical Therapeutics, 45, 11, 1023-1028. doi: 10.1016/j.clinthera.2023.09.019\n\n只输出一个 ```json 代码块：{\"references\":[{\"item_id\":1,\"doi_status\":\"valid|not_found|no_doi\",\"metadata_match\":true,\"verdict\":\"confirm|suspect|pass\",\"confidence\":0.0,\"evidence_url\":\"\",\"issue\":\"\"}]}。正常用 pass，DOI 不存在或题录有误用 confirm，不确定用 suspect。"
+}

@@ -1,0 +1,107 @@
+{
+  "seed": 42,
+  "n": 12,
+  "items": [
+    {
+      "item_id": 1,
+      "label": "valid",
+      "doi": "10.1016/j.diabres.2022.109552",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Kavathiya K., Korukonda K. (2022). IDF21-0484 Case cohort, Observational Study to assess Safety and effectiveness of rEmogliflozin in T2DM-CASE study. Diabetes Research and Clinical Practice, 186, 109552. doi: 10.1016/j.diabres.2022.109552"
+    },
+    {
+      "item_id": 2,
+      "label": "not_found",
+      "doi": "10.1158/1538-7445.am2026-7860-X70217",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "mismatch_type": "hallucinated_doi",
+      "citation": "Luo Jian-Hua, Liu Silvia, Yu Yanping (2026). Abstract 7860: Fusion gene machine learning models improve clinical outcome prediction of hepatocellular carcinoma.. Cancer Research, 86, 7_Supplement, 7860-7860. doi: 10.1158/1538-7445.am2026-7860-X70217"
+    },
+    {
+      "item_id": 3,
+      "label": "valid",
+      "doi": "10.1177/0145721714551992",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Nundy Shantanu, Mishra Anjuli, Hogan Patrick, et al. (2014). How Do Mobile Phone Diabetes Programs Drive Behavior Change?. The Diabetes Educator, 40, 6, 806-819. doi: 10.1177/0145721714551992"
+    },
+    {
+      "item_id": 4,
+      "label": "mismatch",
+      "doi": "10.1158/1538-7445.am2022-lb150",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "citation": "Luo Jian-Hua, Liu Silvia, Yu Yan-Ping (2026). Abstract LB150: Clinical outcome prediction of prostate cancer using machine learning based on fusion gene detection. Cancer Research, 82, 12_Supplement, LB150-LB150. doi: 10.1158/1538-7445.am2022-lb150"
+    },
+    {
+      "item_id": 5,
+      "label": "valid",
+      "doi": "10.2337/db26-2623-p",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "SHRYACK GRACE, DIXON WILLIAM, KIM STEPHANIE, et al. (2026). 2623-P: Engagement with an AI-Enabled Continuous Glucose Monitoring Platform and Weight Loss in Adults with Obesity without Diabetes: An Observational Cohort Study. Diabetes, 75, Supplement_1. doi: 10.2337/db26-2623-p"
+    },
+    {
+      "item_id": 6,
+      "label": "valid",
+      "doi": "10.1016/j.diabres.2011.03.027",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Pantalone Kevin M., Agarwal Shikhar, Faiman Charles (2011). Glargine vs. NPH insulin therapy in pregnancies complicated by diabetes: An observational cohort study—Comment on Negrato et al.. Diabetes Research and Clinical Practice, 93, 1, e9-e10. doi: 10.1016/j.diabres.2011.03.027"
+    },
+    {
+      "item_id": 7,
+      "label": "mismatch",
+      "doi": "10.2337/dc07-1427",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "journal",
+      "citation": "Song Yiqing, Liu Simin (2007). Insulin Sensitivity and Insulin Secretion Determined by Homeostasis Model Assessment and Risk of Diabetes in a Multiethnic Cohort of Women: the Women’s Health Initiative Observational Study. Journal of Nonexistent Clinical Studies, 30, 11, e111-e111. doi: 10.2337/dc07-1427"
+    },
+    {
+      "item_id": 8,
+      "label": "valid",
+      "doi": "10.1227/neu.0000000000002809_401",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Buchlak Quinlan, Leveque Jean-Christophe A., Krause Katie L., et al. (2024). 401 Applying Machine Learning for Risk Stratification and Acute Clinical Outcome Prediction Amongst Aneurysmal Subarachnoid Hemorrhage Patients. Neurosurgery, 70, Supplement_1, 121-122. doi: 10.1227/neu.0000000000002809_401"
+    },
+    {
+      "item_id": 9,
+      "label": "valid",
+      "doi": "10.54254/2755-2721/2026.gu34787",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Zeng Xiaonan (2026). Chess Game Outcome Prediction Based on Machine Learning Methods. Applied and Computational Engineering, 248, 1, 11-16. doi: 10.54254/2755-2721/2026.gu34787"
+    },
+    {
+      "item_id": 10,
+      "label": "valid",
+      "doi": "10.51473/rcmos.v1i1.2026.2175",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Razera Amanda, Miri Maiara Luiza Biava, Ravarena Eduardo de Almeida, et al. (2026). Predição de desfechos clínicos em câncer de mama luminal B por meio de modelos de machine learning baseado em variantes somáticas. RCMOS - Revista Científica Multidisciplinar O Saber, 1, 1. doi: 10.51473/rcmos.v1i1.2026.2175"
+    },
+    {
+      "item_id": 11,
+      "label": "not_found",
+      "doi": "10.1016/j.clinph.2025.2111433-X15695",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "mismatch_type": "hallucinated_doi",
+      "citation": "Campbell Tom A. (2026). Machine learning predicts cognitive outcome from preterm infants’ EEG. Clinical Neurophysiology, 181, 2111433. doi: 10.1016/j.clinph.2025.2111433-X15695"
+    },
+    {
+      "item_id": 12,
+      "label": "valid",
+      "doi": "10.1016/j.crad.2025.107058",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Liu Z.Y., Liu Z.Y., Wan X.Y., et al. (2025). Multiparametric magnetic resonance imaging (MRI)–based interpretable radiomics machine learning model for outcome prediction in adenomyosis treated by high-intensity focussed ultrasound. Clinical Radiology, 90, 107058. doi: 10.1016/j.crad.2025.107058"
+    }
+  ],
+  "prompt": "下面是某生物医学论文稿件的参考文献列表。请逐条核查：① 每条的 DOI 是否真实存在（必须在沙箱中实际联网调用 Crossref，记录 HTTP 状态）；② 题录信息（作者、年份、标题、期刊）是否与该 DOI 的真实元数据一致。\n\n[1] Kavathiya K., Korukonda K. (2022). IDF21-0484 Case cohort, Observational Study to assess Safety and effectiveness of rEmogliflozin in T2DM-CASE study. Diabetes Research and Clinical Practice, 186, 109552. doi: 10.1016/j.diabres.2022.109552\n[2] Luo Jian-Hua, Liu Silvia, Yu Yanping (2026). Abstract 7860: Fusion gene machine learning models improve clinical outcome prediction of hepatocellular carcinoma.. Cancer Research, 86, 7_Supplement, 7860-7860. doi: 10.1158/1538-7445.am2026-7860-X70217\n[3] Nundy Shantanu, Mishra Anjuli, Hogan Patrick, et al. (2014). How Do Mobile Phone Diabetes Programs Drive Behavior Change?. The Diabetes Educator, 40, 6, 806-819. doi: 10.1177/0145721714551992\n[4] Luo Jian-Hua, Liu Silvia, Yu Yan-Ping (2026). Abstract LB150: Clinical outcome prediction of prostate cancer using machine learning based on fusion gene detection. Cancer Research, 82, 12_Supplement, LB150-LB150. doi: 10.1158/1538-7445.am2022-lb150\n[5] SHRYACK GRACE, DIXON WILLIAM, KIM STEPHANIE, et al. (2026). 2623-P: Engagement with an AI-Enabled Continuous Glucose Monitoring Platform and Weight Loss in Adults with Obesity without Diabetes: An Observational Cohort Study. Diabetes, 75, Supplement_1. doi: 10.2337/db26-2623-p\n[6] Pantalone Kevin M., Agarwal Shikhar, Faiman Charles (2011). Glargine vs. NPH insulin therapy in pregnancies complicated by diabetes: An observational cohort study—Comment on Negrato et al.. Diabetes Research and Clinical Practice, 93, 1, e9-e10. doi: 10.1016/j.diabres.2011.03.027\n[7] Song Yiqing, Liu Simin (2007). Insulin Sensitivity and Insulin Secretion Determined by Homeostasis Model Assessment and Risk of Diabetes in a Multiethnic Cohort of Women: the Women’s Health Initiative Observational Study. Journal of Nonexistent Clinical Studies, 30, 11, e111-e111. doi: 10.2337/dc07-1427\n[8] Buchlak Quinlan, Leveque Jean-Christophe A., Krause Katie L., et al. (2024). 401 Applying Machine Learning for Risk Stratification and Acute Clinical Outcome Prediction Amongst Aneurysmal Subarachnoid Hemorrhage Patients. Neurosurgery, 70, Supplement_1, 121-122. doi: 10.1227/neu.0000000000002809_401\n[9] Zeng Xiaonan (2026). Chess Game Outcome Prediction Based on Machine Learning Methods. Applied and Computational Engineering, 248, 1, 11-16. doi: 10.54254/2755-2721/2026.gu34787\n[10] Razera Amanda, Miri Maiara Luiza Biava, Ravarena Eduardo de Almeida, et al. (2026). Predição de desfechos clínicos em câncer de mama luminal B por meio de modelos de machine learning baseado em variantes somáticas. RCMOS - Revista Científica Multidisciplinar O Saber, 1, 1. doi: 10.51473/rcmos.v1i1.2026.2175\n[11] Campbell Tom A. (2026). Machine learning predicts cognitive outcome from preterm infants’ EEG. Clinical Neurophysiology, 181, 2111433. doi: 10.1016/j.clinph.2025.2111433-X15695\n[12] Liu Z.Y., Liu Z.Y., Wan X.Y., et al. (2025). Multiparametric magnetic resonance imaging (MRI)–based interpretable radiomics machine learning model for outcome prediction in adenomyosis treated by high-intensity focussed ultrasound. Clinical Radiology, 90, 107058. doi: 10.1016/j.crad.2025.107058\n\n请仅输出一个 ```json 代码块，references 数组每项对应一个编号，字段为：{\"item_id\":1,\"doi_status\":\"valid|not_found|no_doi\",\"metadata_match\":true|false,\"verdict\":\"confirm|suspect|pass\",\"confidence\":0.0,\"evidence_url\":\"\",\"issue\":\"\"}。其中 DOI 不存在或题录与 DOI 不符用 confirm，存疑用 suspect，正常用 pass。"
+}

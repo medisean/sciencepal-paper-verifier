@@ -1,0 +1,131 @@
+{
+  "version": "v2",
+  "layer": "layer1_doi_metadata",
+  "seed": 2024,
+  "n": 12,
+  "source": "Crossref REST API",
+  "created_for": "SciencePal AI4Science Hackathon 2026",
+  "items": [
+    {
+      "item_id": 1,
+      "label": "valid",
+      "doi": "10.21275/ms2312181849",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Sathiri D. (2023). AI-Based Clinical Decision Support Systems in Smart Hospitals. International Journal of Science and Research (IJSR), 2291-2302. doi: 10.21275/ms2312181849",
+      "year": 2023
+    },
+    {
+      "item_id": 2,
+      "label": "not_found",
+      "doi": "10.3390/jcm13207975",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Rout M., Vaughan A., Sidorov EV., Sanghera DK. (2024). Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion. Journal of Clinical Medicine, 13, 19, 5917. doi: 10.3390/jcm13207975",
+      "real_doi": "10.3390/jcm13195917",
+      "year": 2024
+    },
+    {
+      "item_id": 3,
+      "label": "mismatch",
+      "doi": "10.3389/fonc.2023.1156009",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "journal",
+      "detail": "期刊名被改",
+      "citation": "Andersson B., Langen B., Liu P., Dávila López M. (2023). Development of a machine learning framework for radiation biomarker discovery and absorbed dose prediction. The Journal of Clinical Research Reports, 13. doi: 10.3389/fonc.2023.1156009",
+      "real_year": 2023
+    },
+    {
+      "item_id": 4,
+      "label": "not_found",
+      "doi": "10.1016/j.cplett.2024.198118",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Sankar Borah G., Nagamani S. (2024). Development of a robust Machine learning model for Ames test outcome prediction. Chemical Physics Letters, 856, 141663. doi: 10.1016/j.cplett.2024.198118",
+      "real_doi": "10.1016/j.cplett.2024.141663",
+      "year": 2024
+    },
+    {
+      "item_id": 5,
+      "label": "valid",
+      "doi": "10.3390/audiolres15060161",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Ollermann R., Strodthoff N., Radeloff A., Böscke R. (2025). Machine Learning Versus Simple Clinical Models for Cochlear Implant Outcome Prediction. Audiology Research, 15, 6, 161. doi: 10.3390/audiolres15060161",
+      "year": 2025
+    },
+    {
+      "item_id": 6,
+      "label": "valid",
+      "doi": "10.21275/sr231015173828",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015173828",
+      "year": 2023
+    },
+    {
+      "item_id": 7,
+      "label": "mismatch",
+      "doi": "10.1016/j.jocn.2022.07.022",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "author_title",
+      "detail": "标题/作者被改",
+      "citation": "Zhang H., Chen H., Zhang C., Cao A., et al. (2022). Development and validation of comprehensive clinical Cryptographic prediction models for acute ischaemic stroke in anterior circulation based on machine learning. Journal of Clinical Neuroscience, 104, 1-9. doi: 10.1016/j.jocn.2022.07.022",
+      "real_year": 2022
+    },
+    {
+      "item_id": 8,
+      "label": "valid",
+      "doi": "10.1016/j.clon.2021.12.002",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Appelt AL., Elhaminia B., Gooya A., Gilbert A., et al. (2022). Deep Learning for Radiotherapy Outcome Prediction Using Dose Data – A Review. Clinical Oncology, 34, 2, e87-e96. doi: 10.1016/j.clon.2021.12.002",
+      "year": 2022
+    },
+    {
+      "item_id": 9,
+      "label": "valid",
+      "doi": "10.21275/sr241230211809",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Thabitha J G., R P. (2025). Plant Leaves Disease Detection and Classification: Insights from Machine Learning and Deep Learning Approaches - A Review. International Journal of Science and Research (IJSR), 14, 1, 102-108. doi: 10.21275/sr241230211809",
+      "year": 2025
+    },
+    {
+      "item_id": 10,
+      "label": "mismatch",
+      "doi": "10.1177/21677026251340348",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "detail": "年份 2025→2022",
+      "citation": "McClure Z., Fuller-Tyszkiewicz M., Messer M., Linardon J. (2022). Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review. Clinical Psychological Science, 13, 6, 1051-1068. doi: 10.1177/21677026251340348",
+      "real_year": 2025
+    },
+    {
+      "item_id": 11,
+      "label": "not_found",
+      "doi": "10.1016/j.mlwa.2024.120962",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Ghosh J. (2024). Efficient machine learning-assisted failure analysis method for circuit-level defect prediction. Machine Learning with Applications, 16, 100537. doi: 10.1016/j.mlwa.2024.120962",
+      "real_doi": "10.1016/j.mlwa.2024.100537",
+      "year": 2024
+    },
+    {
+      "item_id": 12,
+      "label": "valid",
+      "doi": "10.1016/j.mlwa.2022.100343",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Garcia J. (2022). Bankruptcy prediction using synthetic sampling. Machine Learning with Applications, 9, 100343. doi: 10.1016/j.mlwa.2022.100343",
+      "year": 2022
+    }
+  ],
+  "prompt": "下面是某生物医学论文稿件的参考文献列表。请逐条核查：① 每条的 DOI 是否真实存在（必须在沙箱中实际联网调用 Crossref，记录 HTTP 状态）；② 题录信息（作者、年份、标题、期刊、卷期页码）是否与该 DOI 的真实元数据逐字段一致（任一字段不一致即 metadata_match=false）。\n\n[1] Sathiri D. (2023). AI-Based Clinical Decision Support Systems in Smart Hospitals. International Journal of Science and Research (IJSR), 2291-2302. doi: 10.21275/ms2312181849\n[2] Rout M., Vaughan A., Sidorov EV., Sanghera DK. (2024). Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion. Journal of Clinical Medicine, 13, 19, 5917. doi: 10.3390/jcm13207975\n[3] Andersson B., Langen B., Liu P., Dávila López M. (2023). Development of a machine learning framework for radiation biomarker discovery and absorbed dose prediction. The Journal of Clinical Research Reports, 13. doi: 10.3389/fonc.2023.1156009\n[4] Sankar Borah G., Nagamani S. (2024). Development of a robust Machine learning model for Ames test outcome prediction. Chemical Physics Letters, 856, 141663. doi: 10.1016/j.cplett.2024.198118\n[5] Ollermann R., Strodthoff N., Radeloff A., Böscke R. (2025). Machine Learning Versus Simple Clinical Models for Cochlear Implant Outcome Prediction. Audiology Research, 15, 6, 161. doi: 10.3390/audiolres15060161\n[6] Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015173828\n[7] Zhang H., Chen H., Zhang C., Cao A., et al. (2022). Development and validation of comprehensive clinical Cryptographic prediction models for acute ischaemic stroke in anterior circulation based on machine learning. Journal of Clinical Neuroscience, 104, 1-9. doi: 10.1016/j.jocn.2022.07.022\n[8] Appelt AL., Elhaminia B., Gooya A., Gilbert A., et al. (2022). Deep Learning for Radiotherapy Outcome Prediction Using Dose Data – A Review. Clinical Oncology, 34, 2, e87-e96. doi: 10.1016/j.clon.2021.12.002\n[9] Thabitha J G., R P. (2025). Plant Leaves Disease Detection and Classification: Insights from Machine Learning and Deep Learning Approaches - A Review. International Journal of Science and Research (IJSR), 14, 1, 102-108. doi: 10.21275/sr241230211809\n[10] McClure Z., Fuller-Tyszkiewicz M., Messer M., Linardon J. (2022). Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review. Clinical Psychological Science, 13, 6, 1051-1068. doi: 10.1177/21677026251340348\n[11] Ghosh J. (2024). Efficient machine learning-assisted failure analysis method for circuit-level defect prediction. Machine Learning with Applications, 16, 100537. doi: 10.1016/j.mlwa.2024.120962\n[12] Garcia J. (2022). Bankruptcy prediction using synthetic sampling. Machine Learning with Applications, 9, 100343. doi: 10.1016/j.mlwa.2022.100343\n\n只输出一个 ```json 代码块：{\"references\":[{\"item_id\":1,\"doi_status\":\"valid|not_found|no_doi\",\"metadata_match\":true,\"verdict\":\"confirm|suspect|pass\",\"confidence\":0.0,\"evidence_url\":\"\",\"issue\":\"\"}]}。正常用 pass，DOI 不存在或题录有误用 confirm，不确定用 suspect。"
+}

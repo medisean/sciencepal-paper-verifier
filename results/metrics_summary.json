@@ -1,0 +1,81 @@
+{
+  "n_total": 48,
+  "seeds": [
+    7,
+    123,
+    2024,
+    2025
+  ],
+  "metrics": {
+    "verifier": {
+      "hallucinated_doi_detection": {
+        "tp": 12,
+        "fp": 0,
+        "fn": 0,
+        "tn": 36,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "metadata_error_detection": {
+        "tp": 24,
+        "fp": 0,
+        "fn": 0,
+        "tn": 24,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      },
+      "any_issue_detection": {
+        "tp": 24,
+        "fp": 0,
+        "fn": 0,
+        "tn": 24,
+        "precision": 1.0,
+        "recall": 1.0,
+        "specificity": 1.0,
+        "f1": 1.0,
+        "accuracy": 1.0
+      }
+    },
+    "baseline": {
+      "hallucinated_doi_detection": {
+        "tp": 9,
+        "fp": 8,
+        "fn": 3,
+        "tn": 28,
+        "precision": 0.5294,
+        "recall": 0.75,
+        "specificity": 0.7778,
+        "f1": 0.6207,
+        "accuracy": 0.7708
+      },
+      "metadata_error_detection": {
+        "tp": 21,
+        "fp": 6,
+        "fn": 3,
+        "tn": 18,
+        "precision": 0.7778,
+        "recall": 0.875,
+        "specificity": 0.75,
+        "f1": 0.8235,
+        "accuracy": 0.8125
+      },
+      "any_issue_detection": {
+        "tp": 23,
+        "fp": 9,
+        "fn": 1,
+        "tn": 15,
+        "precision": 0.7188,
+        "recall": 0.9583,
+        "specificity": 0.625,
+        "f1": 0.8214,
+        "accuracy": 0.7917
+      }
+    }
+  }
+}

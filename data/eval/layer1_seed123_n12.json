@@ -1,0 +1,131 @@
+{
+  "version": "v2",
+  "layer": "layer1_doi_metadata",
+  "seed": 123,
+  "n": 12,
+  "source": "Crossref REST API",
+  "created_for": "SciencePal AI4Science Hackathon 2026",
+  "items": [
+    {
+      "item_id": 1,
+      "label": "valid",
+      "doi": "10.1259/bjro.20220021",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Lin A., Pieszko K., Park C., Ignor K., et al. (2023). Artificial intelligence in cardiovascular imaging: enhancing image analysis and risk stratification. BJR|Open, 5, 1. doi: 10.1259/bjro.20220021",
+      "year": 2023
+    },
+    {
+      "item_id": 2,
+      "label": "valid",
+      "doi": "10.1016/j.mlwa.2022.100343",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Garcia J. (2022). Bankruptcy prediction using synthetic sampling. Machine Learning with Applications, 9, 100343. doi: 10.1016/j.mlwa.2022.100343",
+      "year": 2022
+    },
+    {
+      "item_id": 3,
+      "label": "valid",
+      "doi": "10.14311/nnw.2018.28.015",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Zaorálek L., Platoš J., Snášel V. (2018). PATIENT-ADAPTED AND INTER-PATIENT ECG CLASSIFICATION USING NEURAL NETWORK AND GRADIENT BOOSTING. Neural Network World, 28, 3, 241-254. doi: 10.14311/nnw.2018.28.015",
+      "year": 2018
+    },
+    {
+      "item_id": 4,
+      "label": "mismatch",
+      "doi": "10.65713/ijaraiv13i1208",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "journal",
+      "detail": "期刊名被改",
+      "citation": "Dr. Keshav Prasad ., Dr. Sonia Kapoor ., Dr. Abhinav Reddy . (2023). ARTIFICIAL INTELLIGENCE FOR PRECISION CANCER PREVENTION: PREDICTIVE ANALYTICS, RISK STRATIFICATION, AND EARLY INTERVENTION. The Journal of Clinical Research Reports, 57. doi: 10.65713/ijaraiv13i1208",
+      "real_year": 2023
+    },
+    {
+      "item_id": 5,
+      "label": "not_found",
+      "doi": "10.55248/gengpi.6.0625.16682",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Kumar GV., Kumar NN. (2025). Eye Disease Classification Using Deep Learning And Resnet. International Journal of Research Publication and Reviews, 6, 6, 12908. doi: 10.55248/gengpi.6.0625.16682",
+      "real_doi": "10.55248/gengpi.6.0625.2410",
+      "year": 2025
+    },
+    {
+      "item_id": 6,
+      "label": "not_found",
+      "doi": "10.1016/j.asoc.2020.175903",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.175903",
+      "real_doi": "10.1016/j.asoc.2020.106351",
+      "year": 2020
+    },
+    {
+      "item_id": 7,
+      "label": "valid",
+      "doi": "10.1016/j.ceh.2024.12.003",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Miranda E., Adiarto S. (2024). Enhancing automatic early arteriosclerosis prediction: an explainable machine learning evidence. Clinical eHealth, 7, 153-163. doi: 10.1016/j.ceh.2024.12.003",
+      "year": 2024
+    },
+    {
+      "item_id": 8,
+      "label": "not_found",
+      "doi": "10.1109/access.2019.2991190",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Gunduz H. (2019). Deep Learning-Based Parkinson’s Disease Classification Using Vocal Feature Sets. IEEE Access, 7, 115540-115551. doi: 10.1109/access.2019.2991190",
+      "real_doi": "10.1109/access.2019.2936564",
+      "year": 2019
+    },
+    {
+      "item_id": 9,
+      "label": "valid",
+      "doi": "10.1016/j.compmedimag.2020.101820",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "He Y., Zhao H., Wong STC. (2021). Deep learning powers cancer diagnosis in digital pathology. Computerized Medical Imaging and Graphics, 88, 101820. doi: 10.1016/j.compmedimag.2020.101820",
+      "year": 2021
+    },
+    {
+      "item_id": 10,
+      "label": "valid",
+      "doi": "10.1007/s10845-018-1428-5",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Wu Q., Ding K., Huang B. (2018). Approach for fault prognosis using recurrent neural network. Journal of Intelligent Manufacturing, 31, 7, 1621-1633. doi: 10.1007/s10845-018-1428-5",
+      "year": 2018
+    },
+    {
+      "item_id": 11,
+      "label": "mismatch",
+      "doi": "10.1093/nargab/lqad055",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "author_title",
+      "detail": "标题/作者被改",
+      "citation": "Yao S., Cao B., Li T., Kalos D., et al. (2022). Prediction-oriented Quantum biomarker discovery with survival machine learning methods. NAR Genomics and Bioinformatics, 5, 2. doi: 10.1093/nargab/lqad055",
+      "real_year": 2022
+    },
+    {
+      "item_id": 12,
+      "label": "mismatch",
+      "doi": "10.30871/jaic.v9i6.11546",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "detail": "年份 2025→2029",
+      "citation": "Simanjuntak MS., Robet R., Hoki L. (2029). A Comparative Study of Machine Learning and Deep Learning Models for Heart Disease Classification. Journal of Applied Informatics and Computing, 9, 6, 3405-3409. doi: 10.30871/jaic.v9i6.11546",
+      "real_year": 2025
+    }
+  ],
+  "prompt": "下面是某生物医学论文稿件的参考文献列表。请逐条核查：① 每条的 DOI 是否真实存在（必须在沙箱中实际联网调用 Crossref，记录 HTTP 状态）；② 题录信息（作者、年份、标题、期刊、卷期页码）是否与该 DOI 的真实元数据逐字段一致（任一字段不一致即 metadata_match=false）。\n\n[1] Lin A., Pieszko K., Park C., Ignor K., et al. (2023). Artificial intelligence in cardiovascular imaging: enhancing image analysis and risk stratification. BJR|Open, 5, 1. doi: 10.1259/bjro.20220021\n[2] Garcia J. (2022). Bankruptcy prediction using synthetic sampling. Machine Learning with Applications, 9, 100343. doi: 10.1016/j.mlwa.2022.100343\n[3] Zaorálek L., Platoš J., Snášel V. (2018). PATIENT-ADAPTED AND INTER-PATIENT ECG CLASSIFICATION USING NEURAL NETWORK AND GRADIENT BOOSTING. Neural Network World, 28, 3, 241-254. doi: 10.14311/nnw.2018.28.015\n[4] Dr. Keshav Prasad ., Dr. Sonia Kapoor ., Dr. Abhinav Reddy . (2023). ARTIFICIAL INTELLIGENCE FOR PRECISION CANCER PREVENTION: PREDICTIVE ANALYTICS, RISK STRATIFICATION, AND EARLY INTERVENTION. The Journal of Clinical Research Reports, 57. doi: 10.65713/ijaraiv13i1208\n[5] Kumar GV., Kumar NN. (2025). Eye Disease Classification Using Deep Learning And Resnet. International Journal of Research Publication and Reviews, 6, 6, 12908. doi: 10.55248/gengpi.6.0625.16682\n[6] Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.175903\n[7] Miranda E., Adiarto S. (2024). Enhancing automatic early arteriosclerosis prediction: an explainable machine learning evidence. Clinical eHealth, 7, 153-163. doi: 10.1016/j.ceh.2024.12.003\n[8] Gunduz H. (2019). Deep Learning-Based Parkinson’s Disease Classification Using Vocal Feature Sets. IEEE Access, 7, 115540-115551. doi: 10.1109/access.2019.2991190\n[9] He Y., Zhao H., Wong STC. (2021). Deep learning powers cancer diagnosis in digital pathology. Computerized Medical Imaging and Graphics, 88, 101820. doi: 10.1016/j.compmedimag.2020.101820\n[10] Wu Q., Ding K., Huang B. (2018). Approach for fault prognosis using recurrent neural network. Journal of Intelligent Manufacturing, 31, 7, 1621-1633. doi: 10.1007/s10845-018-1428-5\n[11] Yao S., Cao B., Li T., Kalos D., et al. (2022). Prediction-oriented Quantum biomarker discovery with survival machine learning methods. NAR Genomics and Bioinformatics, 5, 2. doi: 10.1093/nargab/lqad055\n[12] Simanjuntak MS., Robet R., Hoki L. (2029). A Comparative Study of Machine Learning and Deep Learning Models for Heart Disease Classification. Journal of Applied Informatics and Computing, 9, 6, 3405-3409. doi: 10.30871/jaic.v9i6.11546\n\n只输出一个 ```json 代码块：{\"references\":[{\"item_id\":1,\"doi_status\":\"valid|not_found|no_doi\",\"metadata_match\":true,\"verdict\":\"confirm|suspect|pass\",\"confidence\":0.0,\"evidence_url\":\"\",\"issue\":\"\"}]}。正常用 pass，DOI 不存在或题录有误用 confirm，不确定用 suspect。"
+}
