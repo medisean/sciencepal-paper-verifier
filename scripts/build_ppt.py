@@ -295,7 +295,7 @@ text(s, Inches(7.06), Inches(5.2), Inches(5.45), Inches(1.3),
 
 # ---------- 第 4 页：两个主结果 ----------
 s = prs.slides.add_slide(BLANK)
-header(s, 4, "两个主结果：联网是能力闸门，流程固化确定性护栏",
+header(s, 4, "两个主结果：联网是能力闸门，流程固化可复现的过程约束",
        "48 条独立测试集；三方对照（离线 / 普通联网 / 专家工作流），SSE 审计确认公平")
 # 左：主结果① 标签 + F1 图
 box(s, Inches(0.55), Inches(1.6), Inches(5.55), Inches(0.36), fill=NAVY, rounded=True)
@@ -308,13 +308,13 @@ s.shapes.add_picture(str(fig1), Inches(0.6), Inches(2.05), width=Inches(5.45))
 GREEN_L = RGBColor(0xEC, 0xF4, 0xEF)
 box(s, Inches(6.35), Inches(1.6), Inches(6.45), Inches(0.36), fill=GREEN, rounded=True)
 text(s, Inches(6.35), Inches(1.6), Inches(6.45), Inches(0.36),
-     [[("主结果② 确定性护栏：专家流程相对普通 Agent 的真实增益", 12.5, True, WHITE)]],
+     [[("主结果② 过程约束：专家工作流相对普通 Agent 的可审计增益", 12.5, True, WHITE)]],
      align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
 proc = [
-    ("平均工具调用 / 轮", "路径更短、token 更省（7 轮均值）", "8.3", "12.4"),
+    ("平均工具调用 / 轮", "7 轮均值，路径更短、token 更省", "8.3", "12.4"),
     ("违禁写入长期记忆", "普通 Agent 被禁仍调用 save_memory", "0 次", "1 次"),
-    ("最终 JSON 输出", "固定 schema，无人值守可稳定解析", "末轮固定", "1 次错位"),
-    ("检查覆盖与留痕", "每步留 HTTP 状态、来源与复算脚本", "强制全检", "临场发挥"),
+    ("最终 JSON 输出", "固定 schema，便于无人值守解析", "末轮固定", "1 次错位"),
+    ("检查覆盖与留痕", "专家强制 C1-C4/M1-M5 全流程，留 HTTP 状态、来源、脚本", "全流程", "基础取证"),
 ]
 yt = 2.08
 for name, note, expv, ordv in proc:
@@ -340,13 +340,14 @@ for name, note, expv, ordv in proc:
     yt += 1.02
 
 # 底部：诚实解读
-box(s, Inches(0.55), Inches(6.3), Inches(12.25), Inches(1.02), fill=RGBColor(0xEE,0xF2,0xF8), rounded=True)
-text(s, Inches(0.8), Inches(6.36), Inches(11.9), Inches(0.3),
-     [[("如何读这两个结果：诚实、不设弱对手", 12.5, True, NAVY)]])
-text(s, Inches(0.8), Inches(6.66), Inches(11.9), Inches(0.62),
-     [[("· H1 成立：联网是硬闸门，F1 0.62→1.0、误报 23→0；H2 阴性：强模型上专家流程不额外提高 F1，不宣称更准。", 10.5, False, DARK)],
-      [("· 专家流程价值在无人值守规模化时的确定性、效率与可审计；撤稿、统计复算、2026 冷门撤稿限定任务同输入对照均判对。局限：仅单模型、n=48（Wilson 下界 0.926）、弱模型增益待验。", 10.5, False, DARK)]],
-     line_spacing=1.08, space_after=1)
+box(s, Inches(0.55), Inches(6.16), Inches(12.25), Inches(1.26), fill=RGBColor(0xEE,0xF2,0xF8), rounded=True)
+text(s, Inches(0.8), Inches(6.21), Inches(11.9), Inches(0.28),
+     [[("如何读这两个结果：诚实、不设弱对手", 12, True, NAVY)]])
+text(s, Inches(0.8), Inches(6.5), Inches(11.95), Inches(0.9),
+     [[("· H1 成立：联网是硬闸门，F1 0.62→1.0、误报 23→0；H2 阴性：强模型上专家流程不额外提高 F1，不宣称更准。", 10, False, DARK)],
+      [("· 专家流程是提示词/工作流层约束（非代码级强制）；右侧过程指标为 n=7 对 n=7 的小样本观测，“0 次/1 次”是观察到的事件，未做统计检验，不作为显著结论。", 10, False, DARK)],
+      [("· 撤稿、统计复算、2026 冷门撤稿限定任务同输入对照均判对；局限：仅单模型、n=48（Wilson 下界 0.926）、弱模型增益待验。", 10, False, DARK)]],
+     line_spacing=1.05, space_after=1)
 
 # ---------- 第 5 页：交付与演示 ----------
 s = prs.slides.add_slide(BLANK)
@@ -354,11 +355,11 @@ header(s, 5, "真实可复现：打开公开链接即见全过程",
        "免登录只读回放，完整保留沙箱执行轨迹与最终报告")
 cards = [
     ("主演示 · 一屏四态", "4 条引用分别命中：真实放行 / 404 篡改 DOI / 年份错配 / STAP 撤稿",
-     "sciencepal.ai/share/ee4068d7…"),
+     "sciencepal.ai/share/ee4068d7-07e5-4a27-9af7-1f3c50fedcaa"),
     ("案例 A · 撤稿识别", "识别被当正常引用的 STAP 论文，定位官方撤稿通知 DOI",
-     "sciencepal.ai/share/f6f8746c…"),
+     "sciencepal.ai/share/f6f8746c-3350-48f1-ac58-d0150e135ac1"),
     ("案例 B · 统计复算", "沙箱 scipy 复算发现 p 值与数据矛盾：报告 0.03/0.04，实算 0.206/0.138",
-     "sciencepal.ai/share/8de1f3cc…"),
+     "sciencepal.ai/share/8de1f3cc-cde0-41ad-a2b5-b3b9af5a004b"),
 ]
 cw = Inches(3.95); ch = Inches(2.2); gap = Inches(0.18)
 startx = int(Inches(0.6))
@@ -366,12 +367,12 @@ for i, (t, d, link) in enumerate(cards):
     l = Emu(startx + i*(int(cw)+int(gap)))
     box(s, l, Inches(2.0), cw, ch, fill=WHITE, line=LINE, rounded=True)
     box(s, l, Inches(2.0), cw, Inches(0.14), fill=GREEN)
-    text(s, l+Inches(0.22), Inches(2.28), cw-Inches(0.44), Inches(0.6),
+    text(s, l+Inches(0.22), Inches(2.24), cw-Inches(0.44), Inches(0.55),
          [[(t, 15.5, True, NAVY)]], line_spacing=1.0)
-    text(s, l+Inches(0.22), Inches(2.92), cw-Inches(0.44), Inches(0.95),
-         [[(d, 12, False, DARK)]], line_spacing=1.15)
-    text(s, l+Inches(0.22), Inches(3.82), cw-Inches(0.44), Inches(0.35),
-         [[(link, 10.5, False, BLUE)]])
+    text(s, l+Inches(0.22), Inches(2.82), cw-Inches(0.44), Inches(0.82),
+         [[(d, 11.5, False, DARK)]], line_spacing=1.12)
+    text(s, l+Inches(0.22), Inches(3.74), cw-Inches(0.38), Inches(0.42),
+         [[(link, 9, False, BLUE)]], line_spacing=1.0)
 # 复现材料 + 未来
 box(s, Inches(0.6), Inches(4.5), Inches(5.95), Inches(2.3), fill=LIGHT, rounded=True)
 text(s, Inches(0.88), Inches(4.7), Inches(5.4), Inches(0.4),
