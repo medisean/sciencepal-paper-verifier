@@ -1,0 +1,363 @@
+{
+  "mode": "guarded",
+  "case": "layer1_seed2025_n12",
+  "adversarial": null,
+  "run_id": "387a1d81-4678-49a4-865e-ea0ecf03c18a",
+  "thread_id": "6a770b00-ca58-4ca8-989f-f02529a62bd0",
+  "status": "ok",
+  "wall_seconds": 138.2,
+  "usage": {
+    "total_tokens": 44536,
+    "prompt_tokens": 36102,
+    "completion_tokens": 8434
+  },
+  "tool_counts": {
+    "execute_command": 5,
+    "watch_task": 2
+  },
+  "tool_names": [
+    "execute_command",
+    "watch_task"
+  ],
+  "tool_contents": [
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@be7ea60c-2e84-4285-a86a-e762ae8f3a0c:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \\\\\"10.1093/eurheartj\\\\n/ehaf784.4139\\\\\" \\\\\"10.21275/sr231015260210\\\\\" \\\\\"10.2174/15734056mte2nnjcoy\\\\\" \\\\\"10.1016/j\\\\n.dss.2025.126417\\\\\"; do echo \\\\\"=== $doi ===\\\\\"; curl -s -o /tmp/out.json -w \\\\\"HTTP %{h\\\\nttp_code}\\\\\\\\n\\\\\" \\\\\"https://api.crossref.org/works/$doi\\\\\"; if [ -s /tmp",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@be7ea60c-2e84-4285-a86a-e762ae8f3a0c:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \\\\\"10.1016/j.ejmp.20\\\\n24.175697\\\\\" \\\\\"10.1016/j.mlwa.2023.100516\\\\\" \\\\\"10.1016/j.asoc.2020.106351\\\\\" \\\\\"10.1177/21\\\\n677026251340348\\\\\"; do echo \\\\\"=== $doi ===\\\\\"; curl -s -o /tmp/out.json -w \\\\\"HTTP %{ht\\\\ntp_code}\\\\\\\\n\\\\\" \\\\\"https://api.crossref.org/works/$doi\\\\\"; if [ -s /tmp/",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@be7ea60c-2e84-4285-a86a-e762ae8f3a0c:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \\\\\"10.1109/rbme.2020\\\\n.3007816\\\\\" \\\\\"10.1093/nargab/lqad055\\\\\" \\\\\"10.1016/j.media.2020.101913\\\\\" \\\\\"10.1016/j.clin\\\\nthera.2023.09.019\\\\\"; do echo \\\\\"=== $doi ===\\\\\"; curl -s -o /tmp/out.json -w \\\\\"HTTP %{\\\\nhttp_code}\\\\\\\\n\\\\\" \\\\\"https://api.crossref.org/works/$doi\\\\\"; if [ -s /tm",
+    "{'name': 'watch_task', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@be7ea60c-2e84-4285-a86a-e762ae8f3a0c:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \\\\\"10.1093/eurheartj\\\\n/ehaf784.4139\\\\\" \\\\\"10.21275/sr231015260210\\\\\" \\\\\"10.2174/15734056mte2nnjcoy\\\\\" \\\\\"10.1016/j\\\\n.dss.2025.126417\\\\\"; do echo \\\\\"=== $doi ===\\\\\"; curl -s -o /tmp/out.json -w \\\\\"HTTP %{h\\\\nttp_code}\\\\\\\\n\\\\\" \\\\\"https://api.crossref.org/works/$doi\\\\\"; if [ -s /tmp/out.",
+    "{'name': 'watch_task', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@be7ea60c-2e84-4285-a86a-e762ae8f3a0c:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \\\\\"10.1109/rbme.2020\\\\n.3007816\\\\\" \\\\\"10.1093/nargab/lqad055\\\\\" \\\\\"10.1016/j.media.2020.101913\\\\\" \\\\\"10.1016/j.clin\\\\nthera.2023.09.019\\\\\"; do echo \\\\\"=== $doi ===\\\\\"; curl -s -o /tmp/out.json -w \\\\\"HTTP %{\\\\nhttp_code}\\\\\\\\n\\\\\" \\\\\"https://api.crossref.org/works/$doi\\\\\"; if [ -s /tmp/out",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== rbme 3007816 ===\\\\nTITLE: [\\'Machine Learning for Clinical Outcome Prediction\\']\\\\nAUTHORS: [(\\'Shamout\\', \\'Farah\\'), (\\'Zhu\\', \\'Tingting\\'), (\\'Clifton\\', \\'David A.\\')]\\\\nYEAR: [[2021]]\\\\nJOURNAL: [\\'IEEE Reviews in Biomedical Engineering\\']\\\\nVOL: 14 ISSUE: None PAGE: 116-126\\\\n=== ejmp 175697 ===\\\\nResource not found.\\\\nHTTP 404\\\\n\\\\n=== mlwa 100516 ===\\\\n{\\\\\"status\\\\\":\\\\\"ok\\\\\",\\\\\"message-type\\\\\":\\\\\"work\\\\\",\\\\\"mess",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== asoc authors ===\\\\nAUTHORS: [(\\'Xia\\', \\'Min\\'), (\\'Zheng\\', \\'Xi\\'), (\\'Imran\\', \\'Muhammad\\'), (\\'Shoaib\\', \\'Muhammad\\')]\\\\nYEAR: [[2020, 8]]\\\\nJOURNAL: [\\'Applied Soft Computing\\']\\\\nVOL: 93 PAGE: 106351\\\\n=== sr231015260210 full ===\\\\nResource not found.\\\\nHTTP 404\\\\n=== dss 126417 full ===\\\\nResource not found.\\\\nHTTP 404\\\\n=== ejmp 175697 full ===\\\\nResource not found.\\\\nHTTP 404\",\\n  \"cwd\": \"/workspace\",\\n  \"comp"
+  ],
+  "interventions": [],
+  "rounds": [
+    {
+      "run_id": "387a1d81-4678-49a4-865e-ea0ecf03c18a",
+      "stopped": false,
+      "parsed": true,
+      "n_errors": 0,
+      "errors": []
+    }
+  ],
+  "n_repairs": 0,
+  "n_stops": 0,
+  "degraded": false,
+  "first_pass_valid": true,
+  "violations": {
+    "contract_errors": [],
+    "contract_violated": false,
+    "policy_violations": [],
+    "policy_violated": false,
+    "policy_executed": false,
+    "usable": true
+  },
+  "score": {
+    "bundle": 2025,
+    "n": 12,
+    "n_pred": 12,
+    "missing": [],
+    "hallucinated_doi_detection": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "metadata_error_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "any_issue_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "rows": [
+      {
+        "item_id": 1,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)"
+      },
+      {
+        "item_id": 3,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)"
+      },
+      {
+        "item_id": 5,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)"
+      },
+      {
+        "item_id": 6,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份不一致:Crossref issued 2021,引用写 2025"
+      },
+      {
+        "item_id": 10,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "期刊名不一致:Crossref 为 'NAR Genomics and Bioinformatics',引用写 'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 11,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "标题不一致:Crossref 为 'COVID-AL: The diagnosis of COVID-19 with deep active learning',引用写 'deep Wearable learning'"
+      },
+      {
+        "item_id": 12,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      }
+    ]
+  },
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "raw_citation": "Liu I., Park C. (2025). Novel biomarker-based machine learning model in personalized cardiotoxicity prediction. European Heart Journal, 46, Supplement_1. doi: 10.1093/eurheartj/ehaf784.4139",
+        "doi": "10.1093/eurheartj/ehaf784.4139",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "claim_support": "inaccessible",
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1093/eurheartj/ehaf784.4139",
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "raw_citation": "Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015260210",
+        "doi": "10.21275/sr231015260210",
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "claim_support": "inaccessible",
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.21275/sr231015260210",
+        "issue": "DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)"
+      },
+      {
+        "item_id": 3,
+        "raw_citation": "Mondal, MRH . (2021). Diagnosis of COVID-19 Using Machine Learning and Deep Learning: A Review. Current Medical Imaging Reviews, 17, 12. doi: 10.2174/15734056mte2nnjcoy",
+        "doi": "10.2174/15734056mte2nnjcoy",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "claim_support": "inaccessible",
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.2174/15734056mte2nnjcoy",
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "raw_citation": "Strunk J., Nissen A., Smolnik S. (2025). All risks ain't the same – A risk facets perspective on AI-based decision support systems. Decision Support Systems, 199, 114557. doi: 10.1016/j.dss.2025.126417",
+        "doi": "10.1016/j.dss.2025.126417",
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "claim_support": "inaccessible",
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.dss.2025.126417",
+        "issue": "DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)"
+      },
+      {
+        "item_id": 5,
+        "raw_citation": "Hossain A., Hossain S., Sultana J. (2024). PS01.02 STRATIFICATION ON HIGH RISK AND LOW RISK ISCHEMIC STROKES USING MRI IMAGES BASED ON ARTIFICIAL INTELLIGENCE. Physica Medica, 125, 104004. doi: 10.1016/j.ejmp.2024.175697",
+        "doi": "10.1016/j.ejmp.2024.175697",
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "claim_support": "inaccessible",
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.ejmp.2024.175697",
+        "issue": "DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)"
+      },
+      {
+        "item_id": 6,
+        "raw_citation": "Orji U., Ukwandu E. (2024). Machine learning for an explainable cost prediction of medical insurance. Machine Learning with Applications, 15, 100516. doi: 10.1016/j.mlwa.2023.100516",
+        "doi": "10.1016/j.mlwa.2023.100516",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "claim_support": "inaccessible",
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.mlwa.2023.100516",
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "raw_citation": "Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.106351",
+        "doi": "10.1016/j.asoc.2020.106351",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "claim_support": "inaccessible",
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.asoc.2020.106351",
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "raw_citation": "McClure Z., Fuller-Tyszkiewicz M., Messer M., Linardon J. (2025). Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review. Clinical Psychological Science, 13, 6, 1051-1068. doi: 10.1177/21677026251340348",
+        "doi": "10.1177/21677026251340348",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "claim_support": "inaccessible",
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1177/21677026251340348",
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "raw_citation": "Shamout F., Zhu T., Clifton DA. (2025). Machine Learning for Clinical Outcome Prediction. IEEE Reviews in Biomedical Engineering, 14, 116-126. doi: 10.1109/rbme.2020.3007816",
+        "doi": "10.1109/rbme.2020.3007816",
+        "doi_status": "valid",
+        "metadata_match": false,
+        "claim_support": "inaccessible",
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1109/rbme.2020.3007816",
+        "issue": "年份不一致:Crossref issued 2021,引用写 2025"
+      },
+      {
+        "item_id": 10,
+        "raw_citation": "Yao S., Cao B., Li T., Kalos D., et al. (2022). Prediction-oriented prognostic biomarker discovery with survival machine learning methods. The Journal of Clinical Research Reports, 5, 2. doi: 10.1093/nargab/lqad055",
+        "doi": "10.1093/nargab/lqad055",
+        "doi_status": "valid",
+        "metadata_match": false,
+        "claim_support": "inaccessible",
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1093/nargab/lqad055",
+        "issue": "期刊名不一致:Crossref 为 'NAR Genomics and Bioinformatics',引用写 'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 11,
+        "raw_citation": "Wu X., Chen C., Zhong M., Wang J., et al. (2021). COVID-AL: The diagnosis of COVID-19 with deep Wearable learning. Medical Image Analysis, 68, 101913. doi: 10.1016/j.media.2020.101913",
+        "doi": "10.1016/j.media.2020.101913",
+        "doi_status": "valid",
+        "metadata_match": false,
+        "claim_support": "inaccessible",
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.media.2020.101913",
+        "issue": "标题不一致:Crossref 为 'COVID-AL: The diagnosis of COVID-19 with deep active learning',引用写 'deep Wearable learning'"
+      },
+      {
+        "item_id": 12,
+        "raw_citation": "Jaltotage B., Sukudom S., Ihdayhid AR., Dwivedi G. (2023). Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence. Clinical Therapeutics, 45, 11, 1023-1028. doi: 10.1016/j.clinthera.2023.09.019",
+        "doi": "10.1016/j.clinthera.2023.09.019",
+        "doi_status": "valid",
+        "metadata_match": true,
+        "claim_support": "inaccessible",
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.clinthera.2023.09.019",
+        "issue": ""
+      }
+    ]
+  },
+  "final_text": "I have all the data I need. Let me analyze each item:\n\n**Item 1**: DOI 10.1093/eurheartj/ehaf784.4139 — HTTP 200. Title \"Novel biomarker-based machine learning model in personalized cardiotoxicity prediction\" matches. Authors Liu I, Park C match. Year 2025 matches. Journal European Heart Journal matches. Vol 46, Issue Supplement_1 matches. **PASS**\n\n**Item 2**: DOI 10.21275/sr231015260210 — HTTP 404. **not_found, CONFIRM**\n\n**Item 3**: DOI 10.2174/15734056mte2nnjcoy — HTTP 200. Title \"Diagnosis of COVID-19 Using Machine Learning and Deep Learning: A Review\" matches. Author Mondal MRH matches. Year 2021 matches. Journal Current Medical Imaging Reviews matches. Vol 17, Issue 12 matches. **PASS**\n\n**Item 4**: DOI 10.1016/j.dss.2025.126417 — HTTP 404. **not_found, CONFIRM**\n\n**Item 5**: DOI 10.1016/j.ejmp.2024.175697 — HTTP 404. **not_found, CONFIRM**\n\n**Item 6**: DOI 10.1016/j.mlwa.2023.100516 — HTTP 200. Title \"Machine learning for an explainable cost prediction of medical insurance\" matches. Authors Orji U, Ukwandu E match. Year 2024 (published-print 2024-03, created 2023-11). Cited year 2024. Journal Machine Learning with Applications matches. Vol 15, page 100516. Cited \"15, 100516\". **PASS**\n\n**Item 7**: DOI 10.1016/j.asoc.2020.106351 — HTTP 200. Title \"Data-driven prognosis method using hybrid deep recurrent neural network\" matches. Authors Xia M, Zheng X, Imran M, Shoaib M match. Year 2020 matches. Journal Applied Soft Computing matches. Vol 93, page 106351. **PASS**\n\n**Item 8**: DOI 10.1177/21677026251340348 — HTTP 200. Title \"Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review\" matches. Authors McClure Z, Fuller-Tyszkiewicz M, Messer M, Linardon J match. Year 2025 matches. Journal Clinical Psychological Science matches. Vol 13, Issue 6, pages 1051-1068. **PASS**\n\n**Item 9**: DOI 10.1109/rbme.2020.3007816 — HTTP 200. Title \"Machine Learning for Clinical Outcome Prediction\" matches. Authors Shamout F, Zhu T, Clifton DA match. Year 2021 (Crossref issued 2021). **Cited year is 2025** — MISMATCH! The citation says \"Shamout F., Zhu T., Clifton DA. (2025)\". Crossref issued 2021. **Year mismatch → CONFIRM**\n\n**Item 10**: DOI 10.1093/nargab/lqad055 — HTTP 200. Title \"Prediction-oriented prognostic biomarker discovery with survival machine learning methods\" matches. Authors Yao S, Cao B, Li T, Kalos D match. Year 2022 (issued 2022-06-01). **Cited year is 2022** — matches. Journal NAR Genomics and Bioinformatics. **But cited journal is \"The Journal of Clinical Research Reports\"** — MISMATCH! The citation says journal is \"The Journal of Clinical Research Reports\" but Crossref says \"NAR Genomics and Bioinformatics\". **Journal mismatch → CONFIRM**\n\n**Item 11**: DOI 10.1016/j.media.2020.101913 — HTTP 200. Title \"COVID-AL: The diagnosis of COVID-19 with deep active learning\". **Cited title is \"COVID-AL: The diagnosis of COVID-19 with deep Wearable learning\"** — MISMATCH! Crossref title says \"deep active learning\", cited says \"deep Wearable learning\". **Title mismatch → CONFIRM**. Also authors: Crossref Wu X, Chen C, Zhong M, Wang J, Shi J. Cited \"Wu X., Chen C., Zhong M., Wang J., et al.\" matches. Year 2021 matches. Journal Medical Image Analysis matches. Vol 68, page 101913 matches. But title mismatch → CONFIRM.\n\n**Item 12**: DOI 10.1016/j.clinthera.2023.09.019 — HTTP 200. Title \"Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence\" matches. Authors Jaltotage B, Sukudom S, Ihdayhid AR, Dwivedi G match. Year 2023 matches. Journal Clinical Therapeutics matches. Vol 45, Issue 11, pages 1023-1028. **PASS**\n\nLet me verify the year for item 9 more carefully. Crossref issued 2021. The citation says 2025. This is a clear year mismatch. Also note the DOI is from 2020 (rbme.2020.3007816) but the article was published in 2021 (vol 14). The citation year 2025 is wrong.\n\nNow let me compile the JSON output.\n\n```json\n{\n  \"references\": [\n    {\n      \"item_id\": 1,\n      \"raw_citation\": \"Liu I., Park C. (2025). Novel biomarker-based machine learning model in personalized cardiotoxicity prediction. European Heart Journal, 46, Supplement_1. doi: 10.1093/eurheartj/ehaf784.4139\",\n      \"doi\": \"10.1093/eurheartj/ehaf784.4139\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1093/eurheartj/ehaf784.4139\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 2,\n      \"raw_citation\": \"Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015260210\",\n      \"doi\": \"10.21275/sr231015260210\",\n      \"doi_status\": \"not_found\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.21275/sr231015260210\",\n      \"issue\": \"DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)\"\n    },\n    {\n      \"item_id\": 3,\n      \"raw_citation\": \"Mondal, MRH . (2021). Diagnosis of COVID-19 Using Machine Learning and Deep Learning: A Review. Current Medical Imaging Reviews, 17, 12. doi: 10.2174/15734056mte2nnjcoy\",\n      \"doi\": \"10.2174/15734056mte2nnjcoy\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.2174/15734056mte2nnjcoy\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 4,\n      \"raw_citation\": \"Strunk J., Nissen A., Smolnik S. (2025). All risks ain't the same – A risk facets perspective on AI-based decision support systems. Decision Support Systems, 199, 114557. doi: 10.1016/j.dss.2025.126417\",\n      \"doi\": \"10.1016/j.dss.2025.126417\",\n      \"doi_status\": \"not_found\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.dss.2025.126417\",\n      \"issue\": \"DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)\"\n    },\n    {\n      \"item_id\": 5,\n      \"raw_citation\": \"Hossain A., Hossain S., Sultana J. (2024). PS01.02 STRATIFICATION ON HIGH RISK AND LOW RISK ISCHEMIC STROKES USING MRI IMAGES BASED ON ARTIFICIAL INTELLIGENCE. Physica Medica, 125, 104004. doi: 10.1016/j.ejmp.2024.175697\",\n      \"doi\": \"10.1016/j.ejmp.2024.175697\",\n      \"doi_status\": \"not_found\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.ejmp.2024.175697\",\n      \"issue\": \"DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)\"\n    },\n    {\n      \"item_id\": 6,\n      \"raw_citation\": \"Orji U., Ukwandu E. (2024). Machine learning for an explainable cost prediction of medical insurance. Machine Learning with Applications, 15, 100516. doi: 10.1016/j.mlwa.2023.100516\",\n      \"doi\": \"10.1016/j.mlwa.2023.100516\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.mlwa.2023.100516\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 7,\n      \"raw_citation\": \"Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.106351\",\n      \"doi\": \"10.1016/j.asoc.2020.106351\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.asoc.2020.106351\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 8,\n      \"raw_citation\": \"McClure Z., Fuller-Tyszkiewicz M., Messer M., Linardon J. (2025). Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review. Clinical Psychological Science, 13, 6, 1051-1068. doi: 10.1177/21677026251340348\",\n      \"doi\": \"10.1177/21677026251340348\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1177/21677026251340348\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 9,\n      \"raw_citation\": \"Shamout F., Zhu T., Clifton DA. (2025). Machine Learning for Clinical Outcome Prediction. IEEE Reviews in Biomedical Engineering, 14, 116-126. doi: 10.1109/rbme.2020.3007816\",\n      \"doi\": \"10.1109/rbme.2020.3007816\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1109/rbme.2020.3007816\",\n      \"issue\": \"年份不一致:Crossref issued 2021,引用写 2025\"\n    },\n    {\n      \"item_id\": 10,\n      \"raw_citation\": \"Yao S., Cao B., Li T., Kalos D., et al. (2022). Prediction-oriented prognostic biomarker discovery with survival machine learning methods. The Journal of Clinical Research Reports, 5, 2. doi: 10.1093/nargab/lqad055\",\n      \"doi\": \"10.1093/nargab/lqad055\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1093/nargab/lqad055\",\n      \"issue\": \"期刊名不一致:Crossref 为 'NAR Genomics and Bioinformatics',引用写 'The Journal of Clinical Research Reports';卷期也不符(Crossref vol 5 issue 2,引用写 5, 2 但期刊名错误)\"\n    },\n    {\n      \"item_id\": 11,\n      \"raw_citation\": \"Wu X., Chen C., Zhong M., Wang J., et al. (2021). COVID-AL: The diagnosis of COVID-19 with deep Wearable learning. Medical Image Analysis, 68, 101913. doi: 10.1016/j.media.2020.101913\",\n      \"doi\": \"10.1016/j.media.2020.101913\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.media.2020.101913\",\n      \"issue\": \"标题不一致:Crossref 为 'COVID-AL: The diagnosis of COVID-19 with deep active learning',引用写 'deep Wearable learning'\"\n    },\n    {\n      \"item_id\": 12,\n      \"raw_citation\": \"Jaltotage B., Sukudom S., Ihdayhid AR., Dwivedi G. (2023). Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence. Clinical Therapeutics, 45, 11, 1023-1028. doi: 10.1016/j.clinthera.2023.09.019\",\n      \"doi\": \"10.1016/j.clinthera.2023.09.019\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.clinthera.2023.09.019\",\n      \"issue\": \"\"\n    }\n  ]\n}\n```\n\nLet me double-check item 10's volume/issue. Crossref: vol 5, issue 2, article lqad055. Citation: \"The Journal of Clinical Research Reports, 5, 2\". The volume 5 issue 2 actually matches Crossref, but the journal name is wrong. So the issue is the journal name mismatch. Let me correct that.\n\nAlso for item 9, the citation year is 2025 but Crossref issued 2021. Confirmed mismatch.\n\nLet me finalize the output. The user asked for only a JSON code block. I'll provide the JSON.\n\n```json\n{\n  \"references\": [\n    {\n      \"item_id\": 1,\n      \"raw_citation\": \"Liu I., Park C. (2025). Novel biomarker-based machine learning model in personalized cardiotoxicity prediction. European Heart Journal, 46, Supplement_1. doi: 10.1093/eurheartj/ehaf784.4139\",\n      \"doi\": \"10.1093/eurheartj/ehaf784.4139\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1093/eurheartj/ehaf784.4139\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 2,\n      \"raw_citation\": \"Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015260210\",\n      \"doi\": \"10.21275/sr231015260210\",\n      \"doi_status\": \"not_found\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.21275/sr231015260210\",\n      \"issue\": \"DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)\"\n    },\n    {\n      \"item_id\": 3,\n      \"raw_citation\": \"Mondal, MRH . (2021). Diagnosis of COVID-19 Using Machine Learning and Deep Learning: A Review. Current Medical Imaging Reviews, 17, 12. doi: 10.2174/15734056mte2nnjcoy\",\n      \"doi\": \"10.2174/15734056mte2nnjcoy\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.2174/15734056mte2nnjcoy\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 4,\n      \"raw_citation\": \"Strunk J., Nissen A., Smolnik S. (2025). All risks ain't the same – A risk facets perspective on AI-based decision support systems. Decision Support Systems, 199, 114557. doi: 10.1016/j.dss.2025.126417\",\n      \"doi\": \"10.1016/j.dss.2025.126417\",\n      \"doi_status\": \"not_found\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.dss.2025.126417\",\n      \"issue\": \"DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)\"\n    },\n    {\n      \"item_id\": 5,\n      \"raw_citation\": \"Hossain A., Hossain S., Sultana J. (2024). PS01.02 STRATIFICATION ON HIGH RISK AND LOW RISK ISCHEMIC STROKES USING MRI IMAGES BASED ON ARTIFICIAL INTELLIGENCE. Physica Medica, 125, 104004. doi: 10.1016/j.ejmp.2024.175697\",\n      \"doi\": \"10.1016/j.ejmp.2024.175697\",\n      \"doi_status\": \"not_found\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.ejmp.2024.175697\",\n      \"issue\": \"DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)\"\n    },\n    {\n      \"item_id\": 6,\n      \"raw_citation\": \"Orji U., Ukwandu E. (2024). Machine learning for an explainable cost prediction of medical insurance. Machine Learning with Applications, 15, 100516. doi: 10.1016/j.mlwa.2023.100516\",\n      \"doi\": \"10.1016/j.mlwa.2023.100516\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.mlwa.2023.100516\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 7,\n      \"raw_citation\": \"Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.106351\",\n      \"doi\": \"10.1016/j.asoc.2020.106351\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.asoc.2020.106351\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 8,\n      \"raw_citation\": \"McClure Z., Fuller-Tyszkiewicz M., Messer M., Linardon J. (2025). Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review. Clinical Psychological Science, 13, 6, 1051-1068. doi: 10.1177/21677026251340348\",\n      \"doi\": \"10.1177/21677026251340348\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1177/21677026251340348\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 9,\n      \"raw_citation\": \"Shamout F., Zhu T., Clifton DA. (2025). Machine Learning for Clinical Outcome Prediction. IEEE Reviews in Biomedical Engineering, 14, 116-126. doi: 10.1109/rbme.2020.3007816\",\n      \"doi\": \"10.1109/rbme.2020.3007816\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1109/rbme.2020.3007816\",\n      \"issue\": \"年份不一致:Crossref issued 2021,引用写 2025\"\n    },\n    {\n      \"item_id\": 10,\n      \"raw_citation\": \"Yao S., Cao B., Li T., Kalos D., et al. (2022). Prediction-oriented prognostic biomarker discovery with survival machine learning methods. The Journal of Clinical Research Reports, 5, 2. doi: 10.1093/nargab/lqad055\",\n      \"doi\": \"10.1093/nargab/lqad055\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1093/nargab/lqad055\",\n      \"issue\": \"期刊名不一致:Crossref 为 'NAR Genomics and Bioinformatics',引用写 'The Journal of Clinical Research Reports'\"\n    },\n    {\n      \"item_id\": 11,\n      \"raw_citation\": \"Wu X., Chen C., Zhong M., Wang J., et al. (2021). COVID-AL: The diagnosis of COVID-19 with deep Wearable learning. Medical Image Analysis, 68, 101913. doi: 10.1016/j.media.2020.101913\",\n      \"doi\": \"10.1016/j.media.2020.101913\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.media.2020.101913\",\n      \"issue\": \"标题不一致:Crossref 为 'COVID-AL: The diagnosis of COVID-19 with deep active learning',引用写 'deep Wearable learning'\"\n    },\n    {\n      \"item_id\": 12,\n      \"raw_citation\": \"Jaltotage B., Sukudom S., Ihdayhid AR., Dwivedi G. (2023). Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence. Clinical Therapeutics, 45, 11, 1023-1028. doi: 10.1016/j.clinthera.2023.09.019\",\n      \"doi\": \"10.1016/j.clinthera.2023.09.019\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.clinthera.2023.09.019\",\n      \"issue\": \"\"\n    }\n  ]\n}\n```\n\nI've completed the verification. All 12 DOIs were checked against Crossref with actual HTTP requests. Let me present the final JSON output as requested.\n\n```json\n{\n  \"references\": [\n    {\n      \"item_id\": 1,\n      \"raw_citation\": \"Liu I., Park C. (2025). Novel biomarker-based machine learning model in personalized cardiotoxicity prediction. European Heart Journal, 46, Supplement_1. doi: 10.1093/eurheartj/ehaf784.4139\",\n      \"doi\": \"10.1093/eurheartj/ehaf784.4139\",\n      \"doi_status\": \"valid\",\n      \"metadata_match\": true,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"pass\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.1093/eurheartj/ehaf784.4139\",\n      \"issue\": \"\"\n    },\n    {\n      \"item_id\": 2,\n      \"raw_citation\": \"Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015260210\",\n      \"doi\": \"10.21275/sr231015260210\",\n      \"doi_status\": \"not_found\",\n      \"metadata_match\": false,\n      \"claim_support\": \"inaccessible\",\n      \"verdict\": \"confirm\",\n      \"confidence\": 0.95,\n      \"evidence_url\": \"https://api.crossref.org/works/10.21275/sr231015260210\",\n      \"issue\": \"DOI 不存在:Crossref 返回 HTTP 404 (Resource not found)\"\n    },\n "
+}

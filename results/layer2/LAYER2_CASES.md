@@ -19,7 +19,7 @@ into pluripotency. Nature. 2014;505(7485):641-647. doi:10.1038/nature12968
 - 判定 `retracted=true, verdict=confirm`：该著名 STAP 细胞论文于 2014 年被 Nature 撤稿，不得作为有效证据；
 - 正常对照 LeCun 论文判定 `retracted=false, verdict=ok`。
 
-**金标准对照**：item 1 确为已撤稿论文（RETRACTED），item 2 为未撤稿有效文献——**判定全部正确**。
+**金标准对照**：item 1 确为已撤稿论文（RETRACTED），item 2 为未撤稿有效文献，**判定全部正确**。
 
 **价值**：撤稿文献在题录层面完全“合法”，只有核查其当前出版状态（标题撤稿标记 / 撤稿通知关系）才能发现，纯离线模型无法获知。
 

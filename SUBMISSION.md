@@ -28,6 +28,9 @@
 - 专家核查工作流（本作品）：三项 F1 = 1.000，零误报、零漏报。
 - 结论：**决定性闸门是强制联网（F1 0.62→1.0）；强模型上专家流程无额外 F1 增益，价值在可复现性、效率与可审计**（工具调用更少、无长期记忆污染、输出 schema 稳定）。专家流程为提示词/工作流层约束而非代码级强制，过程指标为 n=7 对 n=7 的小样本观测（未做统计检验），已如实写进技术报告。
 - 图表：`results/metrics_summary.csv`、`results/process_reliability.json`；逐条：`results/per_item_results.csv`；Layer-2 同输入对照：`results/layer2/compare/`。
+- **代码级 guardrail（本轮新增）**：稿件注入 6 例 × 干预前/后，交付可用率 **4/6 → 6/6**、契约违规 **2 → 0**、运行时拦截 1 次 / 自动修复 4 次；另对校验器做 18 例故障注入，**18/18 检出、0 误报**；17 条状态机离线断言与 35 个 run 的契约回溯审计：专家 5/5、guardrail 开启 11/11、普通联网 2/4、离线 0/7。
+- **泛化验证**：换 `deepseek-v4-pro` 在 4 个 seed 上复现 F1 1.000、零干预；真实已发表论文的 50 条书目检出 4/4、误报 0（`results/guardrail/SUMMARY_extras.md`）。
+- **干净输入无回归**：同一批 48 条（4 个 seed）上 guardrail 组 4/4 可用、F1 1.000（与无 guardrail 组一致）、**0 次干预**；36 条规模压测两组各 1/1 可用、F1 1.000、0 次干预。协议、逐例与局限见 `results/guardrail/PROTOCOL.md`，技术报告 §4.7。
 
 ## 四、随附材料（代码仓库）
 
@@ -37,7 +40,8 @@
 - `results/layer2/compare/`：普通联网 Agent 与专家工作流的同输入 Layer-2 结果
 - `results/audit_report.md`：离线/联网 SSE 审计证据
 - `results/metrics_summary.{json,csv}`、`results/per_item_results.csv`、`results/process_reliability.json`：三组指标、逐条结果与过程可靠性
-- `scripts/`：评测集生成、三方跑批（run_batch / run_naive）、评分、审计、Layer-2 同输入对照等全部可复现脚本
+- `scripts/`：评测集生成、三方跑批（run_batch / run_naive）、评分、审计、Layer-2 同输入对照，以及 guardrail（`guardrail.py` / `report_schema.py` / `run_guardrail_eval.py` / `analyze_guardrail.py`）等全部可复现脚本
+- `results/guardrail/`：guardrail 协议、逐例结果、校验器故障注入与汇总表
 - `data/eval/`：Layer-1 金标准评测集
 - 本仓库已公开（GitHub，.env 与密钥已通过 .gitignore 排除，远程确认无泄露）：  
   **仓库地址：<https://github.com/medisean/sciencepal-paper-verifier>**
@@ -46,7 +50,7 @@
 
 - [x] 项目基本信息（见上）
 - [x] 可运行 SciencePal 公开分享链接（3 个，见上）
-- [x] 演示视频（3–5 分钟，实际 3 分 13 秒，1080p）：`assets/科研论文核查员_演示视频.mp4`
+- [x] 演示视频（3–5 分钟，实际 **3 分 06 秒**，1080p，guardrail 叙事）：`assets/科研论文核查员_演示视频.mp4`
 - [x] 演示 PPT（5 页，16:9）：`assets/科研论文核查员.pptx`
 - [x] 原创性与资源使用声明：`assets/原创性与资源使用声明.md`
 - [x] 代码仓库 / 技术报告 / Agent 配置 / 可复现实验材料（鼓励项，已具备）
@@ -58,7 +62,7 @@
 
 1. 项目基本信息（名称 / 简介 / 参赛形式与成员（邹亮明、邹晶晶）/ 联系方式）；
 2. 三个公开分享链接（建议以“主演示”为主链接，另两个为补充）；
-3. 上传演示视频 `科研论文核查员_演示视频.mp4`（16.8 MB，时长 3:13）；
-4. 上传演示 PPT `科研论文核查员.pptx`；
+3. 上传演示视频 `科研论文核查员_演示视频.mp4`（10.6 MB，时长 3:06），或填“仅持链接可访问”的视频地址；
+4. 上传项目说明 PDF `科研论文核查员_项目说明.pdf`（5 页，由 PPT 导出）；
 5. 上传原创性与资源使用声明（可导出为 PDF）；
 6. 如提供代码仓库，填公开 Git 地址（见第四节）。

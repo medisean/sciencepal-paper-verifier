@@ -124,68 +124,83 @@ def demo_page(name, title, shot, points, idx=None):
     right_panel(d, points)
     return img
 
-# s04 引导
+# ---------- s04 公开回放 ----------
 img, d = base()
-topbar(d, "一、免登录公开回放，执行过程全留痕", "01")
+topbar(d, "一、免登录公开回放：每一步都可复核", "01")
 sim = Image.open("/tmp/share_view.png")
 ar = sim.height/sim.width; sw=920; sh=int(sw*ar)
 if sh>820: sh=820; sw=int(sh/ar)
 shadow_paste(img, sim, 90, (H-sh)//2-10, sw, sh)
-y = 250
-rrect(d, [1130, 250, 1850, 760], 18, LIGHT)
-d.text((1170, 300), "打开公开链接即可看到", font=F(32, True), fill=NAVY)
-for i, t in enumerate(["无需登录，只读的“智能体运行记录”",
-                       "40 步完整执行轨迹，可逐步回放",
-                       "每一条沙箱命令、HTTP 状态都可见",
-                       "点“跳到结尾”直接看最终报告",
-                       "每一步都可独立复核"]):
-    d.ellipse([1170, 380+i*72, 1192, 402+i*72], fill=GREEN)
-    para(d, 1210, 376+i*72, t, 25, DARK, 600, lh=1.1, gap=0)
+right_panel(d, [
+    ("无需登录、只读回放，评审打开即可看", BLUE, None),
+    ("39 步完整执行轨迹，可逐步回放", GREEN, None),
+    ("每条沙箱命令与 HTTP 状态都可见", GOLD, None),
+    ("点“跳到结尾”直接看最终报告", NAVY, None),
+], x=1120, y=250, w=700)
 save(img, "s04.png")
 
-# s05 HTTP 实测
-img = demo_page("s05", "二、逐条联网 Crossref：404 即判 DOI 不存在", "/tmp/demo_done.png",
-    [("Agent 在隔离沙箱中对每条 DOI 发起真实 HTTP 请求", RED, "实测"),
-     ("[1] 200 真实；[2] 404 判定伪造 DOI 不存在", RED, "HTTP 200 / 404"),
-     ("[3][4] 200 后再逐字段比对题录与撤稿", BLUE, "取证"),
-     ("不靠记忆，每一条结论都有可复核的来源", GREEN, "可追溯")],
-    "02")
+# ---------- s05 一次真实拦截的时间线 ----------
+img, d = base()
+topbar(d, "二、一次真实拦截：核验 → 越权调用 → 拦截 → 纠正", "02")
+fig = Image.open(str(ROOT / "results" / "figures" / "guardrail_timeline.png"))
+fw = 1780; fh = int(fw * fig.height / fig.width)
+shadow_paste(img, fig, 70, 210, fw, fh)
+d.text((70, 210+fh+30), "120 秒时尝试调用 save_memory（被禁）→ guardrail 2.1 秒内 stop → 纠正后续跑 → 160 秒输出合规 JSON",
+       font=F(27, True), fill=NAVY)
+d.text((70, 210+fh+78), "数据取自真实 run 的 SSE 事件时间戳，不是示意图。",
+       font=F(24), fill=GRAY)
 save(img, "s05.png")
 
-# s06 最终报告
-img = demo_page("s06", "三、四条引用、四种状态：零误判", "/tmp/share_end.png",
-    [("[1] LeCun 真实，全部字段匹配，放行", GREEN, "通过"),
-     ("[2] DOI 被篡改（404），还指出真实后缀", RED, "幻觉 DOI"),
-     ("[3] Crossref 为 2024 年，引用写成 2027", RED, "年份错配"),
-     ("[4] STAP 细胞论文已撤稿，未披露", RED, "已撤稿")],
-    "03")
+# ---------- s06 干预前后对照 ----------
+img, d = base()
+topbar(d, "三、干预前后：交付可用 4/6 → 6/6", "03")
+fig = Image.open(str(ROOT / "results" / "figures" / "guardrail_compare.png"))
+fw = 1780; fh = int(fw * fig.height / fig.width)
+shadow_paste(img, fig, 70, 220, fw, fh)
+d.text((70, 220+fh+34), "6 个稿件注入用例：漏查条目、篡改 schema 各 1 例会让交付直接不可用（F1=0）；有 guardrail 时全部修复为合规交付。",
+       font=F(25), fill=DARK)
+d.text((70, 220+fh+80), "代价如实标注：修复要重发上下文，平均 token +82%、墙钟 +48%。", font=F(25, True), fill=RED)
 save(img, "s06.png")
 
-# s07 撤稿
-img = demo_page("s07", "四、撤稿识别：题录合法但已撤稿的 STAP 论文", "/tmp/share_retraction.png",
-    [("DOI 有效（HTTP 200），但标题带 RETRACTED ARTICLE", RED, "Retracted: TRUE"),
-     ("Agent 主动查询 relation 字段定位撤稿通知", BLUE, "撤稿通知"),
-     ("对照正常文献（LeCun）正确放行", GREEN, "对照"),
-     ("避免引用已撤稿论文", NAVY, "学术诚信")],
-    "04")
+# ---------- s07 交付契约与回溯审计 ----------
+img, d = base()
+topbar(d, "四、交付契约：四类校验 + 35 个 run 回溯审计", "04")
+rules = [
+    ("S 结构", "字段齐全、类型正确、枚举合法、置信度 ∈ [0,1]"),
+    ("C 覆盖", "references 必须恰好覆盖 1..N，不多不少不重"),
+    ("E 证据", "结论必须给 evidence_url，且指向该条 DOI 的权威来源"),
+    ("V 自洽", "metadata_match=false 不得配 pass；not_found 不得配 match=true"),
+]
+y = 210
+for k, v in rules:
+    rrect(d, [70, y, 1130, y+92], 14, LIGHT)
+    d.text((100, y+28), k, font=F(30, True), fill=NAVY)
+    d.text((330, y+30), v, font=F(25), fill=DARK)
+    y += 105
+# 右侧审计表
+rrect(d, [1180, 210, 1850, 700], 16, LIGHT)
+d.text((1210, 236), "契约回溯审计", font=F(28, True), fill=NAVY)
+audit = [("专家核查工作流", "5/5"), ("guardrail 开启", "11/11"),
+         ("guardrail 关闭", "5/7"), ("普通联网 Agent", "2/4"), ("离线基线", "0/7")]
+yy = 300
+for name, val in audit:
+    d.text((1210, yy), name, font=F(24), fill=DARK)
+    d.text((1740, yy-6), val, font=F(30, True), fill=(GREEN if val.split("/")[0] == val.split("/")[1] else RED))
+    yy += 72
+d.text((70, 720), "契约不是事后编的：专家、普通、离线三组结果都在契约定稿之前跑出，原样套用同一套判据。", font=F(24), fill=GRAY)
+d.text((70, 780), "普通联网 Agent 的失败是“证据张冠李戴”：对不存在的 DOI 填了最接近的真实 DOI，F1 仍 1.0，但点开链接是另一篇文献。", font=F(24), fill=GRAY)
 save(img, "s07.png")
 
-# s08 方法学
-img = demo_page("s08", "五、沙箱复算：报告 p 值与数据矛盾", "/tmp/share_method_end.png",
-    [("沙箱安装 scipy 1.15.3，按原始数据真实复算", BLUE, "真实执行"),
-     ("报告 p=0.03/0.04，复算 p=0.206/0.138（不显著）", RED, "p 值矛盾"),
-     ("两两 t 检验替代 ANOVA；样本量不足（功效0.24）", RED, "方法错误"),
-     ("产出可审计复算脚本 recompute_stats.py", GREEN, "证据留痕")],
-    "05")
-save(img, "s08.png")
+# ---------- s08 结果页（PPT 第4页全屏）----------
+save(ppt_page(4), "s08.png")
 
-# s10 严谨性（自定义）
+# ---------- s09 为什么结果可信 ----------
 img, d = base()
 topbar(d, "六、为什么结果可信：方法学严谨性", "06")
 cards = [
-    ("金标准可复现", "用 Crossref 实时构造 valid / not_found / mismatch 三类标签；伪造 DOI 用过去年份、同格式仅篡改后缀并实时验证 404，避免靠未来年份推断。", BLUE),
-    ("三方对照防稻草人", "离线基线关闭工具并审计确认零联网；另设工具全开、给基础取证指令但不教专家流程的普通 Agent，与专家工作流同输入对比；12 个 run 审计均符合预期。", GREEN),
-    ("测试集未调参", "dev 与 test 分离，48 条测试样本（4 个随机种子）从未参与提示词调优；结论由独立测试集给出。", GOLD),
+    ("金标准可复现", "用 Crossref 实时构造 valid / not_found / mismatch 三类标签；伪造 DOI 仅篡改后缀并实时验证 404，避免靠未来年份推断。", BLUE),
+    ("三方对照防稻草人", "离线基线关闭工具并用 SSE 审计确认零联网；另设工具全开、给基础取证指令但不教专家流程的普通 Agent，同输入对比。", GREEN),
+    ("测试集未调参", "dev 与 test 分离，48 条测试样本（4 个随机种子）从未参与提示词调优；结论只由未调参的测试集给出。", GOLD),
 ]
 x = 70
 for t, c, col in cards:
@@ -194,11 +209,14 @@ for t, c, col in cards:
     d.text((x+36, 280), t, font=F(36, True), fill=NAVY)
     para(d, x+36, 370, c, 26, DARK, 510, lh=1.4, gap=0)
     x += 610
-d.text((70, 870), "主结果一（能力）：联网是能力闸门，F1 0.62→1.0、误报 23→0，普通联网 Agent 同样满分。", font=F(28, True), fill=RED)
-d.text((70, 925), "主结果二（过程）：专家流程不额外提高 F1，但给可复现、可审计的工作流约束（工具更少、无状态污染、输出稳定）。", font=F(26, True), fill=NAVY)
-save(img, "s10.png")
+d.text((70, 870), "主结果一（能力）：联网是能力闸门，F1 0.62→1.0、误报 23→0。", font=F(28, True), fill=RED)
+d.text((70, 925), "主结果二（交付）：代码级 guardrail 把“必须覆盖、必须留证、不许写记忆”变成机制保证。", font=F(26, True), fill=NAVY)
+save(img, "s09.png")
 
-# s12 结尾
+# ---------- s10 交付页（PPT 第5页全屏）----------
+save(ppt_page(5), "s10.png")
+
+# ---------- s11 结尾 ----------
 img, d = base(NAVY)
 d.text((110, 150), "真实可复现，打开即见全过程", font=F(72, True), fill=WHITE)
 links = [
@@ -212,13 +230,13 @@ for t, u in links:
     d.text((150, y+26), t, font=F(32, True), fill=WHITE)
     d.text((150, y+76), u, font=F(28), fill=(159,182,214))
     y += 160
-d.text((110, 880), "配套代码仓库、技术报告、金标准评测集与 SSE 审计报告，支持一键复现。", font=F(30), fill=(191,208,232))
+d.text((110, 880), "配套代码仓库、技术报告、金标准评测集、SSE 审计与 guardrail 协议，支持一键复现。", font=F(30), fill=(191,208,232))
 d.text((110, 960), "科研论文核查员 · Paper Reference Verifier", font=F(36, True), fill=WHITE)
-save(img, "s12.png")
+save(img, "s11.png")
 
 # 场景时长（秒）
-DUR = {"s01":8, "s02":16, "s03":18, "s04":13, "s05":18, "s06":20,
-       "s07":17, "s08":22, "s09":19, "s10":15, "s11":18, "s12":9}
+DUR = {"s01": 8, "s02": 17, "s03": 19, "s04": 15, "s05": 24, "s06": 18,
+       "s07": 22, "s08": 20, "s09": 16, "s10": 18, "s11": 9}
 import json
 (OUT / "durations.json").write_text(json.dumps(DUR, ensure_ascii=False, indent=1))
 print("场景帧已生成于", OUT, "总时长", sum(DUR.values()), "秒")
@@ -235,7 +253,7 @@ for i, key in enumerate(sorted(DUR.keys()), start=1):
     seg = seg_dir / f"seg{i:02d}.mp4"
     vf = (
         "scale=3840:2160,"
-        f"zoompan=z='min(1.0+0.00075*on,1.10)':d={frames}:"
+        f"zoompan=z='min(1.0+0.00025*on,1.02)':d={frames}:"
         "x='(iw-iw/zoom)/2':y='(ih-ih/zoom)/2':s=1920x1080:fps={fps},"
         "fade=t=in:st=0:d=0.5,fade=t=out:st=%.2f:d=0.5,format=yuv420p" % (t-0.5)
     ).format(fps=fps)

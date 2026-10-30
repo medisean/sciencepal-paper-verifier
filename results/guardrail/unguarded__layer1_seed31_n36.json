@@ -1,0 +1,787 @@
+{
+  "mode": "unguarded",
+  "case": "layer1_seed31_n36",
+  "adversarial": null,
+  "run_id": "2994edbd-1c37-4099-9d8d-9eb0bfd04d42",
+  "thread_id": "32ad063d-9d06-4bdc-a197-164727641a97",
+  "status": "ok",
+  "wall_seconds": 187.9,
+  "usage": {
+    "total_tokens": 37792,
+    "prompt_tokens": 34783,
+    "completion_tokens": 3009,
+    "cached_input_tokens": 30720,
+    "_cache_usage_reported": true,
+    "cache_read_input_tokens": 0,
+    "estimated_cached_tokens": 0,
+    "cache_creation_input_tokens": 0
+  },
+  "tool_counts": {
+    "execute_command": 6
+  },
+  "tool_names": [
+    "execute_command",
+    "execute_command",
+    "execute_command",
+    "execute_command",
+    "execute_command",
+    "execute_command"
+  ],
+  "tool_contents": [
+    "{\n  \"output\": \"10.1038/s43856-024-00666-w -> 200\\n10.1016/j.clon.2021.12.002 -> 200\\n10.1227/neu.0000000000002809_401 -> 200\\n10.3389/fonc.2023.1156009 -> 200\\n10.21275/sr241230233129 -> 404\\n10.1016/j.asoc.2020.106351 -> 200\\n10.1016/j.ejmp.2024.170856 -> 404\\n10.1016/j.cplett.2024.193357 -> 404\\n10.21275/sr231015173828 -> 200\\n10.11648/j.mlr.20230801.11 -> 200\\n10.1007/s10994-018-5747-8 -> 200\\n10.1007/s00521-019-04451-y -> 200\\n\",\n  \"session_name\": \"session_a98d0c61\",\n  \"cwd\": \"/workspace\",\n ",
+    "{\n  \"output\": \"10.1016/j.ijmedinf.2023.105308 -> 200\\n10.1042/etls20210246 -> 200\\n10.1259/bjro.20251239 -> 404\\n10.1016/j.mlwa.2024.100537 -> 200\\n10.3390/plants8110468 -> 200\\n10.1016/j.artint.2023.104018 -> 200\\n10.1016/j.ceh.2024.12.003 -> 200\\n10.1016/j.semcancer.2023.09.005 -> 200\\n10.1016/j.clinthera.2023.09.019 -> 200\\n10.1148/ryai.258558 -> 404\\n10.1016/j.dss.2025.114557 -> 200\\n10.1016/j.mlwa.2023.165985 -> 404\\n10.1007/s11739-023-03358-w -> 200\\n10.20517/ais.2022.38 -> 200\\n10.1016/j.",
+    "{\n  \"output\": \"=== 10.1038/s43856-024-00666-w ===\\nTITLE: Machine learning for early dynamic prediction of functional outcome after stroke\\nJOURNAL: Communications Medicine\\nYEAR: 2024\\nVOL: 4\\nISSUE: 1\\nPAGE: \\nAUTHORS: ['Klug', 'Leclerc', 'Dirren', 'Carrera']\\n=== 10.1016/j.clon.2021.12.002 ===\\nTITLE: Deep Learning for Radiotherapy Outcome Prediction Using Dose Data \\u2013 A Review\\nJOURNAL: Clinical Oncology\\nYEAR: 2022\\nVOL: 34\\nISSUE: 2\\nPAGE: e87-e96\\nAUTHORS: ['Appelt', 'Elhaminia', 'Goo",
+    "{\n  \"output\": \"=== 10.1016/j.ijmedinf.2023.105308 ===\\nTITLE: Machine and deep learning methods for clinical outcome prediction based on physiological data of COVID-19 patients: a scoping review\\nJOURNAL: International Journal of Medical Informatics\\nYEAR: 2024\\nVOL: 182\\nISSUE: \\nPAGE: 105308\\nAUTHORS: ['Viderman', 'Kotov', 'Popov', 'Abdildin']\\n=== 10.1042/etls20210246 ===\\nTITLE: Artificial intelligence, machine learning, and deep learning for clinical outcome prediction\\nJOURNAL: Emerging To",
+    "{\n  \"output\": \"=== 10.3390/jcm13195917 ===\\nTITLE: Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion\\nJOURNAL: Journal of Clinical Medicine\\nYEAR: 2024\\nVOL: 13\\nISSUE: 19\\nPAGE: 5917\\nAUTHORS: ['Rout', 'Vaughan', 'Sidorov', 'Sanghera']\\n=== 10.1007/s10845-018-1428-5 ===\\nTITLE: Approach for fault prognosis using recurrent neural network\\nJOURNAL: Journal of Intelligent Manufacturing\\nYEAR: 2018\\nVOL: 31\\nISSUE: 7\\nPAGE: 1621-1633\\nAUTH",
+    "{\n  \"output\": \"10.1038/s43856-024-00666-w -> no-retract-title | rel: {}\\n10.1016/j.clon.2021.12.002 -> no-retract-title | rel: {}\\n10.1227/neu.0000000000002809_401 -> no-retract-title | rel: {}\\n10.3389/fonc.2023.1156009 -> no-retract-title | rel: {}\\n10.1016/j.asoc.2020.106351 -> no-retract-title | rel: {}\\n10.21275/sr231015173828 -> no-retract-title | rel: {}\\n10.11648/j.mlr.20230801.11 -> no-retract-title | rel: {}\\n10.1007/s10994-018-5747-8 -> no-retract-title | rel: {}\\n10.1007/s00521-019-0"
+  ],
+  "interventions": [],
+  "rounds": [
+    {
+      "run_id": "2994edbd-1c37-4099-9d8d-9eb0bfd04d42",
+      "stopped": false
+    }
+  ],
+  "n_repairs": 0,
+  "n_stops": 0,
+  "degraded": false,
+  "first_pass_valid": null,
+  "violations": {
+    "contract_errors": [],
+    "contract_violated": false,
+    "policy_violations": [],
+    "policy_violated": false,
+    "policy_executed": false,
+    "usable": true
+  },
+  "score": {
+    "bundle": 31,
+    "n": 36,
+    "n_pred": 36,
+    "missing": [],
+    "hallucinated_doi_detection": {
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 28,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "metadata_error_detection": {
+      "tp": 16,
+      "fp": 0,
+      "fn": 0,
+      "tn": 20,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "any_issue_detection": {
+      "tp": 16,
+      "fp": 0,
+      "fn": 0,
+      "tn": 20,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "rows": [
+      {
+        "item_id": 1,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "标题不符:Crossref真实标题为'Deep Learning for Radiotherapy Outcome Prediction Using Dose Data – A Review',引用写为'Radiotherapy Astrophysical Prediction'"
+      },
+      {
+        "item_id": 3,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 5,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 6,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 8,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 9,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 11,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份不符:Crossref issued 2018,引用写为2015"
+      },
+      {
+        "item_id": 12,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 13,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份不符:Crossref issued 2024,引用写为2027"
+      },
+      {
+        "item_id": 14,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 15,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 16,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 17,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 18,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 19,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 20,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份不符:Crossref issued 2023,引用写为2026"
+      },
+      {
+        "item_id": 21,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 22,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 23,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "期刊不符:Crossref真实期刊为'Decision Support Systems',引用写为'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 24,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 25,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 26,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 27,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 28,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "标题不符:Crossref真实标题为'Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion',引用写为'Molecular and Astrophysical Learning Approaches'"
+      },
+      {
+        "item_id": 29,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 30,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 31,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 32,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 33,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 34,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 35,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "期刊不符:Crossref真实期刊为'Machine Learning',引用写为'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 36,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "标题不符:Crossref真实标题为'A Comparative Study of Machine Learning and Deep Learning Models for Heart Disease Classification',引用写为'A Robotic Study of Machine Learning and Deep Learning Models'"
+      }
+    ]
+  },
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1038/s43856-024-00666-w",
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.clon.2021.12.002",
+        "issue": "标题不符:Crossref真实标题为'Deep Learning for Radiotherapy Outcome Prediction Using Dose Data – A Review',引用写为'Radiotherapy Astrophysical Prediction'"
+      },
+      {
+        "item_id": 3,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1227/neu.0000000000002809_401",
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.3389/fonc.2023.1156009",
+        "issue": ""
+      },
+      {
+        "item_id": 5,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.21275/sr241230233129",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 6,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.asoc.2020.106351",
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.ejmp.2024.170856",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 8,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.cplett.2024.193357",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 9,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.21275/sr231015173828",
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.11648/j.mlr.20230801.11",
+        "issue": ""
+      },
+      {
+        "item_id": 11,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s10994-018-5747-8",
+        "issue": "年份不符:Crossref issued 2018,引用写为2015"
+      },
+      {
+        "item_id": 12,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s00521-019-04451-y",
+        "issue": ""
+      },
+      {
+        "item_id": 13,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.ijmedinf.2023.105308",
+        "issue": "年份不符:Crossref issued 2024,引用写为2027"
+      },
+      {
+        "item_id": 14,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1042/etls20210246",
+        "issue": ""
+      },
+      {
+        "item_id": 15,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1259/bjro.20251239",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 16,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.mlwa.2024.100537",
+        "issue": ""
+      },
+      {
+        "item_id": 17,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.3390/plants8110468",
+        "issue": ""
+      },
+      {
+        "item_id": 18,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.artint.2023.104018",
+        "issue": ""
+      },
+      {
+        "item_id": 19,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.ceh.2024.12.003",
+        "issue": ""
+      },
+      {
+        "item_id": 20,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.semcancer.2023.09.005",
+        "issue": "年份不符:Crossref issued 2023,引用写为2026"
+      },
+      {
+        "item_id": 21,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.clinthera.2023.09.019",
+        "issue": ""
+      },
+      {
+        "item_id": 22,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1148/ryai.258558",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 23,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.dss.2025.114557",
+        "issue": "期刊不符:Crossref真实期刊为'Decision Support Systems',引用写为'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 24,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.mlwa.2023.165985",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 25,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s11739-023-03358-w",
+        "issue": ""
+      },
+      {
+        "item_id": 26,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.20517/ais.2022.38",
+        "issue": ""
+      },
+      {
+        "item_id": 27,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.compmedimag.2020.101820",
+        "issue": ""
+      },
+      {
+        "item_id": 28,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.3390/jcm13195917",
+        "issue": "标题不符:Crossref真实标题为'Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion',引用写为'Molecular and Astrophysical Learning Approaches'"
+      },
+      {
+        "item_id": 29,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s10845-018-1428-5",
+        "issue": ""
+      },
+      {
+        "item_id": 30,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1089/ct.2024;36.150-152",
+        "issue": ""
+      },
+      {
+        "item_id": 31,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.55248/gengpi.6.0625.66905",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 32,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1093/eurheartj/ehad847",
+        "issue": ""
+      },
+      {
+        "item_id": 33,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.engappai.2023.107187",
+        "issue": ""
+      },
+      {
+        "item_id": 34,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.18280/ria.371759",
+        "issue": "DOI不存在(HTTP 404)"
+      },
+      {
+        "item_id": 35,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s10994-024-06611-1",
+        "issue": "期刊不符:Crossref真实期刊为'Machine Learning',引用写为'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 36,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.30871/jaic.v9i6.11546",
+        "issue": "标题不符:Crossref真实标题为'A Comparative Study of Machine Learning and Deep Learning Models for Heart Disease Classification',引用写为'A Robotic Study of Machine Learning and Deep Learning Models'"
+      }
+    ]
+  },
+  "final_text": "No retraction flags found on any valid DOI. I now have all the data needed. Let me compile the final results.\n\nSummary of findings:\n\n**DOI not found (404) — CONFIRM:**\n- Item 5: 10.21275/sr241230233129\n- Item 7: 10.1016/j.ejmp.2024.170856\n- Item 8: 10.1016/j.cplett.2024.193357\n- Item 15: 10.1259/bjro.20251239\n- Item 22: 10.1148/ryai.258558\n- Item 24: 10.1016/j.mlwa.2023.165985\n- Item 31: 10.55248/gengpi.6.0625.66905\n- Item 34: 10.18280/ria.371759\n\n**Title mismatch — CONFIRM:**\n- Item 2: Crossref \"Radiotherapy Outcome Prediction\" vs cited \"Radiotherapy Astrophysical Prediction\"\n- Item 28: Crossref \"Molecular and Machine Learning\" vs cited \"Molecular and Astrophysical Learning\"\n- Item 36: Crossref \"A Comparative Study\" vs cited \"A Robotic Study\"\n\n**Year mismatch — CONFIRM:**\n- Item 11: Crossref 2018 vs cited 2015\n- Item 13: Crossref 2024 vs cited 2027\n- Item 20: Crossref 2023 vs cited 2026\n\n**Journal mismatch — CONFIRM:**\n- Item 23: Crossref \"Decision Support Systems\" vs cited \"The Journal of Clinical Research Reports\"\n- Item 35: Crossref \"Machine Learning\" vs cited \"The Journal of Clinical Research Reports\"\n\nAll others PASS. No retraction flags on any valid DOI.\n\n```json\n{\"references\":[\n{\"item_id\":1,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1038/s43856-024-00666-w\",\"issue\":\"\"},\n{\"item_id\":2,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.clon.2021.12.002\",\"issue\":\"标题不符:Crossref真实标题为'Deep Learning for Radiotherapy Outcome Prediction Using Dose Data – A Review',引用写为'Radiotherapy Astrophysical Prediction'\"},\n{\"item_id\":3,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1227/neu.0000000000002809_401\",\"issue\":\"\"},\n{\"item_id\":4,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.3389/fonc.2023.1156009\",\"issue\":\"\"},\n{\"item_id\":5,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/sr241230233129\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":6,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.asoc.2020.106351\",\"issue\":\"\"},\n{\"item_id\":7,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.ejmp.2024.170856\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":8,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.cplett.2024.193357\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":9,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/sr231015173828\",\"issue\":\"\"},\n{\"item_id\":10,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.11648/j.mlr.20230801.11\",\"issue\":\"\"},\n{\"item_id\":11,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s10994-018-5747-8\",\"issue\":\"年份不符:Crossref issued 2018,引用写为2015\"},\n{\"item_id\":12,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s00521-019-04451-y\",\"issue\":\"\"},\n{\"item_id\":13,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.ijmedinf.2023.105308\",\"issue\":\"年份不符:Crossref issued 2024,引用写为2027\"},\n{\"item_id\":14,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1042/etls20210246\",\"issue\":\"\"},\n{\"item_id\":15,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1259/bjro.20251239\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":16,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2024.100537\",\"issue\":\"\"},\n{\"item_id\":17,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.3390/plants8110468\",\"issue\":\"\"},\n{\"item_id\":18,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.artint.2023.104018\",\"issue\":\"\"},\n{\"item_id\":19,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.ceh.2024.12.003\",\"issue\":\"\"},\n{\"item_id\":20,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.semcancer.2023.09.005\",\"issue\":\"年份不符:Crossref issued 2023,引用写为2026\"},\n{\"item_id\":21,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.clinthera.2023.09.019\",\"issue\":\"\"},\n{\"item_id\":22,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1148/ryai.258558\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":23,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.dss.2025.114557\",\"issue\":\"期刊不符:Crossref真实期刊为'Decision Support Systems',引用写为'The Journal of Clinical Research Reports'\"},\n{\"item_id\":24,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2023.165985\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":25,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s11739-023-03358-w\",\"issue\":\"\"},\n{\"item_id\":26,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.20517/ais.2022.38\",\"issue\":\"\"},\n{\"item_id\":27,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.compmedimag.2020.101820\",\"issue\":\"\"},\n{\"item_id\":28,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.3390/jcm13195917\",\"issue\":\"标题不符:Crossref真实标题为'Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion',引用写为'Molecular and Astrophysical Learning Approaches'\"},\n{\"item_id\":29,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s10845-018-1428-5\",\"issue\":\"\"},\n{\"item_id\":30,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1089/ct.2024;36.150-152\",\"issue\":\"\"},\n{\"item_id\":31,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.55248/gengpi.6.0625.66905\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":32,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1093/eurheartj/ehad847\",\"issue\":\"\"},\n{\"item_id\":33,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.engappai.2023.107187\",\"issue\":\"\"},\n{\"item_id\":34,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.18280/ria.371759\",\"issue\":\"DOI不存在(HTTP 404)\"},\n{\"item_id\":35,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s10994-024-06611-1\",\"issue\":\"期刊不符:Crossref真实期刊为'Machine Learning',引用写为'The Journal of Clinical Research Reports'\"},\n{\"item_id\":36,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.30871/jaic.v9i6.11546\",\"issue\":\"标题不符:Crossref真实标题为'A Comparative Study of Machine Learning and Deep Learning Models for Heart Disease Classification',引用写为'A Robotic Study of Machine Learning and Deep Learning Models'\"}\n]}\n```\n\n核查完成。所有 36 条 DOI 均已在沙箱中实际调用 Crossref API 验证(记录 HTTP 状态),并逐字段比对题录。结果如下:\n\n**8 条 DOI 不存在(HTTP 404,引用幻觉):** 条目 5、7、8、15、22、24、31、34。\n\n**8 条 DOI 有效但题录被篡改(confirm):**\n- **标题被改(3 条):** 条目 2(Outcome→Astrophysical)、28(Machine→Astrophysical)、36(Comparative→Robotic)\n- **年份被改(3 条):** 条目 11(2018→2015)、13(2024→2027)、20(2023→2026)\n- **期刊被改(2 条):** 条目 23(Decision Support Systems→The Journal of Clinical Research Reports)、35(Machine Learning→The Journal of Clinical Research Reports)\n\n**20 条通过(pass):** 条目 1、3、4、6、9、10、12、14、16、17、18、19、21、25、26、27、29、30、32、33。\n\n所有有效 DOI 均未发现撤稿标记(标题无 RETRACTED 前缀/后缀,relation 字段无撤稿通知)。"
+}

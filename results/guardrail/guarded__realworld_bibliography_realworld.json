@@ -1,0 +1,1046 @@
+{
+  "mode": "guarded",
+  "case": "realworld_bibliography",
+  "adversarial": null,
+  "run_id": "4dda00b8-9168-4c24-904f-43bea3a58f9e",
+  "thread_id": "19914a91-720d-475b-81aa-498867b75323",
+  "status": "ok",
+  "wall_seconds": 263.4,
+  "usage": {
+    "total_tokens": 48791,
+    "prompt_tokens": 41617,
+    "completion_tokens": 7174
+  },
+  "tool_counts": {
+    "execute_command": 6
+  },
+  "tool_names": [
+    "execute_command"
+  ],
+  "tool_contents": [
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1016/S1474-4422(21)00252-0 -> HTTP 200\\\\n  title: Global, regional, and national burden of stroke and its risk factors, 1990\\\\u20132019: a systema\\\\n  year: 2021\\\\n  journal: The Lancet Neurology\\\\n  vol: 20 issue: 10 page: 795-820 art: None\\\\n  authors: Feigin V; Stark B; Johnson C; Roth G\\\\n=== 10.2174/1567202617666200817141837 -> HTTP 200\\\\n  title: Stroke History is an Independent Risk Factor for Poor Prognosis in",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1016/j.hest.2020.09.001 -> HTTP 200\\\\n  title: Behavioral tests in rodent models of stroke\\\\n  year: 2020\\\\n  journal: Brain Hemorrhages\\\\n  vol: 1 issue: 4 page: 171-184 art: None\\\\n  authors: Ruan J; Yao Y\\\\n=== 10.1016/j.jstrokecerebrovasdis.2019.104618 -> HTTP 200\\\\n  title: Potential Metabolite Biomarkers for Acute Versus Chronic Stage of Ischemic Stroke: A Pilot\\\\n  year: 2020\\\\n  journal: Journal of Stroke and ",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1212/WNL.0000000000007313 -> HTTP 200\\\\n  title: Large-scale plasma metabolome analysis reveals alterations in HDL metabolism in migraine\\\\n  year: 2019\\\\n  journal: Neurology\\\\n  vol: 92 issue: 16 page: None art: None\\\\n  authors: Onderwater G; Ligthart L; Bot M; Demirkan A\\\\n=== 10.1016/j.neuint.2023.105588 -> HTTP 200\\\\n  title: Discovery and validation of circulating stroke metabolites by NMR-based analyses using ",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1177/1971400915609347 -> HTTP 200\\\\n  title: Final infarct volume discriminates outcome in mild strokes\\\\n  year: 2015\\\\n  journal: The Neuroradiology Journal\\\\n  vol: 28 issue: 4 page: 404-408 art: None\\\\n  authors: Vagal A; Sucharew H; Prabhakaran S; Khatri P\\\\n=== 10.3389/fneur.2020.551411 -> HTTP 200\\\\n  title: Deletion of MicroRNA-144/451 Cluster Aggravated Brain Injury in Intracerebral Hemorrhage M\\\\n  year: 202",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1161/STROKEAHA.111.000813 -> HTTP 200\\\\n  title: Diabetes Mellitus, Admission Glucose, and Outcomes After Stroke Thrombolysis\\\\n  year: 2013\\\\n  journal: Stroke\\\\n  vol: 44 issue: 7 page: 1915-1923 art: None\\\\n  authors: Desilles J; Meseguer E; Labreuche J; Lapergue B\\\\n=== 10.1016/j.jocn.2023.09.019 -> HTTP 200\\\\n  title: Urinary ketone bodies and stroke recurrence in patient with acute ischemic stroke or TIA\\\\n  yea",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1136/neurintsurg-2016-012515\\\\n  issued: {\\'date-parts\\': [[2016, 7, 15]]}\\\\n  published-print: {\\'date-parts\\': [[2017, 8]]}\\\\n  published-online: {\\'date-parts\\': [[2016, 7, 15]]}\\\\n  created: {\\'date-parts\\': [[2016, 7, 16]], \\'date-time\\': \\'2016-07-16T03:29:25Z\\', \\'timestamp\\': 1468639765000}\\\\n=== 10.1007/s12975-020-00876-z\\\\n  issued: {\\'date-parts\\': [[2020, 11, 19]]}\\\\n  published-print: {\\'date-parts\\': [[2"
+  ],
+  "interventions": [],
+  "rounds": [
+    {
+      "run_id": "4dda00b8-9168-4c24-904f-43bea3a58f9e",
+      "stopped": false,
+      "parsed": true,
+      "n_errors": 0,
+      "errors": []
+    }
+  ],
+  "n_repairs": 0,
+  "n_stops": 0,
+  "degraded": false,
+  "first_pass_valid": true,
+  "violations": {
+    "contract_errors": [],
+    "contract_violated": false,
+    "policy_violations": [],
+    "policy_violated": false,
+    "policy_executed": false,
+    "usable": true
+  },
+  "score": {
+    "bundle": 0,
+    "n": 50,
+    "n_pred": 50,
+    "missing": [],
+    "hallucinated_doi_detection": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 50,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "accuracy": 1.0
+    },
+    "metadata_error_detection": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 46,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "any_issue_detection": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "tn": 46,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "rows": [
+      {
+        "item_id": 1,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 3,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 5,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份:Crossref issued 2016(在线优先),引用 2017"
+      },
+      {
+        "item_id": 6,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 11,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 12,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 13,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 14,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份:Crossref issued 2020(在线优先),引用 2021"
+      },
+      {
+        "item_id": 15,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 16,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 17,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 18,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 19,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 20,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 21,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 22,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 23,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 24,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 25,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 26,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 27,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 28,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 29,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 30,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 31,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 32,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份:Crossref issued 2021,引用 2020"
+      },
+      {
+        "item_id": 33,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份:Crossref issued 2020(在线优先),引用 2021"
+      },
+      {
+        "item_id": 34,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 35,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 36,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 37,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 38,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 39,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 40,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 41,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 42,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 43,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 44,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 45,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 46,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 47,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 48,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 49,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 50,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      }
+    ]
+  },
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/S1474-4422(21)00252-0",
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.2174/1567202617666200817141837",
+        "issue": ""
+      },
+      {
+        "item_id": 3,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1161/CIR.0000000000000757",
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1161/STROKEAHA.116.013144",
+        "issue": ""
+      },
+      {
+        "item_id": 5,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1136/neurintsurg-2016-012515",
+        "issue": "年份:Crossref issued 2016(在线优先),引用 2017"
+      },
+      {
+        "item_id": 6,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1589/jpts.30.1310",
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1161/01.STR.0000251792.76080.45",
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1038/nrm3313",
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1111/ejn.14695",
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1021/acs.jproteome.1c00259",
+        "issue": ""
+      },
+      {
+        "item_id": 11,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.hest.2020.09.001",
+        "issue": ""
+      },
+      {
+        "item_id": 12,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2019.104618",
+        "issue": ""
+      },
+      {
+        "item_id": 13,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.5853/jos.2018.03454",
+        "issue": ""
+      },
+      {
+        "item_id": 14,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s12975-020-00876-z",
+        "issue": "年份:Crossref issued 2020(在线优先),引用 2021"
+      },
+      {
+        "item_id": 15,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2022.106320",
+        "issue": ""
+      },
+      {
+        "item_id": 16,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1097/01376517-199712000-00008",
+        "issue": ""
+      },
+      {
+        "item_id": 17,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1002/ana.410320113",
+        "issue": ""
+      },
+      {
+        "item_id": 18,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1161/01.STR.0000258355.23810.c6",
+        "issue": ""
+      },
+      {
+        "item_id": 19,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1161/STR.0000000000000211",
+        "issue": ""
+      },
+      {
+        "item_id": 20,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1161/STROKEAHA.109.571364",
+        "issue": ""
+      },
+      {
+        "item_id": 21,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1212/WNL.0000000000007313",
+        "issue": ""
+      },
+      {
+        "item_id": 22,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.neuint.2023.105588",
+        "issue": ""
+      },
+      {
+        "item_id": 23,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.gene.2024.148712",
+        "issue": ""
+      },
+      {
+        "item_id": 24,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1038/nmeth.3252",
+        "issue": ""
+      },
+      {
+        "item_id": 25,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1261/rna.2183803",
+        "issue": ""
+      },
+      {
+        "item_id": 26,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2018.04.003",
+        "issue": ""
+      },
+      {
+        "item_id": 27,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1111/j.1600-0404.2010.01401.x",
+        "issue": ""
+      },
+      {
+        "item_id": 28,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1056/NEJMoa2118191",
+        "issue": ""
+      },
+      {
+        "item_id": 29,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1056/NEJMoa2213379",
+        "issue": ""
+      },
+      {
+        "item_id": 30,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1056/NEJMoa2214403",
+        "issue": ""
+      },
+      {
+        "item_id": 31,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1177/1971400915609347",
+        "issue": ""
+      },
+      {
+        "item_id": 32,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.3389/fneur.2020.551411",
+        "issue": "年份:Crossref issued 2021,引用 2020"
+      },
+      {
+        "item_id": 33,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s13760-020-01500-5",
+        "issue": "年份:Crossref issued 2020(在线优先),引用 2021"
+      },
+      {
+        "item_id": 34,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.bbrc.2016.01.122",
+        "issue": ""
+      },
+      {
+        "item_id": 35,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.18632/oncotarget.14710",
+        "issue": ""
+      },
+      {
+        "item_id": 36,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1159/000351767",
+        "issue": ""
+      },
+      {
+        "item_id": 37,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1161/STROKEAHA.117.017804",
+        "issue": ""
+      },
+      {
+        "item_id": 38,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.brainresbull.2013.02.007",
+        "issue": ""
+      },
+      {
+        "item_id": 39,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1161/STROKEAHA.118.023769",
+        "issue": ""
+      },
+      {
+        "item_id": 40,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s00415-018-8866-z",
+        "issue": ""
+      },
+      {
+        "item_id": 41,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1161/STROKEAHA.111.000813",
+        "issue": ""
+      },
+      {
+        "item_id": 42,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.jocn.2023.09.019",
+        "issue": ""
+      },
+      {
+        "item_id": 43,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1111/cns.14323",
+        "issue": ""
+      },
+      {
+        "item_id": 44,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.wneu.2019.07.203",
+        "issue": ""
+      },
+      {
+        "item_id": 45,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.brainres.2014.09.055",
+        "issue": ""
+      },
+      {
+        "item_id": 46,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1212/WNL.0000000000008615",
+        "issue": ""
+      },
+      {
+        "item_id": 47,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.jns.2023.120589",
+        "issue": ""
+      },
+      {
+        "item_id": 48,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.9,
+        "evidence_url": "https://api.crossref.org/works/10.1177/00368504211029777",
+        "issue": ""
+      },
+      {
+        "item_id": 49,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.bdr.2022.100332",
+        "issue": ""
+      },
+      {
+        "item_id": 50,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1158/1078-0432.CCR-17-0853",
+        "issue": ""
+      }
+    ]
+  },
+  "final_text": "Now I have the full picture for the year-mismatch items. Let me analyze:\n\n**[5] Rai 2017** — Crossref issued 2016-07-15 (online), published-print 2017-08. Cited year 2017. The print publication is 2017. Per the instruction: \"以 Crossref 的 issued.date-parts 年份为准(在线优先/正式见刊或有多个年份时,取与该出版类型对应的发表年份)\". Crossref issued = 2016. The cited year 2017 corresponds to the print publication. Since the instruction says to use Crossref issued date-parts as authoritative, and issued = 2016 while cited = 2017, this is a year mismatch → metadata_match=false, confirm.\n\n**[14] Sidorov 2021** — Crossref issued 2020-11-19 (online), published-print 2021-10. Cited 2021. Crossref issued = 2020. Cited = 2021. Mismatch → confirm.\n\n**[32] Wang 2020** — Crossref issued 2021-01-12 (online only, no print). Cited 2020. Crossref issued = 2021. Cited = 2020. Mismatch → confirm.\n\n**[33] Zhong 2021** — Crossref issued 2020-09-22 (online), published-print 2021-02. Cited 2021. Crossref issued = 2020. Cited = 2021. Mismatch → confirm.\n\nPer the strict instruction, all four are year mismatches against Crossref issued date-parts → metadata_match=false, verdict=confirm.\n\nLet me also double-check item 3 (Virani) and item 19 (Powers) and item 21 (Onderwater) and item 46 (Carcel) regarding the \"e-number\" pages. The cited page numbers (e139, e344, e1899, e2170) are article numbers. Crossref shows page=None for these. This is a common citation convention where the article number is used as the page. This is not a mismatch per the instruction (title truncation and journal abbreviation are normal). The article number is a legitimate way to cite. I'll treat these as PASS.\n\nLet me also verify item 48 (Kokol) article number. Crossref article-number = 00368504211029777. Cited = 368504211029777. These are the same number (leading zero dropped). Not a mismatch.\n\nNow let me compile the final JSON. All 50 DOIs are valid (HTTP 200). The mismatches are items 5, 14, 32, 33 (year mismatches).\n\nLet me record the evidence URLs. The evidence URL for each is the Crossref API URL.\n\n```json\n{\n  \"references\": [\n    {\"item_id\": 1, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/S1474-4422(21)00252-0\", \"issue\": \"\"},\n    {\"item_id\": 2, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.2174/1567202617666200817141837\", \"issue\": \"\"},\n    {\"item_id\": 3, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1161/CIR.0000000000000757\", \"issue\": \"\"},\n    {\"item_id\": 4, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1161/STROKEAHA.116.013144\", \"issue\": \"\"},\n    {\"item_id\": 5, \"doi_status\": \"valid\", \"metadata_match\": false, \"verdict\": \"confirm\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1136/neurintsurg-2016-012515\", \"issue\": \"年份:Crossref issued 2016(在线优先),引用 2017\"},\n    {\"item_id\": 6, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1589/jpts.30.1310\", \"issue\": \"\"},\n    {\"item_id\": 7, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1161/01.STR.0000251792.76080.45\", \"issue\": \"\"},\n    {\"item_id\": 8, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1038/nrm3313\", \"issue\": \"\"},\n    {\"item_id\": 9, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1111/ejn.14695\", \"issue\": \"\"},\n    {\"item_id\": 10, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1021/acs.jproteome.1c00259\", \"issue\": \"\"},\n    {\"item_id\": 11, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.hest.2020.09.001\", \"issue\": \"\"},\n    {\"item_id\": 12, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2019.104618\", \"issue\": \"\"},\n    {\"item_id\": 13, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.5853/jos.2018.03454\", \"issue\": \"\"},\n    {\"item_id\": 14, \"doi_status\": \"valid\", \"metadata_match\": false, \"verdict\": \"confirm\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1007/s12975-020-00876-z\", \"issue\": \"年份:Crossref issued 2020(在线优先),引用 2021\"},\n    {\"item_id\": 15, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2022.106320\", \"issue\": \"\"},\n    {\"item_id\": 16, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1097/01376517-199712000-00008\", \"issue\": \"\"},\n    {\"item_id\": 17, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1002/ana.410320113\", \"issue\": \"\"},\n    {\"item_id\": 18, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1161/01.STR.0000258355.23810.c6\", \"issue\": \"\"},\n    {\"item_id\": 19, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1161/STR.0000000000000211\", \"issue\": \"\"},\n    {\"item_id\": 20, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1161/STROKEAHA.109.571364\", \"issue\": \"\"},\n    {\"item_id\": 21, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1212/WNL.0000000000007313\", \"issue\": \"\"},\n    {\"item_id\": 22, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.neuint.2023.105588\", \"issue\": \"\"},\n    {\"item_id\": 23, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.gene.2024.148712\", \"issue\": \"\"},\n    {\"item_id\": 24, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1038/nmeth.3252\", \"issue\": \"\"},\n    {\"item_id\": 25, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1261/rna.2183803\", \"issue\": \"\"},\n    {\"item_id\": 26, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2018.04.003\", \"issue\": \"\"},\n    {\"item_id\": 27, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1111/j.1600-0404.2010.01401.x\", \"issue\": \"\"},\n    {\"item_id\": 28, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1056/NEJMoa2118191\", \"issue\": \"\"},\n    {\"item_id\": 29, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1056/NEJMoa2213379\", \"issue\": \"\"},\n    {\"item_id\": 30, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1056/NEJMoa2214403\", \"issue\": \"\"},\n    {\"item_id\": 31, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1177/1971400915609347\", \"issue\": \"\"},\n    {\"item_id\": 32, \"doi_status\": \"valid\", \"metadata_match\": false, \"verdict\": \"confirm\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.3389/fneur.2020.551411\", \"issue\": \"年份:Crossref issued 2021,引用 2020\"},\n    {\"item_id\": 33, \"doi_status\": \"valid\", \"metadata_match\": false, \"verdict\": \"confirm\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1007/s13760-020-01500-5\", \"issue\": \"年份:Crossref issued 2020(在线优先),引用 2021\"},\n    {\"item_id\": 34, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.bbrc.2016.01.122\", \"issue\": \"\"},\n    {\"item_id\": 35, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.18632/oncotarget.14710\", \"issue\": \"\"},\n    {\"item_id\": 36, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1159/000351767\", \"issue\": \"\"},\n    {\"item_id\": 37, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1161/STROKEAHA.117.017804\", \"issue\": \"\"},\n    {\"item_id\": 38, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.brainresbull.2013.02.007\", \"issue\": \"\"},\n    {\"item_id\": 39, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1161/STROKEAHA.118.023769\", \"issue\": \"\"},\n    {\"item_id\": 40, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1007/s00415-018-8866-z\", \"issue\": \"\"},\n    {\"item_id\": 41, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1161/STROKEAHA.111.000813\", \"issue\": \"\"},\n    {\"item_id\": 42, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.jocn.2023.09.019\", \"issue\": \"\"},\n    {\"item_id\": 43, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1111/cns.14323\", \"issue\": \"\"},\n    {\"item_id\": 44, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.wneu.2019.07.203\", \"issue\": \"\"},\n    {\"item_id\": 45, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.brainres.2014.09.055\", \"issue\": \"\"},\n    {\"item_id\": 46, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1212/WNL.0000000000008615\", \"issue\": \"\"},\n    {\"item_id\": 47, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.jns.2023.120589\", \"issue\": \"\"},\n    {\"item_id\": 48, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.9, \"evidence_url\": \"https://api.crossref.org/works/10.1177/00368504211029777\", \"issue\": \"\"},\n    {\"item_id\": 49, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1016/j.bdr.2022.100332\", \"issue\": \"\"},\n    {\"item_id\": 50, \"doi_status\": \"valid\", \"metadata_match\": true, \"verdict\": \"pass\", \"confidence\": 0.95, \"evidence_url\": \"https://api.crossref.org/works/10.1158/1078-0432.CCR-17-0853\", \"issue\": \"\"}\n  ]\n}\n```\n\nAll 50 DOIs were verified against Crossref (all returned HTTP 200). Four items have year mismatches against Crossref's issued date-parts: items 5, 14, 32, 33. All other fields (authors, titles, journals, volumes, issues, pages) match.\n\n```json\n{\"references\":[{\"item_id\":1,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/S1474-4422(21)00252-0\",\"issue\":\"\"},{\"item_id\":2,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.2174/1567202617666200817141837\",\"issue\":\"\"},{\"item_id\":3,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.9,\"evidence_url\":\"https://api.crossref.org/works/10.1161/CIR.0000000000000757\",\"issue\":\"\"},{\"item_id\":4,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1161/STROKEAHA.116.013144\",\"issue\":\"\"},{\"item_id\":5,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.9,\"evidence_url\":\"https://api.crossref.org/works/10.1136/neurintsurg-2016-012515\",\"issue\":\"年份:Crossref issued 2016(在线优先),引用 2017\"},{\"item_id\":6,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1589/jpts.30.1310\",\"issue\":\"\"},{\"item_id\":7,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1161/01.STR.0000251792.76080.45\",\"issue\":\"\"},{\"item_id\":8,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1038/nrm3313\",\"issue\":\"\"},{\"item_id\":9,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1111/ejn.14695\",\"issue\":\"\"},{\"item_id\":10,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1021/acs.jproteome.1c00259\",\"issue\":\"\"},{\"item_id\":11,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.hest.2020.09.001\",\"issue\":\"\"},{\"item_id\":12,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2019.104618\",\"issue\":\"\"},{\"item_id\":13,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.5853/jos.2018.03454\",\"issue\":\"\"},{\"item_id\":14,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.9,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s12975-020-00876-z\",\"issue\":\"年份:Crossref issued 2020(在线优先),引用 2021\"},{\"item_id\":15,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2022.106320\",\"issue\":\"\"},{\"item_id\":16,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1097/01376517-199712000-00008\",\"issue\":\"\"},{\"item_id\":17,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1002/ana.410320113\",\"issue\":\"\"},{\"item_id\":18,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1161/01.STR.0000258355.23810.c6\",\"issue\":\"\"},{\"item_id\":19,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.9,\"evidence_url\":\"https://api.crossref.org/works/10.1161/STR.0000000000000211\",\"issue\":\"\"},{\"item_id\":20,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1161/STROKEAHA.109.571364\",\"issue\":\"\"},{\"item_id\":21,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.9,\"evidence_url\":\"https://api.crossref.org/works/10.1212/WNL.0000000000007313\",\"issue\":\"\"},{\"item_id\":22,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.neuint.2023.105588\",\"issue\":\"\"},{\"item_id\":23,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.gene.2024.148712\",\"issue\":\"\"},{\"item_id\":24,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1038/nmeth.3252\",\"issue\":\"\"},{\"item_id\":25,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1261/rna.2183803\",\"issue\":\"\"},{\"item_id\":26,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.jstrokecerebrovasdis.2018.04.003\",\"issue\":\"\"},{\"item_id\":27,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1111/j.1600-0404.2010.01401.x\",\"issue\":\"\"},{\"item_id\":28,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1056/NEJMoa2118191\",\"issue\":\"\"},{\"item_id\":29,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1056/NEJMoa2213379\",\"issue\":\"\"},{\"item_id\":30,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1056/NEJMoa2214403\",\"issue\":\"\"},{\"item_id\":31,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1177/1971400915609347\",\"issue\":\"\"},{\"item_id\":32,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.9,\"evidence_url\":\"https://api.crossref.org/works/10.3389/fneur.2020.551411\",\"issue\":\"年份:Crossref issued 2021,引用 2020\"},{\"item_id\":33,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.9,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s13760-020-01500-5\",\"issue\":\"年份:Crossref issued 2020(在线优先),引用 2021\"},{\"item_id\":34,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.bbrc.2016.01.122\",\"issue\":\"\"},{\"item_id\":35,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.18632/oncotarget.14710\",\"issue\":\"\"},{\"item_id\":36,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1159/000351767\",\"issue\":\"\"},{\"item_id\":37,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1161/STROKEAHA.117.017804\",\"issue\":\"\"},{\"item_id\":38,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.brainresbull.2013.02.007\",\"issue\":\"\"},{\"item_id\":39,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1161/STROKEAHA.118.023769\",\"issue\":\"\"},{\"item_id\":40,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s00415-018-8866-z\",\"issue\":\"\"},{\"item_id\":41,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1161/STROKEAHA.111.000813\",\"issue\":\"\"},{\"item_id\":42,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url"
+}

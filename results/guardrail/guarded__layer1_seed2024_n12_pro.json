@@ -1,0 +1,322 @@
+{
+  "mode": "guarded",
+  "case": "layer1_seed2024_n12",
+  "adversarial": null,
+  "run_id": "67bdcdf0-628d-450b-82c5-2d6ed320c388",
+  "thread_id": "c5c46cf2-8822-4d41-a431-f1f68ca19547",
+  "status": "ok",
+  "wall_seconds": 258.7,
+  "usage": {
+    "total_tokens": 35803,
+    "prompt_tokens": 32164,
+    "completion_tokens": 3639
+  },
+  "tool_counts": {
+    "execute_command": 4
+  },
+  "tool_names": [
+    "execute_command"
+  ],
+  "tool_contents": [
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@e75ec46d-2d84-40c5-8b69-3853122272c8:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \\\\\"10.21275/ms231218\\\\n1849\\\\\" \\\\\"10.3390/jcm13207975\\\\\" \\\\\"10.3389/fonc.2023.1156009\\\\\" \\\\\"10.1016/j.cplett.2024.1\\\\n98118\\\\\" \\\\\"10.3390/audiolres15060161\\\\\" \\\\\"10.21275/sr231015173828\\\\\" \\\\\"10.1016/j.jocn.202\\\\n2.07.022\\\\\" \\\\\"10.1016/j.clon.2021.12.002\\\\\" \\\\\"10.21275/sr2412302118",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@e75ec46d-2d84-40c5-8b69-3853122272c8:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && for doi in \\\\\"10.21275/ms231218\\\\n1849\\\\\" \\\\\"10.3390/jcm13207975\\\\\" \\\\\"10.3389/fonc.2023.1156009\\\\\" \\\\\"10.1016/j.cplett.2024.1\\\\n98118\\\\\" \\\\\"10.3390/audiolres15060161\\\\\" \\\\\"10.21275/sr231015173828\\\\\" \\\\\"10.1016/j.jocn.202\\\\n2.07.022\\\\\" \\\\\"10.1016/j.clon.2021.12.002\\\\\" \\\\\"10.21275/sr2412302118",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"(venv) root@e75ec46d-2d84-40c5-8b69-3853122272c8:/workspace# eval \\'export GIT_TE\\\\nRMINAL_PROMPT=0; set -o pipefail; cd /workspace && cat /tmp/verify_results.txt\\';\\\\n command printf \\'%s\\\\\\\\n\\' \\\\\"$?\\\\\" > /tmp/_agent_cmd_194763c0ba134c3e8407f902a9195f6d.r\\\\nc\\\\n=== 10.21275/ms2312181849 ===\\\\nHTTP:200\\\\nTITLE: [\\'AI-Based Clinical Decision Support Systems in Smart Hospitals\\']\\\\nAUTHORS: [\\'Sathiri\\']\\\\nYEAR: [[2023, 12, 1",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== Search [2] JCM stroke outcome ===\\\\n10.3390/jcm13195917 | [\\'Improving Stroke Outcome Prediction Using Molecular and Machine Learning Approaches in Large Vessel Occlusion\\'] | [[2024, 10, 3]] | [\\'Journal of Clinical Medicine\\'] | 13 19 5917\\\\n10.1136/svn-2021-001096 | [\\'Prediction of large vessel occlusion for ischaemic stroke by using the machine learning model random forests\\'] | [[2021, 10, 26]] | [\\'Stroke and Vasc"
+  ],
+  "interventions": [],
+  "rounds": [
+    {
+      "run_id": "67bdcdf0-628d-450b-82c5-2d6ed320c388",
+      "stopped": false,
+      "parsed": true,
+      "n_errors": 0,
+      "errors": []
+    }
+  ],
+  "n_repairs": 0,
+  "n_stops": 0,
+  "degraded": false,
+  "first_pass_valid": true,
+  "violations": {
+    "contract_errors": [],
+    "contract_violated": false,
+    "policy_violations": [],
+    "policy_violated": false,
+    "policy_executed": false,
+    "usable": true
+  },
+  "score": {
+    "bundle": 2024,
+    "n": 12,
+    "n_pred": 12,
+    "missing": [],
+    "hallucinated_doi_detection": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "metadata_error_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "any_issue_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "rows": [
+      {
+        "item_id": 1,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在(HTTP 404)。真实 DOI 为 10.3390/jcm13195917(Journal of Clinical Medicine, 13(19), 5917, 2024),题录其余字段与真实记录一致,仅 DOI 错误。"
+      },
+      {
+        "item_id": 3,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "期刊名不一致:真实期刊为 Frontiers in Oncology,引用写为 'The Journal of Clinical Research Reports'。其余字段(作者、年份2023、卷13、文章号1156009)一致。"
+      },
+      {
+        "item_id": 4,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.cplett.2024.141663(Chemical Physics Letters, 856, 141663, 2024),题录其余字段与真实记录一致,仅 DOI 错误。"
+      },
+      {
+        "item_id": 5,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 6,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "标题不一致:真实标题为 '...comprehensive clinical outcome prediction models...',引用写为 '...comprehensive clinical Cryptographic prediction models...'(Cryptographic 应为 outcome)。其余字段(作者、年份2022、期刊、卷104、页码1-9)一致。"
+      },
+      {
+        "item_id": 8,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份不一致:真实发表年份为 2025(issued 2025-06-27),引用写为 2022。其余字段(作者、标题、期刊、卷13、期6、页码1051-1068)一致。"
+      },
+      {
+        "item_id": 11,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.mlwa.2024.100537(Machine Learning with Applications, 16, 100537, 2024),题录其余字段与真实记录一致,仅 DOI 错误。"
+      },
+      {
+        "item_id": 12,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      }
+    ]
+  },
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.21275/ms2312181849",
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.3390/jcm13207975",
+        "issue": "DOI 不存在(HTTP 404)。真实 DOI 为 10.3390/jcm13195917(Journal of Clinical Medicine, 13(19), 5917, 2024),题录其余字段与真实记录一致,仅 DOI 错误。"
+      },
+      {
+        "item_id": 3,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.3389/fonc.2023.1156009",
+        "issue": "期刊名不一致:真实期刊为 Frontiers in Oncology,引用写为 'The Journal of Clinical Research Reports'。其余字段(作者、年份2023、卷13、文章号1156009)一致。"
+      },
+      {
+        "item_id": 4,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.cplett.2024.198118",
+        "issue": "DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.cplett.2024.141663(Chemical Physics Letters, 856, 141663, 2024),题录其余字段与真实记录一致,仅 DOI 错误。"
+      },
+      {
+        "item_id": 5,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.3390/audiolres15060161",
+        "issue": ""
+      },
+      {
+        "item_id": 6,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.21275/sr231015173828",
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.jocn.2022.07.022",
+        "issue": "标题不一致:真实标题为 '...comprehensive clinical outcome prediction models...',引用写为 '...comprehensive clinical Cryptographic prediction models...'(Cryptographic 应为 outcome)。其余字段(作者、年份2022、期刊、卷104、页码1-9)一致。"
+      },
+      {
+        "item_id": 8,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.clon.2021.12.002",
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.21275/sr241230211809",
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1177/21677026251340348",
+        "issue": "年份不一致:真实发表年份为 2025(issued 2025-06-27),引用写为 2022。其余字段(作者、标题、期刊、卷13、期6、页码1051-1068)一致。"
+      },
+      {
+        "item_id": 11,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.mlwa.2024.120962",
+        "issue": "DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.mlwa.2024.100537(Machine Learning with Applications, 16, 100537, 2024),题录其余字段与真实记录一致,仅 DOI 错误。"
+      },
+      {
+        "item_id": 12,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.mlwa.2022.100343",
+        "issue": ""
+      }
+    ]
+  },
+  "final_text": "I now have all the data I need. Let me analyze each reference carefully.\n\n**Analysis of the 4 \"404\" DOIs:**\n\n**[2]** Claimed DOI `10.3390/jcm13207975` → 404. Real DOI is `10.3390/jcm13195917` (JCM 13, 19, 5917, 2024). The citation's title, authors, journal, volume, issue, page all match the real paper, but the DOI is wrong. → DOI not found, metadata mismatch.\n\n**[4]** Claimed DOI `10.1016/j.cplett.2024.198118` → 404. Real DOI is `10.1016/j.cplett.2024.141663` (Chem Phys Lett 856, 141663, 2024). Citation's title, journal, volume, page match. DOI wrong. → DOI not found, metadata mismatch.\n\n**[11]** Claimed DOI `10.1016/j.mlwa.2024.120962` → 404. Real DOI is `10.1016/j.mlwa.2024.100537` (MLWA 16, 100537, 2024). Citation's title, journal, volume, page match. DOI wrong. → DOI not found, metadata mismatch.\n\n**[12]** Claimed DOI `10.1016/j.mlwa.2022.100343` → 200. Title \"Bankruptcy prediction using synthetic sampling\", author Garcia, year 2022, journal MLWA, vol 9, page 100343. All match. → valid, metadata match.\n\n**Now checking the other references for metadata consistency:**\n\n**[1]** DOI `10.21275/ms2312181849` → 200. Title matches \"AI-Based Clinical Decision Support Systems in Smart Hospitals\", author Sathiri, year 2023, journal IJSR, page 2291-2302. Citation says year 2023, author Sathiri D., journal IJSR, pages 2291-2302. All match. → pass.\n\n**[3]** DOI `10.3389/fonc.2023.1156009` → 200. Title matches, authors Andersson, Langen, Liu, Dávila López, year 2023, journal **Frontiers in Oncology** (not \"The Journal of Clinical Research Reports\" as cited!), vol 13, artno 1156009. **Journal name mismatch** — citation says \"The Journal of Clinical Research Reports\" but real journal is \"Frontiers in Oncology\". → metadata mismatch.\n\n**[5]** DOI `10.3390/audiolres15060161` → 200. Title matches, authors Ollermann, Strodthoff, Radeloff, Böscke, year 2025, journal Audiology Research, vol 15, issue 6, page 161. Citation says year 2025, vol 15, issue 6, page 161. All match. → pass.\n\n**[6]** DOI `10.21275/sr231015173828` → 200. Title matches, authors Mallika, Suresh Babu, year 2023, journal IJSR, vol 12, issue 10, pages 1235-1238. Citation matches. → pass.\n\n**[7]** DOI `10.1016/j.jocn.2022.07.022` → 200. Real title: \"Development and validation of comprehensive clinical **outcome** prediction models for acute ischaemic stroke in anterior circulation based on machine learning\". Citation title says \"comprehensive clinical **Cryptographic** prediction models\". **Title mismatch** — \"Cryptographic\" is wrong, real word is \"outcome\". Authors Zhang, Chen, Zhang, Cao, Yu, Wu, Zhang, Geng (8 authors, citation says \"et al.\" which is fine). Year 2022, journal J Clin Neuroscience, vol 104, pages 1-9. Citation matches vol/pages/year. → metadata mismatch (title).\n\n**[8]** DOI `10.1016/j.clon.2021.12.002` → 200. Title matches, authors Appelt, Elhaminia, Gooya, Gilbert, Nix, year 2022, journal Clinical Oncology, vol 34, issue 2, pages e87-e96. Citation matches. → pass.\n\n**[9]** DOI `10.21275/sr241230211809` → 200. Title matches, authors Thabitha J, R, year 2025, journal IJSR, vol 14, issue 1, pages 102-108. Citation matches. → pass.\n\n**[10]** DOI `10.1177/21677026251340348` → 200. Title matches, authors McClure, Fuller-Tyszkiewicz, Messer, Linardon, year **2025** (issued 2025-06-27), journal Clinical Psychological Science, vol 13, issue 6, pages 1051-1068. Citation says year **2022**. **Year mismatch** — real year is 2025, citation says 2022. → metadata mismatch.\n\nLet me double-check the year for [10]. The Crossref issued date-parts is [[2025, 6, 27]]. The citation says 2022. This is a clear year mismatch. Note the DOI itself (21677026251340348) suggests 2025 publication. → confirm.\n\nNow let me compile the final JSON. For the 404 DOIs ([2], [4], [11]), the DOI doesn't exist as cited, so `doi_status: not_found`, `metadata_match: false`, `verdict: confirm`.\n\nFor [3], journal name mismatch → metadata_match false, confirm.\nFor [7], title mismatch (\"Cryptographic\" vs \"outcome\") → metadata_match false, confirm.\nFor [10], year mismatch (2022 vs 2025) → metadata_match false, confirm.\n\nFor [1], [5], [6], [8], [9], [12] → all match → pass.\n\nLet me verify the evidence URLs for the 404 DOIs — I'll use the real DOI found via search as evidence.\n\n```json\n{\"references\":[\n  {\"item_id\":1,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/ms2312181849\",\"issue\":\"\"},\n  {\"item_id\":2,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.3390/jcm13207975\",\"issue\":\"DOI 不存在(HTTP 404)。真实 DOI 为 10.3390/jcm13195917(Journal of Clinical Medicine, 13(19), 5917, 2024),题录其余字段与真实记录一致,仅 DOI 错误。\"},\n  {\"item_id\":3,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.3389/fonc.2023.1156009\",\"issue\":\"期刊名不一致:真实期刊为 Frontiers in Oncology,引用写为 'The Journal of Clinical Research Reports'。其余字段(作者、年份、卷13、文章号1156009)一致。\"},\n  {\"item_id\":4,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.cplett.2024.198118\",\"issue\":\"DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.cplett.2024.141663(Chemical Physics Letters, 856, 141663, 2024),题录其余字段与真实记录一致,仅 DOI 错误。\"},\n  {\"item_id\":5,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.3390/audiolres15060161\",\"issue\":\"\"},\n  {\"item_id\":6,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/sr231015173828\",\"issue\":\"\"},\n  {\"item_id\":7,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.jocn.2022.07.022\",\"issue\":\"标题不一致:真实标题为 '...comprehensive clinical outcome prediction models...',引用写为 '...comprehensive clinical Cryptographic prediction models...'(Cryptographic 应为 outcome)。其余字段(作者、年份2022、期刊、卷104、页码1-9)一致。\"},\n  {\"item_id\":8,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.clon.2021.12.002\",\"issue\":\"\"},\n  {\"item_id\":9,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/sr241230211809\",\"issue\":\"\"},\n  {\"item_id\":10,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1177/21677026251340348\",\"issue\":\"年份不一致:真实发表年份为 2025(issued 2025-06-27),引用写为 2022。其余字段(作者、标题、期刊、卷13、期6、页码1051-1068)一致。\"},\n  {\"item_id\":11,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2024.120962\",\"issue\":\"DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.mlwa.2024.100537(Machine Learning with Applications, 16, 100537, 2024),题录其余字段与真实记录一致,仅 DOI 错误。\"},\n  {\"item_id\":12,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2022.100343\",\"issue\":\"\"}\n]}\n```\n\n核查完成。所有 12 条 DOI 均已在沙箱中通过 `curl` 实际调用 Crossref API(`https://api.crossref.org/works/{DOI}`)验证,并记录了 HTTP 状态。对返回 404 的条目,进一步通过 Crossref 书目检索定位了真实 DOI 作为证据。\n\n**核查结果摘要:**\n\n- **DOI 不存在(HTTP 404,共 3 条):** [2]、[4]、[11] 引用的 DOI 均不存在,但通过书目检索找到了对应的真实论文(DOI 拼写错误),题录其余字段与真实记录一致。\n- **题录字段不一致(DOI 有效但元数据不符,共 3 条):**\n  - [3] 期刊名错误:真实为 *Frontiers in Oncology*,引用写成 \"The Journal of Clinical Research Reports\"。\n  - [7] 标题错误:真实标题为 \"…clinical **outcome** prediction models…\",引用写成 \"…clinical **Cryptographic** prediction models…\"。\n  - [10] 年份错误:真实发表年份为 **2025**,引用写成 2022。\n- **通过(6 条):** [1]、[5]、[6]、[8]、[9]、[12] 的 DOI 有效且题录逐字段一致。\n\n```json\n{\"references\":[\n  {\"item_id\":1,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/ms2312181849\",\"issue\":\"\"},\n  {\"item_id\":2,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.3390/jcm13207975\",\"issue\":\"DOI 不存在(HTTP 404)。真实 DOI 为 10.3390/jcm13195917(Journal of Clinical Medicine, 13(19), 5917, 2024),题录其余字段与真实记录一致,仅 DOI 错误。\"},\n  {\"item_id\":3,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.3389/fonc.2023.1156009\",\"issue\":\"期刊名不一致:真实期刊为 Frontiers in Oncology,引用写为 'The Journal of Clinical Research Reports'。其余字段(作者、年份2023、卷13、文章号1156009)一致。\"},\n  {\"item_id\":4,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.cplett.2024.198118\",\"issue\":\"DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.cplett.2024.141663(Chemical Physics Letters, 856, 141663, 2024),题录其余字段与真实记录一致,仅 DOI 错误。\"},\n  {\"item_id\":5,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.3390/audiolres15060161\",\"issue\":\"\"},\n  {\"item_id\":6,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/sr231015173828\",\"issue\":\"\"},\n  {\"item_id\":7,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.jocn.2022.07.022\",\"issue\":\"标题不一致:真实标题为 '...comprehensive clinical outcome prediction models...',引用写为 '...comprehensive clinical Cryptographic prediction models...'(Cryptographic 应为 outcome)。其余字段(作者、年份2022、期刊、卷104、页码1-9)一致。\"},\n  {\"item_id\":8,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.clon.2021.12.002\",\"issue\":\"\"},\n  {\"item_id\":9,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.21275/sr241230211809\",\"issue\":\"\"},\n  {\"item_id\":10,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1177/21677026251340348\",\"issue\":\"年份不一致:真实发表年份为 2025(issued 2025-06-27),引用写为 2022。其余字段(作者、标题、期刊、卷13、期6、页码1051-1068)一致。\"},\n  {\"item_id\":11,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2024.120962\",\"issue\":\"DOI 不存在(HTTP 404)。真实 DOI 为 10.1016/j.mlwa.2024.100537(Machine Learning with Applications, 16, 100537, 2024),题录其余字段与真实记录一致,仅 DOI 错误。\"},\n  {\"item_id\":12,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2022.100343\",\"issue\":\"\"}\n]}\n```"
+}

@@ -1,0 +1,276 @@
+{
+  "n_sources": 3,
+  "n_cases": 18,
+  "detected": 18,
+  "detection_rate": 1.0,
+  "matched_expected_class": 18,
+  "false_positive_sources": 0,
+  "per_case": [
+    {
+      "source": "output/eval/layer1_seed7_n12__verifier.json",
+      "mode": "no_json_block",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 0,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed7_n12__verifier.json",
+      "mode": "bad_enum",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 0,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed7_n12__verifier.json",
+      "mode": "coverage_gap",
+      "caught": true,
+      "expected_class": "C",
+      "classes": {
+        "S": 0,
+        "C": 1,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed7_n12__verifier.json",
+      "mode": "missing_evidence",
+      "caught": true,
+      "expected_class": "E",
+      "classes": {
+        "S": 0,
+        "C": 0,
+        "E": 1,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed7_n12__verifier.json",
+      "mode": "verdict_contradiction",
+      "caught": true,
+      "expected_class": "V",
+      "classes": {
+        "S": 0,
+        "C": 0,
+        "E": 0,
+        "V": 1
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed7_n12__verifier.json",
+      "mode": "schema_renamed",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 1,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 2,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed123_n12__verifier.json",
+      "mode": "no_json_block",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 0,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed123_n12__verifier.json",
+      "mode": "bad_enum",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 0,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed123_n12__verifier.json",
+      "mode": "coverage_gap",
+      "caught": true,
+      "expected_class": "C",
+      "classes": {
+        "S": 0,
+        "C": 1,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed123_n12__verifier.json",
+      "mode": "missing_evidence",
+      "caught": true,
+      "expected_class": "E",
+      "classes": {
+        "S": 0,
+        "C": 0,
+        "E": 1,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed123_n12__verifier.json",
+      "mode": "verdict_contradiction",
+      "caught": true,
+      "expected_class": "V",
+      "classes": {
+        "S": 0,
+        "C": 0,
+        "E": 0,
+        "V": 1
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "output/eval/layer1_seed123_n12__verifier.json",
+      "mode": "schema_renamed",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 1,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 2,
+      "matched_expected": true
+    },
+    {
+      "source": "results/guardrail/guarded__layer1_seed7_n12.json",
+      "mode": "no_json_block",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 0,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "results/guardrail/guarded__layer1_seed7_n12.json",
+      "mode": "bad_enum",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 0,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "results/guardrail/guarded__layer1_seed7_n12.json",
+      "mode": "coverage_gap",
+      "caught": true,
+      "expected_class": "C",
+      "classes": {
+        "S": 0,
+        "C": 1,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "results/guardrail/guarded__layer1_seed7_n12.json",
+      "mode": "missing_evidence",
+      "caught": true,
+      "expected_class": "E",
+      "classes": {
+        "S": 0,
+        "C": 0,
+        "E": 1,
+        "V": 0
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "results/guardrail/guarded__layer1_seed7_n12.json",
+      "mode": "verdict_contradiction",
+      "caught": true,
+      "expected_class": "V",
+      "classes": {
+        "S": 0,
+        "C": 0,
+        "E": 0,
+        "V": 1
+      },
+      "n_errors": 1,
+      "matched_expected": true
+    },
+    {
+      "source": "results/guardrail/guarded__layer1_seed7_n12.json",
+      "mode": "schema_renamed",
+      "caught": true,
+      "expected_class": "S",
+      "classes": {
+        "S": 1,
+        "C": 1,
+        "E": 0,
+        "V": 0
+      },
+      "n_errors": 2,
+      "matched_expected": true
+    }
+  ],
+  "source_errors": [
+    {
+      "source": "output/eval/layer1_seed7_n12__verifier.json",
+      "errors": []
+    },
+    {
+      "source": "output/eval/layer1_seed123_n12__verifier.json",
+      "errors": []
+    },
+    {
+      "source": "results/guardrail/guarded__layer1_seed7_n12.json",
+      "errors": []
+    }
+  ]
+}

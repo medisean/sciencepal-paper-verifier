@@ -1,0 +1,367 @@
+{
+  "version": "v2",
+  "layer": "layer1_doi_metadata",
+  "seed": 31,
+  "n": 36,
+  "source": "Crossref REST API",
+  "created_for": "SciencePal AI4Science Hackathon 2026",
+  "items": [
+    {
+      "item_id": 1,
+      "label": "valid",
+      "doi": "10.1038/s43856-024-00666-w",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Klug J., Leclerc G., Dirren E., Carrera E. (2024). Machine learning for early dynamic prediction of functional outcome after stroke. Communications Medicine, 4, 1. doi: 10.1038/s43856-024-00666-w",
+      "year": 2024
+    },
+    {
+      "item_id": 2,
+      "label": "mismatch",
+      "doi": "10.1016/j.clon.2021.12.002",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "author_title",
+      "detail": "标题/作者被改",
+      "citation": "Appelt AL., Elhaminia B., Gooya A., Gilbert A., et al. (2022). Deep Learning for Radiotherapy Astrophysical Prediction Using Dose Data – A Review. Clinical Oncology, 34, 2, e87-e96. doi: 10.1016/j.clon.2021.12.002",
+      "real_year": 2022
+    },
+    {
+      "item_id": 3,
+      "label": "valid",
+      "doi": "10.1227/neu.0000000000002809_401",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Buchlak Q., Leveque JA., Krause KL., Farrokhi F. (2024). 401 Applying Machine Learning for Risk Stratification and Acute Clinical Outcome Prediction Amongst Aneurysmal Subarachnoid Hemorrhage Patients. Neurosurgery, 70, Supplement_1, 121-122. doi: 10.1227/neu.0000000000002809_401",
+      "year": 2024
+    },
+    {
+      "item_id": 4,
+      "label": "valid",
+      "doi": "10.3389/fonc.2023.1156009",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Andersson B., Langen B., Liu P., Dávila López M. (2023). Development of a machine learning framework for radiation biomarker discovery and absorbed dose prediction. Frontiers in Oncology, 13. doi: 10.3389/fonc.2023.1156009",
+      "year": 2023
+    },
+    {
+      "item_id": 5,
+      "label": "not_found",
+      "doi": "10.21275/sr241230233129",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Thabitha J G., R P. (2025). Plant Leaves Disease Detection and Classification: Insights from Machine Learning and Deep Learning Approaches - A Review. International Journal of Science and Research (IJSR), 14, 1, 102-108. doi: 10.21275/sr241230233129",
+      "real_doi": "10.21275/sr241230211809",
+      "year": 2025
+    },
+    {
+      "item_id": 6,
+      "label": "valid",
+      "doi": "10.1016/j.asoc.2020.106351",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.106351",
+      "year": 2020
+    },
+    {
+      "item_id": 7,
+      "label": "not_found",
+      "doi": "10.1016/j.ejmp.2024.170856",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Hossain A., Hossain S., Sultana J. (2024). PS01.02 STRATIFICATION ON HIGH RISK AND LOW RISK ISCHEMIC STROKES USING MRI IMAGES BASED ON ARTIFICIAL INTELLIGENCE. Physica Medica, 125, 104004. doi: 10.1016/j.ejmp.2024.170856",
+      "real_doi": "10.1016/j.ejmp.2024.104004",
+      "year": 2024
+    },
+    {
+      "item_id": 8,
+      "label": "not_found",
+      "doi": "10.1016/j.cplett.2024.193357",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Sankar Borah G., Nagamani S. (2024). Development of a robust Machine learning model for Ames test outcome prediction. Chemical Physics Letters, 856, 141663. doi: 10.1016/j.cplett.2024.193357",
+      "real_doi": "10.1016/j.cplett.2024.141663",
+      "year": 2024
+    },
+    {
+      "item_id": 9,
+      "label": "valid",
+      "doi": "10.21275/sr231015173828",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015173828",
+      "year": 2023
+    },
+    {
+      "item_id": 10,
+      "label": "valid",
+      "doi": "10.11648/j.mlr.20230801.11",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Wu Z., He H. (2023). Traditional Machine Learning Models for Building Energy Performance Prediction: A Comparative Research. Machine Learning Research. doi: 10.11648/j.mlr.20230801.11",
+      "year": 2023
+    },
+    {
+      "item_id": 11,
+      "label": "mismatch",
+      "doi": "10.1007/s10994-018-5747-8",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "detail": "年份 2018→2015",
+      "citation": "Berrar D., Lopes P., Dubitzky W. (2015). Incorporating domain knowledge in machine learning for soccer outcome prediction. Machine Learning, 108, 1, 97-126. doi: 10.1007/s10994-018-5747-8",
+      "real_year": 2018
+    },
+    {
+      "item_id": 12,
+      "label": "valid",
+      "doi": "10.1007/s00521-019-04451-y",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Özcanhan MH., Utku S., Unluturk MS. (2019). Neural network-supported patient-adaptive fall prevention system. Neural Computing and Applications, 32, 13, 9369-9382. doi: 10.1007/s00521-019-04451-y",
+      "year": 2019
+    },
+    {
+      "item_id": 13,
+      "label": "mismatch",
+      "doi": "10.1016/j.ijmedinf.2023.105308",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "detail": "年份 2024→2027",
+      "citation": "Viderman D., Kotov A., Popov M., Abdildin Y. (2027). Machine and deep learning methods for clinical outcome prediction based on physiological data of COVID-19 patients: a scoping review. International Journal of Medical Informatics, 182, 105308. doi: 10.1016/j.ijmedinf.2023.105308",
+      "real_year": 2024
+    },
+    {
+      "item_id": 14,
+      "label": "valid",
+      "doi": "10.1042/etls20210246",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Pettit RW., Fullem R., Cheng C., Amos CI. (2021). Artificial intelligence, machine learning, and deep learning for clinical outcome prediction. Emerging Topics in Life Sciences, 5, 6, 729-745. doi: 10.1042/etls20210246",
+      "year": 2021
+    },
+    {
+      "item_id": 15,
+      "label": "not_found",
+      "doi": "10.1259/bjro.20251239",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Lin A., Pieszko K., Park C., Ignor K., et al. (2023). Artificial intelligence in cardiovascular imaging: enhancing image analysis and risk stratification. BJR|Open, 5, 1. doi: 10.1259/bjro.20251239",
+      "real_doi": "10.1259/bjro.20220021",
+      "year": 2023
+    },
+    {
+      "item_id": 16,
+      "label": "valid",
+      "doi": "10.1016/j.mlwa.2024.100537",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Ghosh J. (2024). Efficient machine learning-assisted failure analysis method for circuit-level defect prediction. Machine Learning with Applications, 16, 100537. doi: 10.1016/j.mlwa.2024.100537",
+      "year": 2024
+    },
+    {
+      "item_id": 17,
+      "label": "valid",
+      "doi": "10.3390/plants8110468",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Saleem MH., Potgieter J., Arif KM. (2019). Plant Disease Detection and Classification by Deep Learning. Plants, 8, 11, 468. doi: 10.3390/plants8110468",
+      "year": 2019
+    },
+    {
+      "item_id": 18,
+      "label": "valid",
+      "doi": "10.1016/j.artint.2023.104018",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Dixit A., Ahmadi M., Burdick JW. (2023). Risk-averse receding horizon motion planning for obstacle avoidance using coherent risk measures. Artificial Intelligence, 325, 104018. doi: 10.1016/j.artint.2023.104018",
+      "year": 2023
+    },
+    {
+      "item_id": 19,
+      "label": "valid",
+      "doi": "10.1016/j.ceh.2024.12.003",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Miranda E., Adiarto S. (2024). Enhancing automatic early arteriosclerosis prediction: an explainable machine learning evidence. Clinical eHealth, 7, 153-163. doi: 10.1016/j.ceh.2024.12.003",
+      "year": 2024
+    },
+    {
+      "item_id": 20,
+      "label": "mismatch",
+      "doi": "10.1016/j.semcancer.2023.09.005",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "year",
+      "detail": "年份 2023→2026",
+      "citation": "Jiang Y., Wang C., Zhou S. (2026). Artificial intelligence-based risk stratification, accurate diagnosis and treatment prediction in gynecologic oncology. Seminars in Cancer Biology, 96, 82-99. doi: 10.1016/j.semcancer.2023.09.005",
+      "real_year": 2023
+    },
+    {
+      "item_id": 21,
+      "label": "valid",
+      "doi": "10.1016/j.clinthera.2023.09.019",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Jaltotage B., Sukudom S., Ihdayhid AR., Dwivedi G. (2023). Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence. Clinical Therapeutics, 45, 11, 1023-1028. doi: 10.1016/j.clinthera.2023.09.019",
+      "year": 2023
+    },
+    {
+      "item_id": 22,
+      "label": "not_found",
+      "doi": "10.1148/ryai.258558",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Adams LC., Bressem KK. (2024). Chest Radiographs as Biological Clocks: Implications for Risk Stratification and Personalized Care. Radiology: Artificial Intelligence, 6, 5. doi: 10.1148/ryai.258558",
+      "real_doi": "10.1148/ryai.240410",
+      "year": 2024
+    },
+    {
+      "item_id": 23,
+      "label": "mismatch",
+      "doi": "10.1016/j.dss.2025.114557",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "journal",
+      "detail": "期刊名被改",
+      "citation": "Strunk J., Nissen A., Smolnik S. (2025). All risks ain't the same – A risk facets perspective on AI-based decision support systems. The Journal of Clinical Research Reports, 199, 114557. doi: 10.1016/j.dss.2025.114557",
+      "real_year": 2025
+    },
+    {
+      "item_id": 24,
+      "label": "not_found",
+      "doi": "10.1016/j.mlwa.2023.165985",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Orji U., Ukwandu E. (2024). Machine learning for an explainable cost prediction of medical insurance. Machine Learning with Applications, 15, 100516. doi: 10.1016/j.mlwa.2023.165985",
+      "real_doi": "10.1016/j.mlwa.2023.100516",
+      "year": 2024
+    },
+    {
+      "item_id": 25,
+      "label": "valid",
+      "doi": "10.1007/s11739-023-03358-w",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Riela PM. (2023). Artificial intelligence for COVID-19 mortality prediction: improvement of risk stratification and clinical decision-making. Internal and Emergency Medicine, 18, 6, 1617-1618. doi: 10.1007/s11739-023-03358-w",
+      "year": 2023
+    },
+    {
+      "item_id": 26,
+      "label": "valid",
+      "doi": "10.20517/ais.2022.38",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Tovar DR., Rosenthal MH., Maitra A., Koay EJ. (2023). Potential of artificial intelligence in the risk stratification for and early detection of pancreatic cancer. Artificial Intelligence Surgery, 3, 1, 14-26. doi: 10.20517/ais.2022.38",
+      "year": 2023
+    },
+    {
+      "item_id": 27,
+      "label": "valid",
+      "doi": "10.1016/j.compmedimag.2020.101820",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "He Y., Zhao H., Wong STC. (2021). Deep learning powers cancer diagnosis in digital pathology. Computerized Medical Imaging and Graphics, 88, 101820. doi: 10.1016/j.compmedimag.2020.101820",
+      "year": 2021
+    },
+    {
+      "item_id": 28,
+      "label": "mismatch",
+      "doi": "10.3390/jcm13195917",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "author_title",
+      "detail": "标题/作者被改",
+      "citation": "Rout M., Vaughan A., Sidorov EV., Sanghera DK. (2024). Improving Stroke Outcome Prediction Using Molecular and Astrophysical Learning Approaches in Large Vessel Occlusion. Journal of Clinical Medicine, 13, 19, 5917. doi: 10.3390/jcm13195917",
+      "real_year": 2024
+    },
+    {
+      "item_id": 29,
+      "label": "valid",
+      "doi": "10.1007/s10845-018-1428-5",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Wu Q., Ding K., Huang B. (2018). Approach for fault prognosis using recurrent neural network. Journal of Intelligent Manufacturing, 31, 7, 1621-1633. doi: 10.1007/s10845-018-1428-5",
+      "year": 2018
+    },
+    {
+      "item_id": 30,
+      "label": "valid",
+      "doi": "10.1089/ct.2024;36.150-152",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Thomas J. (2024). Enhancing Thyroid Nodule Risk Stratification: Integrating Artificial Intelligence and Polygenic Risk Scores. Clinical Thyroidology®, 36, 4, 150-152. doi: 10.1089/ct.2024;36.150-152",
+      "year": 2024
+    },
+    {
+      "item_id": 31,
+      "label": "not_found",
+      "doi": "10.55248/gengpi.6.0625.66905",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Kumar GV., Kumar NN. (2025). Eye Disease Classification Using Deep Learning And Resnet. International Journal of Research Publication and Reviews, 6, 6, 12908. doi: 10.55248/gengpi.6.0625.66905",
+      "real_doi": "10.55248/gengpi.6.0625.2410",
+      "year": 2025
+    },
+    {
+      "item_id": 32,
+      "label": "valid",
+      "doi": "10.1093/eurheartj/ehad847",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Serruys PW., Kageyama S., Onuma Y. (2024). Cardiology’s new crystal ball: machine learning for outcome prediction. European Heart Journal, 45, 8, 610-612. doi: 10.1093/eurheartj/ehad847",
+      "year": 2024
+    },
+    {
+      "item_id": 33,
+      "label": "valid",
+      "doi": "10.1016/j.engappai.2023.107187",
+      "doi_status": "valid",
+      "metadata_match": true,
+      "citation": "Gao Q., Lin H., Qian J., Liu X., et al. (2023). A deep learning model for efficient end-to-end stratification of thrombotic risk in left atrial appendage. Engineering Applications of Artificial Intelligence, 126, 107187. doi: 10.1016/j.engappai.2023.107187",
+      "year": 2023
+    },
+    {
+      "item_id": 34,
+      "label": "not_found",
+      "doi": "10.18280/ria.371759",
+      "doi_status": "not_found",
+      "metadata_match": false,
+      "error_type": "hallucinated_doi",
+      "citation": "Yildirim M., Çinar A. (2019). Classification of White Blood Cells by Deep Learning Methods for Diagnosing Disease. Revue d'Intelligence Artificielle, 33, 5, 335-340. doi: 10.18280/ria.371759",
+      "real_doi": "10.18280/ria.330502",
+      "year": 2019
+    },
+    {
+      "item_id": 35,
+      "label": "mismatch",
+      "doi": "10.1007/s10994-024-06611-1",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "journal",
+      "detail": "期刊名被改",
+      "citation": "Rahimian P., Mihalyi BM., Toka L. (2024). In-game soccer outcome prediction with offline reinforcement learning. The Journal of Clinical Research Reports, 113, 10, 7393-7419. doi: 10.1007/s10994-024-06611-1",
+      "real_year": 2024
+    },
+    {
+      "item_id": 36,
+      "label": "mismatch",
+      "doi": "10.30871/jaic.v9i6.11546",
+      "doi_status": "valid",
+      "metadata_match": false,
+      "mismatch_type": "author_title",
+      "detail": "标题/作者被改",
+      "citation": "Simanjuntak MS., Robet R., Hoki L. (2025). A Robotic Study of Machine Learning and Deep Learning Models for Heart Disease Classification. Journal of Applied Informatics and Computing, 9, 6, 3405-3409. doi: 10.30871/jaic.v9i6.11546",
+      "real_year": 2025
+    }
+  ],
+  "prompt": "下面是某生物医学论文稿件的参考文献列表。请逐条核查：① 每条的 DOI 是否真实存在（必须在沙箱中实际联网调用 Crossref，记录 HTTP 状态）；② 题录信息（作者、年份、标题、期刊、卷期页码）是否与该 DOI 的真实元数据逐字段一致（任一字段不一致即 metadata_match=false）。\n\n[1] Klug J., Leclerc G., Dirren E., Carrera E. (2024). Machine learning for early dynamic prediction of functional outcome after stroke. Communications Medicine, 4, 1. doi: 10.1038/s43856-024-00666-w\n[2] Appelt AL., Elhaminia B., Gooya A., Gilbert A., et al. (2022). Deep Learning for Radiotherapy Astrophysical Prediction Using Dose Data – A Review. Clinical Oncology, 34, 2, e87-e96. doi: 10.1016/j.clon.2021.12.002\n[3] Buchlak Q., Leveque JA., Krause KL., Farrokhi F. (2024). 401 Applying Machine Learning for Risk Stratification and Acute Clinical Outcome Prediction Amongst Aneurysmal Subarachnoid Hemorrhage Patients. Neurosurgery, 70, Supplement_1, 121-122. doi: 10.1227/neu.0000000000002809_401\n[4] Andersson B., Langen B., Liu P., Dávila López M. (2023). Development of a machine learning framework for radiation biomarker discovery and absorbed dose prediction. Frontiers in Oncology, 13. doi: 10.3389/fonc.2023.1156009\n[5] Thabitha J G., R P. (2025). Plant Leaves Disease Detection and Classification: Insights from Machine Learning and Deep Learning Approaches - A Review. International Journal of Science and Research (IJSR), 14, 1, 102-108. doi: 10.21275/sr241230233129\n[6] Xia M., Zheng X., Imran M., Shoaib M. (2020). Data-driven prognosis method using hybrid deep recurrent neural network. Applied Soft Computing, 93, 106351. doi: 10.1016/j.asoc.2020.106351\n[7] Hossain A., Hossain S., Sultana J. (2024). PS01.02 STRATIFICATION ON HIGH RISK AND LOW RISK ISCHEMIC STROKES USING MRI IMAGES BASED ON ARTIFICIAL INTELLIGENCE. Physica Medica, 125, 104004. doi: 10.1016/j.ejmp.2024.170856\n[8] Sankar Borah G., Nagamani S. (2024). Development of a robust Machine learning model for Ames test outcome prediction. Chemical Physics Letters, 856, 141663. doi: 10.1016/j.cplett.2024.193357\n[9] Mallika M., Suresh Babu K. (2023). Breast Cancer Prediction using Machine Learning Algorithms. International Journal of Science and Research (IJSR), 12, 10, 1235-1238. doi: 10.21275/sr231015173828\n[10] Wu Z., He H. (2023). Traditional Machine Learning Models for Building Energy Performance Prediction: A Comparative Research. Machine Learning Research. doi: 10.11648/j.mlr.20230801.11\n[11] Berrar D., Lopes P., Dubitzky W. (2015). Incorporating domain knowledge in machine learning for soccer outcome prediction. Machine Learning, 108, 1, 97-126. doi: 10.1007/s10994-018-5747-8\n[12] Özcanhan MH., Utku S., Unluturk MS. (2019). Neural network-supported patient-adaptive fall prevention system. Neural Computing and Applications, 32, 13, 9369-9382. doi: 10.1007/s00521-019-04451-y\n[13] Viderman D., Kotov A., Popov M., Abdildin Y. (2027). Machine and deep learning methods for clinical outcome prediction based on physiological data of COVID-19 patients: a scoping review. International Journal of Medical Informatics, 182, 105308. doi: 10.1016/j.ijmedinf.2023.105308\n[14] Pettit RW., Fullem R., Cheng C., Amos CI. (2021). Artificial intelligence, machine learning, and deep learning for clinical outcome prediction. Emerging Topics in Life Sciences, 5, 6, 729-745. doi: 10.1042/etls20210246\n[15] Lin A., Pieszko K., Park C., Ignor K., et al. (2023). Artificial intelligence in cardiovascular imaging: enhancing image analysis and risk stratification. BJR|Open, 5, 1. doi: 10.1259/bjro.20251239\n[16] Ghosh J. (2024). Efficient machine learning-assisted failure analysis method for circuit-level defect prediction. Machine Learning with Applications, 16, 100537. doi: 10.1016/j.mlwa.2024.100537\n[17] Saleem MH., Potgieter J., Arif KM. (2019). Plant Disease Detection and Classification by Deep Learning. Plants, 8, 11, 468. doi: 10.3390/plants8110468\n[18] Dixit A., Ahmadi M., Burdick JW. (2023). Risk-averse receding horizon motion planning for obstacle avoidance using coherent risk measures. Artificial Intelligence, 325, 104018. doi: 10.1016/j.artint.2023.104018\n[19] Miranda E., Adiarto S. (2024). Enhancing automatic early arteriosclerosis prediction: an explainable machine learning evidence. Clinical eHealth, 7, 153-163. doi: 10.1016/j.ceh.2024.12.003\n[20] Jiang Y., Wang C., Zhou S. (2026). Artificial intelligence-based risk stratification, accurate diagnosis and treatment prediction in gynecologic oncology. Seminars in Cancer Biology, 96, 82-99. doi: 10.1016/j.semcancer.2023.09.005\n[21] Jaltotage B., Sukudom S., Ihdayhid AR., Dwivedi G. (2023). Enhancing Risk Stratification on Coronary Computed Tomography Angiography: The Role of Artificial Intelligence. Clinical Therapeutics, 45, 11, 1023-1028. doi: 10.1016/j.clinthera.2023.09.019\n[22] Adams LC., Bressem KK. (2024). Chest Radiographs as Biological Clocks: Implications for Risk Stratification and Personalized Care. Radiology: Artificial Intelligence, 6, 5. doi: 10.1148/ryai.258558\n[23] Strunk J., Nissen A., Smolnik S. (2025). All risks ain't the same – A risk facets perspective on AI-based decision support systems. The Journal of Clinical Research Reports, 199, 114557. doi: 10.1016/j.dss.2025.114557\n[24] Orji U., Ukwandu E. (2024). Machine learning for an explainable cost prediction of medical insurance. Machine Learning with Applications, 15, 100516. doi: 10.1016/j.mlwa.2023.165985\n[25] Riela PM. (2023). Artificial intelligence for COVID-19 mortality prediction: improvement of risk stratification and clinical decision-making. Internal and Emergency Medicine, 18, 6, 1617-1618. doi: 10.1007/s11739-023-03358-w\n[26] Tovar DR., Rosenthal MH., Maitra A., Koay EJ. (2023). Potential of artificial intelligence in the risk stratification for and early detection of pancreatic cancer. Artificial Intelligence Surgery, 3, 1, 14-26. doi: 10.20517/ais.2022.38\n[27] He Y., Zhao H., Wong STC. (2021). Deep learning powers cancer diagnosis in digital pathology. Computerized Medical Imaging and Graphics, 88, 101820. doi: 10.1016/j.compmedimag.2020.101820\n[28] Rout M., Vaughan A., Sidorov EV., Sanghera DK. (2024). Improving Stroke Outcome Prediction Using Molecular and Astrophysical Learning Approaches in Large Vessel Occlusion. Journal of Clinical Medicine, 13, 19, 5917. doi: 10.3390/jcm13195917\n[29] Wu Q., Ding K., Huang B. (2018). Approach for fault prognosis using recurrent neural network. Journal of Intelligent Manufacturing, 31, 7, 1621-1633. doi: 10.1007/s10845-018-1428-5\n[30] Thomas J. (2024). Enhancing Thyroid Nodule Risk Stratification: Integrating Artificial Intelligence and Polygenic Risk Scores. Clinical Thyroidology®, 36, 4, 150-152. doi: 10.1089/ct.2024;36.150-152\n[31] Kumar GV., Kumar NN. (2025). Eye Disease Classification Using Deep Learning And Resnet. International Journal of Research Publication and Reviews, 6, 6, 12908. doi: 10.55248/gengpi.6.0625.66905\n[32] Serruys PW., Kageyama S., Onuma Y. (2024). Cardiology’s new crystal ball: machine learning for outcome prediction. European Heart Journal, 45, 8, 610-612. doi: 10.1093/eurheartj/ehad847\n[33] Gao Q., Lin H., Qian J., Liu X., et al. (2023). A deep learning model for efficient end-to-end stratification of thrombotic risk in left atrial appendage. Engineering Applications of Artificial Intelligence, 126, 107187. doi: 10.1016/j.engappai.2023.107187\n[34] Yildirim M., Çinar A. (2019). Classification of White Blood Cells by Deep Learning Methods for Diagnosing Disease. Revue d'Intelligence Artificielle, 33, 5, 335-340. doi: 10.18280/ria.371759\n[35] Rahimian P., Mihalyi BM., Toka L. (2024). In-game soccer outcome prediction with offline reinforcement learning. The Journal of Clinical Research Reports, 113, 10, 7393-7419. doi: 10.1007/s10994-024-06611-1\n[36] Simanjuntak MS., Robet R., Hoki L. (2025). A Robotic Study of Machine Learning and Deep Learning Models for Heart Disease Classification. Journal of Applied Informatics and Computing, 9, 6, 3405-3409. doi: 10.30871/jaic.v9i6.11546\n\n只输出一个 ```json 代码块：{\"references\":[{\"item_id\":1,\"doi_status\":\"valid|not_found|no_doi\",\"metadata_match\":true,\"verdict\":\"confirm|suspect|pass\",\"confidence\":0.0,\"evidence_url\":\"\",\"issue\":\"\"}]}。正常用 pass，DOI 不存在或题录有误用 confirm，不确定用 suspect。"
+}

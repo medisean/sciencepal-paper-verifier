@@ -1,0 +1,321 @@
+{
+  "mode": "guarded",
+  "case": "layer1_seed123_n12",
+  "adversarial": null,
+  "run_id": "1fb13d37-f609-4adc-a5da-0101f6bbbdae",
+  "thread_id": "50f3d45d-736b-4683-8e3f-a14579f1d956",
+  "status": "ok",
+  "wall_seconds": 92.9,
+  "usage": {
+    "total_tokens": 33132,
+    "prompt_tokens": 32070,
+    "completion_tokens": 1062
+  },
+  "tool_counts": {
+    "execute_command": 3
+  },
+  "tool_names": [
+    "execute_command"
+  ],
+  "tool_contents": [
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1259/bjro.20220021 -> HTTP 200 ===\\\\ntitle: Artificial intelligence in cardiovascular imaging: enhancing image analysis and risk stratification\\\\nissued: [[2023, 8]]\\\\ncontainer: BJR|Open\\\\nvolume: 5 issue: 1 page: None article: 20220021\\\\nauthors: Lin Andrew; Pieszko Konrad; Park Caroline; Ignor Katarzyna; Williams Michelle C; Slomka Piotr; Dey Damini\\\\n=== 10.1016/j.mlwa.2022.100343 -> HTTP 200 ===\\\\ntitle: Bankrupt",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== Item5: Eye Disease Classification Using Deep Learning And Resnet ===\\\\n10.55248/gengpi.6.0625.2410 | Eye Disease Classification Using Deep Learning And Resnet | [[2025, 6]] | International Journal of Research Publication and Reviews\\\\n10.1109/incoft60753.2023.10425690 | Eye Disease Classification Using ResNet-18 Deep Learning Architecture | [[2023, 11, 24]] | 2023 2nd International Conference on Futuristic Technologies (",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== Item4 container check ===\\\\ncontainer: [\\'International Journal of Advanced Research and Innovations\\']\\\\nshort-container: [\\'IJARI\\']\\\\npublisher: D3 Publishers\\\\npage: 57 article: P08\",\\n  \"cwd\": \"/workspace\",\\n  \"completed\": true,\\n  \"exit_code\": 0,\\n  \"output_truncated\": false,\\n  \"output_original_chars\": 177,\\n  \"execution_mode\": \"direct\"\\n}', 'tool_call_id': 'call_e8d1879dfe6d4c189be97924'}"
+  ],
+  "interventions": [],
+  "rounds": [
+    {
+      "run_id": "1fb13d37-f609-4adc-a5da-0101f6bbbdae",
+      "stopped": false,
+      "parsed": true,
+      "n_errors": 0,
+      "errors": []
+    }
+  ],
+  "n_repairs": 0,
+  "n_stops": 0,
+  "degraded": false,
+  "first_pass_valid": true,
+  "violations": {
+    "contract_errors": [],
+    "contract_violated": false,
+    "policy_violations": [],
+    "policy_violated": false,
+    "policy_executed": false,
+    "usable": true
+  },
+  "score": {
+    "bundle": 123,
+    "n": 12,
+    "n_pred": 12,
+    "missing": [],
+    "hallucinated_doi_detection": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "metadata_error_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "any_issue_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "rows": [
+      {
+        "item_id": 1,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 3,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "期刊名不一致:Crossref 真实期刊为 'International Journal of Advanced Research and Innovations'(IJARI),引用写为 'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 5,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在(HTTP 404);真实 DOI 为 10.55248/gengpi.6.0625.2410,后缀被篡改(2410→16682)"
+      },
+      {
+        "item_id": 6,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在(HTTP 404);真实 DOI 为 10.1016/j.asoc.2020.106351,后缀被篡改"
+      },
+      {
+        "item_id": 7,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 不存在(HTTP 404);真实 DOI 为 10.1109/access.2019.2936564,后缀被篡改"
+      },
+      {
+        "item_id": 9,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 11,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "标题不一致:Crossref 真实标题为 'Prediction-oriented prognostic biomarker discovery with survival machine learning methods',引用写为 'Prediction-oriented Quantum biomarker discovery with survival machine learning methods'(prognostic→Quantum)"
+      },
+      {
+        "item_id": 12,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份不一致:Crossref 发表年份为 2025(issued 2025-12-07),引用写为 2029"
+      }
+    ]
+  },
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.1259/bjro.20220021",
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.mlwa.2022.100343",
+        "issue": ""
+      },
+      {
+        "item_id": 3,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.14311/nnw.2018.28.015",
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.65713/ijaraiv13i1208",
+        "issue": "期刊名不一致:Crossref 真实期刊为 'International Journal of Advanced Research and Innovations'(IJARI),引用写为 'The Journal of Clinical Research Reports'"
+      },
+      {
+        "item_id": 5,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.55248/gengpi.6.0625.16682",
+        "issue": "DOI 不存在(HTTP 404);真实 DOI 为 10.55248/gengpi.6.0625.2410,后缀被篡改(2410→16682)"
+      },
+      {
+        "item_id": 6,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.asoc.2020.175903",
+        "issue": "DOI 不存在(HTTP 404);真实 DOI 为 10.1016/j.asoc.2020.106351,后缀被篡改"
+      },
+      {
+        "item_id": 7,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.ceh.2024.12.003",
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1109/access.2019.2991190",
+        "issue": "DOI 不存在(HTTP 404);真实 DOI 为 10.1109/access.2019.2936564,后缀被篡改"
+      },
+      {
+        "item_id": 9,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.compmedimag.2020.101820",
+        "issue": ""
+      },
+      {
+        "item_id": 10,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.98,
+        "evidence_url": "https://api.crossref.org/works/10.1007/s10845-018-1428-5",
+        "issue": ""
+      },
+      {
+        "item_id": 11,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1093/nargab/lqad055",
+        "issue": "标题不一致:Crossref 真实标题为 'Prediction-oriented prognostic biomarker discovery with survival machine learning methods',引用写为 'Prediction-oriented Quantum biomarker discovery with survival machine learning methods'(prognostic→Quantum)"
+      },
+      {
+        "item_id": 12,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.30871/jaic.v9i6.11546",
+        "issue": "年份不一致:Crossref 发表年份为 2025(issued 2025-12-07),引用写为 2029"
+      }
+    ]
+  },
+  "final_text": "All verification complete. Here is the final JSON output.\n\n```json\n{\"references\":[\n{\"item_id\":1,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1259/bjro.20220021\",\"issue\":\"\"},\n{\"item_id\":2,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2022.100343\",\"issue\":\"\"},\n{\"item_id\":3,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.14311/nnw.2018.28.015\",\"issue\":\"\"},\n{\"item_id\":4,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.65713/ijaraiv13i1208\",\"issue\":\"期刊名不一致:Crossref 真实期刊为 'International Journal of Advanced Research and Innovations'(IJARI),引用写为 'The Journal of Clinical Research Reports'\"},\n{\"item_id\":5,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.55248/gengpi.6.0625.16682\",\"issue\":\"DOI 不存在(HTTP 404);真实 DOI 为 10.55248/gengpi.6.0625.2410,后缀被篡改(2410→16682)\"},\n{\"item_id\":6,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.asoc.2020.175903\",\"issue\":\"DOI 不存在(HTTP 404);真实 DOI 为 10.1016/j.asoc.2020.106351,后缀被篡改\"},\n{\"item_id\":7,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.ceh.2024.12.003\",\"issue\":\"\"},\n{\"item_id\":8,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1109/access.2019.2991190\",\"issue\":\"DOI 不存在(HTTP 404);真实 DOI 为 10.1109/access.2019.2936564,后缀被篡改\"},\n{\"item_id\":9,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.compmedimag.2020.101820\",\"issue\":\"\"},\n{\"item_id\":10,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.98,\"evidence_url\":\"https://api.crossref.org/works/10.1007/s10845-018-1428-5\",\"issue\":\"\"},\n{\"item_id\":11,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1093/nargab/lqad055\",\"issue\":\"标题不一致:Crossref 真实标题为 'Prediction-oriented prognostic biomarker discovery with survival machine learning methods',引用写为 'Prediction-oriented Quantum biomarker discovery with survival machine learning methods'(prognostic→Quantum)\"},\n{\"item_id\":12,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.30871/jaic.v9i6.11546\",\"issue\":\"年份不一致:Crossref 发表年份为 2025(issued 2025-12-07),引用写为 2029\"}\n]}\n```\n\n**核查说明（过程可审计）**：所有 12 条 DOI 均通过 `curl` 实际请求 `https://api.crossref.org/works/{DOI}` 并记录 HTTP 状态。其中 3 条返回 404（条目 5、6、8），已通过 Crossref 书目检索定位其真实 DOI，确认后缀被篡改。其余 9 条 DOI 有效，逐字段比对作者、年份、标题、期刊、卷期页码后，发现 3 处题录不一致（条目 4 期刊名、条目 11 标题、条目 12 年份）。未发现撤稿标记。"
+}

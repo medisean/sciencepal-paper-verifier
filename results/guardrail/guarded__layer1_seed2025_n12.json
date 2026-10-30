@@ -1,0 +1,323 @@
+{
+  "mode": "guarded",
+  "case": "layer1_seed2025_n12",
+  "adversarial": null,
+  "run_id": "f08eb9bb-f322-4bbb-89cb-02f8c6aacda4",
+  "thread_id": "a63b6376-9eff-4860-805f-05401c961873",
+  "status": "ok",
+  "wall_seconds": 102.7,
+  "usage": {
+    "total_tokens": 30609,
+    "prompt_tokens": 28829,
+    "completion_tokens": 1780
+  },
+  "tool_counts": {
+    "execute_command": 5
+  },
+  "tool_names": [
+    "execute_command"
+  ],
+  "tool_contents": [
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1093/eurheartj/ehaf784.4139 ===\\\\n200\\\\n=== 10.21275/sr231015260210 ===\\\\n404\\\\n=== 10.2174/15734056mte2nnjcoy ===\\\\n200\\\\n=== 10.1016/j.dss.2025.126417 ===\\\\n404\\\\n=== 10.1016/j.ejmp.2024.175697 ===\\\\n404\\\\n=== 10.1016/j.mlwa.2023.100516 ===\\\\n200\\\\n\",\\n  \"session_name\": \"doi1\",\\n  \"cwd\": \"/workspace\",\\n  \"completed\": true,\\n  \"exit_code\": 0,\\n  \"output_truncated\": false,\\n  \"output_original_chars\": 234\\n}', 'tool_ca",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1016/j.asoc.2020.106351 ===\\\\n200\\\\n=== 10.1177/21677026251340348 ===\\\\n200\\\\n=== 10.1109/rbme.2020.3007816 ===\\\\n200\\\\n=== 10.1093/nargab/lqad055 ===\\\\n200\\\\n=== 10.1016/j.media.2020.101913 ===\\\\n200\\\\n=== 10.1016/j.clinthera.2023.09.019 ===\\\\n200\\\\n\",\\n  \"session_name\": \"doi2\",\\n  \"cwd\": \"/workspace\",\\n  \"completed\": true,\\n  \"exit_code\": 0,\\n  \"output_truncated\": false,\\n  \"output_original_chars\": 234\\n}', 'tool_ca",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1093/eurheartj/ehaf784.4139 ===\\\\ntitle: [\\'Novel biomarker-based machine learning model in personalized cardiotoxicity prediction\\']\\\\nissued: {\\'date-parts\\': [[2025, 11]]}\\\\ncontainer: [\\'European Heart Journal\\']\\\\nvolume: 46 issue: Supplement_1 page: None\\\\nauthors: [(\\'Liu\\', \\'I\\'), (\\'Park\\', \\'C\\')]\\\\ntype: journal-article\\\\n=== 10.2174/15734056mte2nnjcoy ===\\\\ntitle: [\\'Diagnosis of COVID-19 Using Machine Le",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== 10.1177/21677026251340348 ===\\\\ntitle: [\\'Machine-Learning Applications in Eating-Disorder-Outcome Prediction: A Systematic Scoping Review\\']\\\\nissued: {\\'date-parts\\': [[2025, 6, 27]]}\\\\ncontainer: [\\'Clinical Psychological Science\\']\\\\nvolume: 13 issue: 6 page: 1051-1068\\\\nauthors: [(\\'McClure\\', \\'Zoe\\'), (\\'Fuller-Tyszkiewicz\\', \\'Matthew\\'), (\\'Messer\\', \\'Mariel\\'), (\\'Linardon\\', \\'Jake\\')]\\\\ntype: journal-article",
+    "{'name': 'execute_command', 'role': 'tool', 'content': '{\\n  \"output\": \"=== search IJSR breast cancer ===\\\\n10.21275/sr231015173828 | [\\'Breast Cancer Prediction using Machine Learning Algorithms\\'] | [\\'International Journal of Science and Research (IJSR)\\'] | {\\'date-parts\\': [[2023, 10, 5]]}\\\\n10.36948/ijfmr.2024.v06i06.32607 | [\\'Breast Cancer Prediction Using Machine Learning Algorithms\\'] | [\\'International Journal For Multidisciplinary Research\\'] | {\\'date-parts\\': [[2024, 12, 7]]}\\\\n10."
+  ],
+  "interventions": [],
+  "rounds": [
+    {
+      "run_id": "f08eb9bb-f322-4bbb-89cb-02f8c6aacda4",
+      "stopped": false,
+      "parsed": true,
+      "n_errors": 0,
+      "errors": []
+    }
+  ],
+  "n_repairs": 0,
+  "n_stops": 0,
+  "degraded": false,
+  "first_pass_valid": true,
+  "violations": {
+    "contract_errors": [],
+    "contract_violated": false,
+    "policy_violations": [],
+    "policy_violated": false,
+    "policy_executed": false,
+    "usable": true
+  },
+  "score": {
+    "bundle": 2025,
+    "n": 12,
+    "n_pred": 12,
+    "missing": [],
+    "hallucinated_doi_detection": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 9,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "metadata_error_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "any_issue_detection": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "specificity": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0
+    },
+    "rows": [
+      {
+        "item_id": 1,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 404 不存在；真实 DOI 为 10.21275/sr231015173828（后缀 173828→260210 被篡改），标题/作者/期刊/年份均匹配真实记录"
+      },
+      {
+        "item_id": 3,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 404 不存在；真实 DOI 为 10.1016/j.dss.2025.114557（后缀 114557→126417 被篡改），标题/作者/期刊/年份均匹配真实记录"
+      },
+      {
+        "item_id": 5,
+        "gold": "not_found",
+        "pred_doi": "not_found",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "DOI 404 不存在；真实 DOI 为 10.1016/j.ejmp.2024.104004（后缀 104004→175697 被篡改），标题/作者/期刊/年份均匹配真实记录"
+      },
+      {
+        "item_id": 6,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "年份不符：Crossref issued 2021，引用写 2025；其余字段（标题/期刊/卷/页码/作者）匹配"
+      },
+      {
+        "item_id": 10,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "期刊不符：真实为 NAR Genomics and Bioinformatics，引用写 The Journal of Clinical Research Reports；其余字段（标题/年份/卷/期/作者）匹配"
+      },
+      {
+        "item_id": 11,
+        "gold": "mismatch",
+        "pred_doi": "valid",
+        "pred_meta": false,
+        "verdict": "confirm",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": "标题不符：真实为 'COVID-AL: The diagnosis of COVID-19 with deep active learning'，引用写 'deep Wearable learning'；其余字段（期刊/卷/页码/年份）匹配"
+      },
+      {
+        "item_id": 12,
+        "gold": "valid",
+        "pred_doi": "valid",
+        "pred_meta": true,
+        "verdict": "pass",
+        "correct_A": true,
+        "correct_B": true,
+        "issue": ""
+      }
+    ]
+  },
+  "json_result": {
+    "references": [
+      {
+        "item_id": 1,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1093/eurheartj/ehaf784.4139",
+        "issue": ""
+      },
+      {
+        "item_id": 2,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.99,
+        "evidence_url": "https://api.crossref.org/works/10.21275/sr231015260210",
+        "issue": "DOI 404 不存在；真实 DOI 为 10.21275/sr231015173828（后缀 173828→260210 被篡改），标题/作者/期刊/年份均匹配真实记录"
+      },
+      {
+        "item_id": 3,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.2174/15734056mte2nnjcoy",
+        "issue": ""
+      },
+      {
+        "item_id": 4,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.99,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.dss.2025.126417",
+        "issue": "DOI 404 不存在；真实 DOI 为 10.1016/j.dss.2025.114557（后缀 114557→126417 被篡改），标题/作者/期刊/年份均匹配真实记录"
+      },
+      {
+        "item_id": 5,
+        "doi_status": "not_found",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.99,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.ejmp.2024.175697",
+        "issue": "DOI 404 不存在；真实 DOI 为 10.1016/j.ejmp.2024.104004（后缀 104004→175697 被篡改），标题/作者/期刊/年份均匹配真实记录"
+      },
+      {
+        "item_id": 6,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.mlwa.2023.100516",
+        "issue": ""
+      },
+      {
+        "item_id": 7,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.asoc.2020.106351",
+        "issue": ""
+      },
+      {
+        "item_id": 8,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1177/21677026251340348",
+        "issue": ""
+      },
+      {
+        "item_id": 9,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1109/rbme.2020.3007816",
+        "issue": "年份不符：Crossref issued 2021，引用写 2025；其余字段（标题/期刊/卷/页码/作者）匹配"
+      },
+      {
+        "item_id": 10,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1093/nargab/lqad055",
+        "issue": "期刊不符：真实为 NAR Genomics and Bioinformatics，引用写 The Journal of Clinical Research Reports；其余字段（标题/年份/卷/期/作者）匹配"
+      },
+      {
+        "item_id": 11,
+        "doi_status": "valid",
+        "metadata_match": false,
+        "verdict": "confirm",
+        "confidence": 0.95,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.media.2020.101913",
+        "issue": "标题不符：真实为 'COVID-AL: The diagnosis of COVID-19 with deep active learning'，引用写 'deep Wearable learning'；其余字段（期刊/卷/页码/年份）匹配"
+      },
+      {
+        "item_id": 12,
+        "doi_status": "valid",
+        "metadata_match": true,
+        "verdict": "pass",
+        "confidence": 0.97,
+        "evidence_url": "https://api.crossref.org/works/10.1016/j.clinthera.2023.09.019",
+        "issue": ""
+      }
+    ]
+  },
+  "final_text": "I have all the data I need. Let me analyze each reference:\n\n**#1** (10.1093/eurheartj/ehaf784.4139): 200. Title, year 2025, journal EHJ, vol 46, Supplement_1, authors Liu/Park — all match. PASS.\n\n**#2** (10.21275/sr231015260210): 404. Real DOI is 10.21275/sr231015173828 (suffix altered 173828→260210). CONFIRM.\n\n**#3** (10.2174/15734056mte2nnjcoy): 200. Title, year 2021, CMIR, vol 17, issue 12, author Mondal — all match. PASS.\n\n**#4** (10.1016/j.dss.2025.126417): 404. Real DOI is 10.1016/j.dss.2025.114557 (suffix altered 114557→126417). CONFIRM.\n\n**#5** (10.1016/j.ejmp.2024.175697): 404. Real DOI is 10.1016/j.ejmp.2024.104004 (suffix altered 104004→175697). CONFIRM.\n\n**#6** (10.1016/j.mlwa.2023.100516): 200. Title, authors Orji/Ukwandu, MLWA, vol 15, page 100516 — all match. Year: Crossref issued 2024-03, cited 2024. Match. PASS.\n\n**#7** (10.1016/j.asoc.2020.106351): 200. Title, year 2020, Applied Soft Computing, vol 93, page 106351, authors Xia/Zheng/Imran/Shoaib — all match. PASS.\n\n**#8** (10.1177/21677026251340348): 200. Title, year 2025, Clinical Psychological Science, vol 13, issue 6, pages 1051-1068, authors McClure/Fuller-Tyszkiewicz/Messer/Linardon — all match. PASS.\n\n**#9** (10.1109/rbme.2020.3007816): 200. Title, IEEE Reviews in Biomedical Engineering, vol 14, pages 116-126, authors Shamout/Zhu/Clifton — match. Year: Crossref issued 2021, cited 2025. **Year mismatch** (cited 2025, real 2021). CONFIRM.\n\n**#10** (10.1093/nargab/lqad055): 200. Title, year 2022, NAR Genomics and Bioinformatics, vol 5, issue 2, authors Yao/Cao/Li/Kalos — match. But cited journal is \"The Journal of Clinical Research Reports\" — **journal mismatch** (real: NAR Genomics and Bioinformatics). CONFIRM.\n\n**#11** (10.1016/j.media.2020.101913): 200. Crossref title: \"COVID-AL: The diagnosis of COVID-19 with deep **active** learning\". Cited title: \"COVID-AL: The diagnosis of COVID-19 with deep **Wearable** learning\". **Title mismatch**. Also cited authors include \"Wu X., Chen C., Zhong M., Wang J., et al.\" — Crossref has Wu/Chen/Zhong/Wang/Shi. Year 2021 matches. CONFIRM (title mismatch).\n\n**#12** (10.1016/j.clinthera.2023.09.019): 200. Title, year 2023, Clinical Therapeutics, vol 45, issue 11, pages 1023-1028, authors Jaltotage/Sukudom/Ihdayhid/Dwivedi — all match. PASS.\n\n```json\n{\"references\":[\n{\"item_id\":1,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1093/eurheartj/ehaf784.4139\",\"issue\":\"\"},\n{\"item_id\":2,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.99,\"evidence_url\":\"https://api.crossref.org/works/10.21275/sr231015260210\",\"issue\":\"DOI 404 不存在；真实 DOI 为 10.21275/sr231015173828（后缀 173828→260210 被篡改），标题/作者/期刊/年份均匹配真实记录\"},\n{\"item_id\":3,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.2174/15734056mte2nnjcoy\",\"issue\":\"\"},\n{\"item_id\":4,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.99,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.dss.2025.126417\",\"issue\":\"DOI 404 不存在；真实 DOI 为 10.1016/j.dss.2025.114557（后缀 114557→126417 被篡改），标题/作者/期刊/年份均匹配真实记录\"},\n{\"item_id\":5,\"doi_status\":\"not_found\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.99,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.ejmp.2024.175697\",\"issue\":\"DOI 404 不存在；真实 DOI 为 10.1016/j.ejmp.2024.104004（后缀 104004→175697 被篡改），标题/作者/期刊/年份均匹配真实记录\"},\n{\"item_id\":6,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.mlwa.2023.100516\",\"issue\":\"\"},\n{\"item_id\":7,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.asoc.2020.106351\",\"issue\":\"\"},\n{\"item_id\":8,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1177/21677026251340348\",\"issue\":\"\"},\n{\"item_id\":9,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1109/rbme.2020.3007816\",\"issue\":\"年份不符：Crossref issued 2021，引用写 2025；其余字段（标题/期刊/卷/页码/作者）匹配\"},\n{\"item_id\":10,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1093/nargab/lqad055\",\"issue\":\"期刊不符：真实为 NAR Genomics and Bioinformatics，引用写 The Journal of Clinical Research Reports；其余字段（标题/年份/卷/期/作者）匹配\"},\n{\"item_id\":11,\"doi_status\":\"valid\",\"metadata_match\":false,\"verdict\":\"confirm\",\"confidence\":0.95,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.media.2020.101913\",\"issue\":\"标题不符：真实为 'COVID-AL: The diagnosis of COVID-19 with deep active learning'，引用写 'deep Wearable learning'；其余字段（期刊/卷/页码/年份）匹配\"},\n{\"item_id\":12,\"doi_status\":\"valid\",\"metadata_match\":true,\"verdict\":\"pass\",\"confidence\":0.97,\"evidence_url\":\"https://api.crossref.org/works/10.1016/j.clinthera.2023.09.019\",\"issue\":\"\"}\n]}\n```"
+}

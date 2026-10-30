@@ -293,10 +293,18 @@ text(s, Inches(7.06), Inches(5.2), Inches(5.45), Inches(1.3),
       [("定位为审稿 / 作者自检助手，不替代同行评议。", 13, False, DARK)]],
      line_spacing=1.2)
 
+# 底部说明：SciencePal 在作品中的角色（官方要求"说明 SciencePal 作用"）
+box(s, Inches(0.55), Inches(6.46), Inches(12.25), Inches(0.58),
+    fill=RGBColor(0xEE, 0xF2, 0xF8), rounded=True)
+text(s, Inches(0.8), Inches(6.5), Inches(11.9), Inches(0.5),
+     [[("SciencePal 的作用：提供 Agent 运行环境、可联网沙箱与工具编排，并保留可回放的运行记录；"
+        "核查的每一次取证都在平台内真实执行，不是用它写文案或做 PPT。", 10.5, False, NAVY)]],
+     anchor=MSO_ANCHOR.MIDDLE)
+
 # ---------- 第 4 页：两个主结果 ----------
 s = prs.slides.add_slide(BLANK)
-header(s, 4, "两个主结果：联网是能力闸门，流程固化可复现的过程约束",
-       "48 条独立测试集；三方对照（离线 / 普通联网 / 专家工作流），SSE 审计确认公平")
+header(s, 4, "两个主结果：联网是能力闸门，代码级 guardrail 保证交付可解析",
+       "48 条三方对照 + 6 例注入干预前后对照；回溯审计 35 个 run：专家 5/5、普通联网 2/4、离线 0/7 合规")
 # 左：主结果① 标签 + F1 图
 box(s, Inches(0.55), Inches(1.6), Inches(5.55), Inches(0.36), fill=NAVY, rounded=True)
 text(s, Inches(0.55), Inches(1.6), Inches(5.55), Inches(0.36),
@@ -308,13 +316,13 @@ s.shapes.add_picture(str(fig1), Inches(0.6), Inches(2.05), width=Inches(5.45))
 GREEN_L = RGBColor(0xEC, 0xF4, 0xEF)
 box(s, Inches(6.35), Inches(1.6), Inches(6.45), Inches(0.36), fill=GREEN, rounded=True)
 text(s, Inches(6.35), Inches(1.6), Inches(6.45), Inches(0.36),
-     [[("主结果② 过程约束：专家工作流相对普通 Agent 的可审计增益", 12.5, True, WHITE)]],
+     [[("主结果② 代码级 guardrail：同一 Agent 加 / 不加，交付可用 6/6 vs 4/6", 12.5, True, WHITE)]],
      align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
 proc = [
-    ("平均工具调用 / 轮", "7 轮均值，路径更短、token 更省", "8.3", "12.4"),
-    ("违禁写入长期记忆", "普通 Agent 被禁仍调用 save_memory", "0 次", "1 次"),
-    ("最终 JSON 输出", "固定 schema，便于无人值守解析", "末轮固定", "1 次错位"),
-    ("检查覆盖与留痕", "专家强制 C1-C4/M1-M5 全流程，留 HTTP 状态、来源、脚本", "全流程", "基础取证"),
+    ("交付可用率（6 例注入）", "可解析且结构/覆盖/证据/自洽四类校验全过", "6/6", "4/6"),
+    ("契约违规（注入）", "漏条目、改 schema 各 1 例，F1 直接归零", "0 次", "2 次"),
+    ("运行时拦截 / 自动修复", "save_memory 一出现即 stop 并纠正续跑", "1 / 4", "0 / 0"),
+    ("校验器检测力（故障注入）", "6 类失败模式 × 3 来源，同一套代码判定", "18/18", "无此机制"),
 ]
 yt = 2.08
 for name, note, expv, ordv in proc:
@@ -345,8 +353,9 @@ text(s, Inches(0.8), Inches(6.21), Inches(11.9), Inches(0.28),
      [[("如何读这两个结果：诚实、不设弱对手", 12, True, NAVY)]])
 text(s, Inches(0.8), Inches(6.5), Inches(11.95), Inches(0.9),
      [[("· H1 成立：联网是硬闸门，F1 0.62→1.0、误报 23→0；H2 阴性：强模型上专家流程不额外提高 F1，不宣称更准。", 10, False, DARK)],
-      [("· 专家流程是提示词/工作流层约束（非代码级强制）；右侧过程指标为 n=7 对 n=7 的小样本观测，“0 次/1 次”是观察到的事件，未做统计检验，不作为显著结论。", 10, False, DARK)],
-      [("· 撤稿、统计复算、2026 冷门撤稿限定任务同输入对照均判对；局限：仅单模型、n=48（Wilson 下界 0.926）、弱模型增益待验。", 10, False, DARK)]],
+      [("· 交付契约下沉到代码：平台关不掉记忆工具（9 种写法实测全无效），故拦截在运行时执行；注入实验把不可解析的交付从 2/6 降到 0/6。", 10, False, DARK)],
+      [("· 局限：干净 48 条与 36 条规模上 guardrail 0 次干预、F1 不变；stop 只能中断不能撤销记忆（两组均 1/6）；修复代价 token +82%；注入 n=6 为定性证据。", 9.5, False, DARK)],
+      [("· 泛化：换 deepseek-v4-pro 复现 4/4、F1 1.000；真实已发表论文的 50 条书目检出 4/4、误报 0。", 9.5, False, DARK)]],
      line_spacing=1.05, space_after=1)
 
 # ---------- 第 5 页：交付与演示 ----------
@@ -371,18 +380,19 @@ for i, (t, d, link) in enumerate(cards):
          [[(t, 15.5, True, NAVY)]], line_spacing=1.0)
     text(s, l+Inches(0.22), Inches(2.82), cw-Inches(0.44), Inches(0.82),
          [[(d, 11.5, False, DARK)]], line_spacing=1.12)
-    text(s, l+Inches(0.22), Inches(3.74), cw-Inches(0.38), Inches(0.42),
-         [[(link, 9, False, BLUE)]], line_spacing=1.0)
+    text(s, l+Inches(0.22), Inches(3.74), cw-Inches(0.30), Inches(0.42),
+         [[(link, 8.5, False, BLUE)]], line_spacing=1.0)
 # 复现材料 + 未来
 box(s, Inches(0.6), Inches(4.5), Inches(5.95), Inches(2.3), fill=LIGHT, rounded=True)
 text(s, Inches(0.88), Inches(4.7), Inches(5.4), Inches(0.4),
      [[("随附可复现材料", 15, True, NAVY)]])
 text(s, Inches(0.88), Inches(5.15), Inches(5.5), Inches(1.6),
-     [[("· 代码仓库：评测集生成 / 跑批 / 评分 / 审计全脚本", 12.5, False, DARK)],
+     [[("· 代码仓库：评测集 / 跑批 / 评分 / 审计 / guardrail 全脚本", 12.5, False, DARK)],
       [("· 一键复现：run_batch + run_naive → export → audit", 12.5, False, DARK)],
-      [("· 三方对照技术报告、逐条结果、12 run SSE 审计、Layer-2 案例", 12.5, False, DARK)],
+      [("· 三方对照报告、逐条结果、SSE 审计、Layer-2 案例", 12.5, False, DARK)],
+      [("· guardrail 协议与故障注入（可用率 6/6 vs 4/6）", 12.5, False, DARK)],
       [("· 原创性与资源使用声明", 12.5, False, DARK)]],
-     line_spacing=1.18, space_after=4)
+     line_spacing=1.12, space_after=3)
 box(s, Inches(6.78), Inches(4.5), Inches(5.95), Inches(2.3), fill=LIGHT, rounded=True)
 text(s, Inches(7.06), Inches(4.7), Inches(5.4), Inches(0.4),
      [[("未来工作", 15, True, NAVY)]])

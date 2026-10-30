@@ -1,0 +1,80 @@
+{
+  "model_replication": [
+    {
+      "seed": 7,
+      "flash": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 58.9,
+        "repairs": 0
+      },
+      "pro": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 120.7,
+        "repairs": 0
+      }
+    },
+    {
+      "seed": 123,
+      "flash": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 91.1,
+        "repairs": 0
+      },
+      "pro": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 92.9,
+        "repairs": 0
+      }
+    },
+    {
+      "seed": 2024,
+      "flash": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 62.0,
+        "repairs": 0
+      },
+      "pro": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 258.7,
+        "repairs": 0
+      }
+    },
+    {
+      "seed": 2025,
+      "flash": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 102.7,
+        "repairs": 0
+      },
+      "pro": {
+        "f1": 1.0,
+        "usable": true,
+        "wall": 138.2,
+        "repairs": 0
+      }
+    }
+  ],
+  "realworld": {
+    "n": 50,
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "tn": 46,
+    "precision": 1.0,
+    "recall": 1.0,
+    "specificity": 1.0,
+    "f1": 1.0,
+    "false_positives": [],
+    "missed": [],
+    "wall": 263.4,
+    "usable": true,
+    "repairs": 0
+  }
+}
